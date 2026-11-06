@@ -15,7 +15,9 @@ SHORTENERS = ("bit.ly", "s.id", "tinyurl.com", "cutt.ly", "shorturl.at", "rebran
 FREE_HOSTS = ("workers.dev", "pages.dev", "blogspot.", "wixsite.com", "weebly.com", "wordpress.com",
               "github.io", "web.app", "firebaseapp.com", "netlify.app", "vercel.app", "000webhostapp",
               "glitch.me", "ngrok", "sites.google.com", "forms.gle", "docs.google.com/forms",
-              "form.jotform", "typeform.com", "my.id", "biz.id", "rf.gd", "epizy.com")
+              "form.jotform", "typeform.com", "my.id", "biz.id", "rf.gd", "epizy.com",
+              # layanan link-in-bio: halaman gratis yang bisa dibuat siapa saja
+              "msha.ke", "milkshake.app", "bio.link", "heylink.me", "beacons.ai", "taplink.cc", "carrd.co")
 OFFICIAL_SUFFIXES = (".go.id", ".co.id", ".ac.id", ".or.id", ".mil.id", ".sch.id", ".desa.id")
 OFFICIAL_PORTALS = ("fhcibumn.id", "kemnaker.go.id", "bkn.go.id")
 GENERIC_TLDS = ("com", "net", "org", "info", "xyz", "site", "online", "top", "click", "live", "store", "shop",
@@ -73,7 +75,7 @@ def _first(pattern: str, text: str, low: str, check_negation: bool = False) -> s
 
 
 def _deobfuscate(low: str) -> str:
-    return re.sub(r"\s?(\[dot\]|\(dot\)|\[\.\])\s?", ".", low)
+    return re.sub(r"\s?(\[dot\]|\(dot\)|\[\.\])\s?", ".", low, flags=re.I)
 
 
 def _money_to_rupiah(token: str) -> float | None:
@@ -96,11 +98,19 @@ def _money_to_rupiah(token: str) -> float | None:
 
 
 def domains_in(text: str) -> list[str]:
-    low = _deobfuscate(text.lower())
+    """Tautan di teks. Host ditulis huruf kecil, path dipertahankan apa adanya (bit.ly/AbC beda dengan bit.ly/abc).
+    Domain yang merupakan bagian alamat email (setelah @) tidak dihitung sebagai tautan."""
+    clean = _deobfuscate(text)
     found = []
-    for m in URL_RE.finditer(low):
-        url = m.group(1)
-        host = re.sub(r"^https?://", "", url).split("/")[0]
+    for m in URL_RE.finditer(clean):
+        if m.start() > 0 and clean[m.start() - 1] == "@":
+            continue
+        raw = m.group(1).rstrip(".,;:!?")
+        scheme = re.match(r"https?://", raw, re.I)
+        rest = raw[scheme.end():] if scheme else raw
+        host, _, path = rest.partition("/")
+        host = host.lower()
+        url = (scheme.group().lower() if scheme else "") + host + ("/" + path if path else "")
         tld = host.rsplit(".", 1)[-1]
         explicit = url.startswith(("http://", "https://", "www."))
         if "." in host and not host.replace(".", "").isdigit() and (explicit or tld in URL_TLDS):
@@ -111,7 +121,7 @@ def domains_in(text: str) -> list[str]:
 # TLD yang dikenali sebagai tautan bila ditulis tanpa http:// (menghindari "transfer.kirim" dianggap tautan).
 URL_TLDS = {"com", "id", "net", "org", "info", "xyz", "site", "online", "top", "click", "live", "store", "shop",
             "biz", "cc", "cx", "icu", "vip", "work", "fun", "ly", "gl", "me", "io", "app", "dev", "link", "gd",
-            "at", "co", "us", "in", "my", "sg", "to", "tk", "ml", "ga", "cf", "gq", "pw", "ws", "tv", "uk", "au"}
+            "at", "co", "us", "in", "my", "sg", "to", "tk", "ml", "ga", "cf", "gq", "pw", "ws", "tv", "uk", "au", "ke", "ai", "cc"}
 
 
 def detect(text: str) -> list[Temuan]:
@@ -156,10 +166,17 @@ def detect(text: str) -> list[Temuan]:
     sensitif = _first(r"\b(otp|kode verifikasi|kode otp|pin atm|pin m-?banking|password)\b", text, low) or _first(
         r"\bfoto\b[^.\n]{0,60}?\b(pakaian dalam|bra|underwear|tanpa busana|telanjang)\b", text, low)
     if not sensitif:
-        doc = re.search(r"\b(ktp|nik|kartu keluarga|nomor rekening|no\.?\s?rek(?:ening)?|rekening bank|foto selfie)\b", low)
-        channel = re.search(r"\b(whatsapp|wa|telegram|formulir|form|link|tautan|dm|inbox)\b", low)
-        if doc and channel and abs(doc.start() - channel.start()) < 160:
-            sensitif = _snippet(text, doc.start(), doc.end())
+        # KTP/NIK sebagai berkas lamaran itu wajar: baru rambu bila diminta lewat chat pribadi.
+        # Rekening/foto selfie: rambu bila diminta lewat chat maupun formulir/tautan.
+        chat = r"\b(whatsapp|wa|telegram|dm|inbox|chat)\b"
+        for pat, ch in ((r"\b(ktp|nik|kartu keluarga)\b", chat),
+                        (r"\b(nomor rekening|no\.?\s?rek(?:ening)?|rekening bank|foto selfie)\b",
+                         r"\b(whatsapp|wa|telegram|dm|inbox|chat|formulir|form|link|tautan)\b")):
+            doc = re.search(pat, low)
+            channel = re.search(ch, low)
+            if doc and channel and abs(doc.start() - channel.start()) < 160:
+                sensitif = _snippet(text, doc.start(), doc.end())
+                break
     add("MINTA_DATA_SENSITIF", sensitif)
 
     for url in domains_in(text):
@@ -167,7 +184,7 @@ def detect(text: str) -> list[Temuan]:
         official = host.endswith(OFFICIAL_SUFFIXES) or host.endswith(OFFICIAL_PORTALS)
         job_word_domain = (re.search(r"lowongan|loker|rekrutmen|recruitment|pendaftaran|daftar|karir|career|kerja", host)
                            and host.rsplit(".", 1)[-1] in GENERIC_TLDS and not official)
-        if (any(s in url for s in SHORTENERS + FREE_HOSTS) or "bitly" in host
+        if (any(s in url.lower() for s in SHORTENERS + FREE_HOSTS) or "bitly" in host
                 or (re.search(r"[a-z]\d{2,}[a-z]|\d{3,}", host) and not official) or job_word_domain):
             add("TAUTAN_MENCURIGAKAN", url)
             break

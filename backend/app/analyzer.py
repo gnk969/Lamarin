@@ -11,7 +11,7 @@ import logging
 import re
 from dataclasses import asdict
 
-from . import config, gemini, rules, sumber
+from . import config, gemini, rules, sumber, tautan
 from .rambu import KATALOG, level_for
 
 # Rambu yang bergantung pada konteks dan tidak berlaku bila pendaftaran terbukti lewat domain resmi.
@@ -126,7 +126,8 @@ def analyze(text: str | None, image: bytes | None = None, mime: str | None = Non
 
     # Verifikasi sumber (kode, bukan AI): cocokkan instansi yang disebut dengan domain pendaftarannya.
     perusahaan = str(((ai_data or {}).get("fakta") or {}).get("perusahaan", "") or "")
-    src = sumber.verify(text, perusahaan, has_personal_contact="KONTAK_PRIBADI" in found)
+    cek = tautan.check_all(rules.domains_in(text))  # buka tautan untuk melihat tujuan aslinya
+    src = sumber.verify(text, perusahaan, has_personal_contact="KONTAK_PRIBADI" in found, cek=cek)
     dibatalkan = []
     if src.status == "resmi":
         for kode in list(found):

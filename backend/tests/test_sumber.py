@@ -6,6 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 os.environ["RAMBU_AI"] = "off"
+os.environ["RAMBU_CEK_TAUTAN"] = "off"
 
 from app import analyzer, sumber  # noqa: E402
 
@@ -51,3 +52,32 @@ def test_lookalike_domain_is_not_official():
 def test_common_words_are_not_org_claims():
     h = sumber.verify("Mampu bekerja mandiri, siap perjalanan dinas, merayakan kemenangan. Kirim CV ke hr@kopikita.com")
     assert h.instansi == "" and h.status == "netral"
+
+
+def test_each_channel_gets_its_own_verdict():
+    t = ("Lowongan Kementerian Kesehatan 2026. Daftar di https://msha.ke/kemenkesricareers. Info di Instagram "
+         "@kemenkes_ri dan @kemenkes.rekrutmen. Kirim CV ke hrd@kemkes.go.id atau rekrut.kemenkes@gmail.com")
+    items = {i["nilai"]: i["status"] for i in sumber.verify(t).item}
+    assert items["https://msha.ke/kemenkesricareers"] == "bahaya"   # link-in-bio, bukan kemkes.go.id
+    assert items["hrd@kemkes.go.id"] == "resmi"
+    assert items["rekrut.kemenkes@gmail.com"] == "bahaya"
+    assert items["@kemenkes_ri"] == "resmi"
+    assert items["@kemenkes.rekrutmen"] == "waspada"
+    assert "kemkes.go.id" not in items                               # domain email bukan tautan
+
+
+def test_link_in_bio_is_flagged_by_rules():
+    r = analyzer.analyze("LOWONGAN KEMENTERIAN KESEHATAN 2026. Pendaftaran: https://msha.ke/kemenkesricareers", use_ai=False)
+    assert {"TAUTAN_MENCURIGAKAN", "CATUT_PERUSAHAAN"} <= {x["kode"] for x in r["rambu"]}
+
+
+def test_ktp_as_application_document_is_not_sensitive_request():
+    r = analyzer.analyze("Dokumen yang dibutuhkan: CV, ijazah, KTP. Pendaftaran online melalui tautan di situs karier "
+                         "kami careers.kopikita.com sebelum 30 November.", use_ai=False)
+    assert all(x["kode"] != "MINTA_DATA_SENSITIF" for x in r["rambu"])
+
+
+def test_link_check_refuses_private_addresses():
+    from app import tautan
+    assert tautan._check("http://127.0.0.1:8010/").galat
+    assert tautan._check("http://localhost/").galat

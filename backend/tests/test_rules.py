@@ -7,6 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 os.environ["RAMBU_AI"] = "off"
+os.environ["RAMBU_CEK_TAUTAN"] = "off"
 
 from app import analyzer, rules  # noqa: E402
 from app.rambu import KATALOG, level_for  # noqa: E402

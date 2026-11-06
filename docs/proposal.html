@@ -115,7 +115,7 @@
   <tr><td>Ekstraksi fakta</td><td>Gemini, keluaran JSON <i>schema</i></td><td>Teks lowongan</td><td>Perusahaan, posisi, gaji, biaya, kontak, tautan, lokasi kerja</td></tr>
   <tr><td>Rambu kontekstual</td><td>Gemini, JSON <i>schema</i> dengan daftar kode rambu tetap</td><td>Teks lowongan</td><td>Kode rambu, kutipan bukti, dan alasan (misalnya mencatut perusahaan besar, informasi saling bertentangan)</td></tr>
   <tr><td>Rambu pola</td><td>Aturan (<i>regex</i>) buatan tim</td><td>Teks lowongan</td><td>11 rambu eksplisit: biaya, deposit, travel wajib, data sensitif, tautan mencurigakan, kontak pribadi, dan lainnya</td></tr>
-  <tr><td>Verifikasi sumber</td><td>Kode program, daftar domain resmi</td><td>Tautan dan email lowongan</td><td>Cocok atau tidak dengan domain instansi yang disebut (mis. Kemenkes harus kemkes.go.id); bila resmi, rambu kontekstual dibatalkan</td></tr>
+  <tr><td>Verifikasi sumber</td><td>Kode program, daftar domain resmi</td><td>Tautan dan email lowongan</td><td>Status tiap tautan, email, nomor, dan akun (resmi/berbahaya/waspada); tautan dibuka aman untuk melihat tujuan aslinya; bila resmi, rambu kontekstual dibatalkan</td></tr>
   <tr><td>Verifikasi dan skor</td><td>Kode program</td><td>Rambu AI dan aturan</td><td>Rambu AI ditolak bila kutipannya tidak ada di teks; skor = jumlah bobot tetap</td></tr>
 </table>
 <p><b>Alasan AI diperlukan:</b> banyak lowongan beredar sebagai gambar, kalimatnya bebas, dan modus yang paling umum (mencatut BUMN lalu mengarahkan ke WhatsApp atau Gmail) hanya terlihat dari hubungan antarbagian teks. Pada set uji, aturan saja hanya menangkap 1 dari 15 lowongan penipuan, sedangkan gabungan aturan dan AI menangkap 10 dari 15 (bagian 8).</p>
@@ -131,7 +131,7 @@
   <li><b>Fakta yang terbaca</b> dan <b>langkah aman</b> yang menyesuaikan rambu yang ditemukan.</li>
   <li><b>Mode cadangan tanpa AI</b>: aturan tetap berjalan dan gambar dibaca di peramban.</li>
 </ol>
-<p><b>Fitur tambahan:</b> contoh kasus nyata dengan tautan sumber, tema terang/gelap, tampilan ponsel, pembatas laju permintaan, dan 26 tes otomatis.</p>
+<p><b>Fitur tambahan:</b> contoh kasus nyata dengan tautan sumber, tema terang/gelap, tampilan ponsel, pembatas laju permintaan, dan 30 tes otomatis.</p>
 
 <h2>6. Arsitektur Teknis (<i>Technical Architecture</i>)</h2>
 <div class="arch">

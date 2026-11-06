@@ -19,6 +19,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+# Evaluasi tidak membuka tautan (hasil bisa diulang, dan tautan phishing di data tidak dikunjungi).
+os.environ.setdefault("RAMBU_CEK_TAUTAN", "off")
 sys.path.insert(0, str(ROOT / "backend"))
 
 

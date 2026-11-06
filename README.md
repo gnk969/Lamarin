@@ -18,7 +18,7 @@ dan calon pekerja migran di Bali.
 2. **Periksa gambar**: unggah, seret, atau tempel (Ctrl+V) tangkapan layar poster lowongan.
 3. **Rambu dengan bukti**: setiap tanda bahaya menampilkan kutipan kalimat lowongan yang memicunya, sumbernya (Aturan / AI), dan alasannya.
 4. **Skor risiko 0-100** dengan tiga level: Risiko tinggi, Waspada, Belum ditemukan rambu utama. Tidak ada label "aman".
-5. **Cek sumber**: mencocokkan domain pendaftaran dengan instansi/perusahaan yang disebut (mis. lowongan Kemenkes harus lewat kemkes.go.id), plus tautan untuk mengecek sendiri ke situs resmi dan laporan hoaks.
+5. **Cek sumber**: setiap tautan, email, nomor, dan akun media sosial di lowongan diperiksa satu per satu (resmi / berbahaya / waspada) dengan alasannya. Domain pendaftaran dicocokkan dengan instansi yang disebut (mis. Kemenkes harus kemkes.go.id), tautan dibuka secara aman untuk melihat tujuan aslinya (pengalihan, halaman 404), dan tersedia tautan untuk mengecek sendiri ke situs resmi dan laporan hoaks.
 6. **Fakta yang terbaca** (perusahaan, posisi, gaji, biaya, kontak, tautan) dan **langkah aman** sesuai rambu.
 7. **Contoh kasus nyata** dari artikel cek fakta dan situs karier resmi, dengan tautan sumber.
 
@@ -79,20 +79,20 @@ Hasil terakhir (6 Nov 2026, model `gemini-3.5-flash-lite`, ambang skor >= 20):
 |---|---|---|---|---|---|
 | Uji (buta, 27) | Aturan saja | 1.00 | 0.07 | 0.12 | 0.48 |
 | Uji (buta, 27) | AI saja | 0.90 | 0.60 | 0.72 | 0.74 |
-| Uji (buta, 27) | **Aturan + AI** | **0.91** | **0.67** | **0.77** | **0.78** |
+| Uji (buta, 27) | **Aturan + AI** | **1.00** | **0.67** | **0.80** | **0.81** |
 | Pengembangan (52) | Aturan saja | 1.00 | 0.59 | 0.74 | 0.79 |
 | Pengembangan (52) | AI saja | 1.00 | 0.70 | 0.83 | 0.85 |
 | Pengembangan (52) | Aturan + AI | 1.00 | 0.70 | 0.83 | 0.85 |
 
-Pada uji buta, AI menaikkan penipuan yang tertangkap dari 1 menjadi 10 dari 15, dengan 1 lowongan asli salah
+Pada uji buta, AI menaikkan penipuan yang tertangkap dari 1 menjadi 10 dari 15, tanpa lowongan asli yang salah
 ditandai. Catatan jujur:
 - Jawaban AI sedikit berbeda antar-jalan walau temperature 0. Dua kali uji buta memberi angka gabungan yang sama,
   tetapi lowongan yang salah berbeda.
 - Pemeriksaan "email gratisan harus benar-benar memuat domain gratisan" (`analyzer._claim_matches`) ditambahkan
   setelah melihat salah tuduh pada uji buta pertama. Ini aturan kebenaran fakta, bukan penyetelan bobot, tetapi
   set uji ini tidak lagi sepenuhnya buta untuk pemeriksaan tersebut. Set uji baru perlu dikumpulkan untuk angka akhir.
-- Verifikasi sumber (domain resmi vs saluran tidak resmi) ditambahkan setelah laporan lowongan resmi Kemenkes
-  dinilai berisiko tinggi. Angka set uji dihitung ulang dari jawaban AI yang tersimpan (tidak berubah);
+- Verifikasi sumber (domain resmi vs saluran tidak resmi) dan aturan KTP yang lebih ketat (KTP sebagai berkas
+  lamaran bukan rambu) ditambahkan setelah laporan lowongan resmi Kemenkes dinilai berisiko tinggi. Angka set uji dihitung ulang dari jawaban AI yang tersimpan (tidak berubah);
   set pengembangan dijalankan ulang dengan AI.
 - 5 penipuan masih lolos, umumnya poster yang hanya mencatut nama instansi dan mengarahkan ke tautan tanpa biaya
   atau kontak pribadi di teksnya.
@@ -125,6 +125,9 @@ Tidak perlu login.
 - Rambu adalah indikator, bukan bukti. Lowongan tanpa rambu tetap perlu dicek ke saluran resmi.
 - Set uji masih kecil; angka evaluasi belum mewakili semua jenis lowongan.
 - Belum ada pengecekan otomatis ke daftar perusahaan penempatan pekerja migran (P3MI) resmi.
+- Pencarian web otomatis (mis. Google Search lewat Gemini) tidak tersedia di paket gratis; cek sumber memakai
+  domain resmi dan pembukaan tautan, ditambah tombol untuk mencari laporan hoaks sendiri.
+- Daftar domain dan akun resmi baru mencakup sekitar 30 instansi/perusahaan besar.
 - Pembacaan gambar tanpa AI (Tesseract.js) kurang akurat untuk poster bergaya rumit.
 - Paket gratis Gemini punya batas kuota, dan Google dapat memakai konten paket gratis untuk meningkatkan produknya.
 - Di hosting gratis, pemeriksaan pertama setelah lama tidak dipakai bisa sedikit lebih lambat (cold start).

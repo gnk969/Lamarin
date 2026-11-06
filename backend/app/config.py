@@ -27,6 +27,8 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
 GEMINI_TIMEOUT = float(os.environ.get("GEMINI_TIMEOUT", "40"))
 AI_ENABLED = os.environ.get("RAMBU_AI", "on").lower() != "off"
 RATE_PER_MINUTE = int(os.environ.get("RAMBU_RATE", "20"))
+# Buka tautan di lowongan untuk melihat tujuan aslinya (redirect). Matikan dengan RAMBU_CEK_TAUTAN=off.
+LINK_CHECK = os.environ.get("RAMBU_CEK_TAUTAN", "on").lower() != "off"
 MAX_TEXT_CHARS = 6000
 MAX_IMAGE_BYTES = 4 * 1024 * 1024
 

@@ -221,6 +221,8 @@ function renderResult(r) {
     })
     .join("");
 
+  const ITEM_LABEL = { resmi: "Resmi", bahaya: "Berbahaya", waspada: "Waspada", info: "Cek sendiri" };
+  const ITEM_KIND = { tautan: "Tautan", email: "Email", nomor: "Nomor", akun: "Akun" };
   const SRC_TITLE = {
     resmi: "Sumber resmi terdeteksi",
     tidak_cocok: "Sumber tidak cocok dengan nama yang dipakai",
@@ -234,6 +236,11 @@ function renderResult(r) {
       <h3><span class="dot" aria-hidden="true"></span>Cek sumber: ${esc(SRC_TITLE[src.status] || "Sumber")}</h3>
       <p>${esc(src.pesan)}</p>
       ${src.rambu_dibatalkan?.length ? `<p class="muted">Tidak dihitung karena sumbernya resmi: ${esc(src.rambu_dibatalkan.join(", "))}.</p>` : ""}
+      ${src.item?.length ? `<ul class="items">${src.item.map((i) => `
+        <li data-status="${esc(i.status)}">
+          <span class="badge">${esc(ITEM_LABEL[i.status] || i.status)}</span>
+          <div><b>${esc(ITEM_KIND[i.jenis] || i.jenis)}:</b> <span class="val">${esc(i.nilai)}</span><br>${esc(i.alasan)}</div>
+        </li>`).join("")}</ul>` : ""}
       ${src.cek_manual?.length ? `<div class="links">${src.cek_manual.map((l) =>
         `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}
     </div>` : "";
