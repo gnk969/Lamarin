@@ -1,0 +1,493 @@
+{
+  "ringkasan": {
+    "set": "pengembangan",
+    "jumlah": 52,
+    "penipuan": 27,
+    "asli": 25,
+    "aturan": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 15,
+      "tn": 25,
+      "precision": 1.0,
+      "recall": 0.444,
+      "f1": 0.615,
+      "akurasi": 0.712
+    }
+  },
+  "per_item": [
+    {
+      "id": "scam-01",
+      "label": 1,
+      "teks": "PENDAFTARAN GURU & STAF SEKOLAH RAKYAT 2026 | Kami membuka kesempatan bagi putra-putri terbaik bangsa untuk bergabung sebagai: Guru Kelas, Guru Mata Pelajaran, Staf Administrasi, Operator Sekolah, Staf Perpustakaan, Tenaga Pendukung Sekolah",
+      "url": "https://turnbackhoax.id/articles/37376-penipuan-tautan-pendaftaran-staf-sekolah-rakyat-tahun-2026",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "scam-02",
+      "label": 1,
+      "teks": "🚨 INFO LOWONGAN KERJA JASA MARGA 2026! 🇮🇩💼\nPengen berkarier di perusahaan BUMN? 👀✨Kesempatan berkarier di bidang Teknik Sipil, Teknik Elektro, IT/Informatika, K3, hingga Administrasi bisa menjadi pilihanmu!\n💰 Kisaran gaji pada poster: Rp7–12 juta/bulan\nCatatan: nominal tersebut merupakan perkiraan dan wajib dikonfirmasi melalui pengumuman resmi.\n📌 CARA CEK & DAFTAR:\n✅ Cek informasi rekrutmen melalui kanal resmi Jasa Marga.\n✅ Jika tersedia, scan barcode pada sorotan atau postingan yang disematkan.\n✅ Cek tautan pendaftaran yang tersedia di Story.\n✅ Pastikan persyaratan dan posisi sesuai kualifikasimu.\n[…]",
+      "url": "https://www.liputan6.com/cek-fakta/read/8316308/cek-fakta-hoaks-link-pendaftaran-lowongan-kerja-jasa-marga-2026",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "scam-03",
+      "label": 1,
+      "teks": "LOWONGAN KERJA TERBARU 2026\nPT INDONESIA WEDA BAY INDUSTRIAL PARK (IWIP)\nPenempatan: Weda, Halmahera Tengah - Maluku Utara\nCARA MELAMAR:\nKirim CV & berkas lamaran melalui:\npt.iwipofficial@gmail.com\nPROSES PENDAFTARAN\nTIDAK DI PUNGUT BIAYA APAPUN…..!!!!",
+      "url": "https://turnbackhoax.id/articles/36647-penipuan-email-rekrutmen-indonesia-weda-bay-industrial-park",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "EMAIL_GRATISAN"
+      ]
+    },
+    {
+      "id": "scam-04",
+      "label": 1,
+      "teks": "PT ASTRA AGRO LESTARI\nPerusahaan perkebunan kelapa sawit terkemuka yang berkomitmen untuk pertumbuhan berkelanjutan dan membuka peluang karir bagi talenta terbaik bangsa.\nASTRA AGRO LESTARI MEMPERBARUI LOWONGAN KERJA\nPosisi Tersedia\nManagement Trainee (MT) (Penempatan Area Kebun & Pabrik)\nAdmin Estate / Pabrik\nPetugas Rantai Pasokan\nKontrol Kualitas (QC)\nAsisten Lapangan (FA)\nKUALIFIKASI UMUM\nPria/Wanita\nPendidikan minimal D3/S1 (sesuai posisi yang dilamar)\nIPK minimal 2,75\nUsia maksimal 28 tahun\nBersedia ditempatkan di seluruh wilayah kerja perusahaan\nMemiliki kemampuan komunikasi yang baik, disiplin dan bertanggung jawab",
+      "url": "https://turnbackhoax.id/articles/36333-penipuan-pendaftaran-rekrutmen-astra-agro-lestari-lewat-whatsapp",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "scam-05",
+      "label": 1,
+      "teks": "LOWONGAN KERJA KANTOR TELKOMSEL\nDibutuhkan segera untuk posisi:\n• Admin Kantor\n• Customer Service\n• Staff Operasional\nKualifikasi:\n✔ Pria/Wanita\n✔ Usia 18–45 tahun\n✔ Jujur & bertanggung jawab\n✔ Mampu bekerja dalam tim\nGaji: 4,5–8 juta/bulan\n📍 Penempatan: Domisili masing-masing\nPendaftaran langsung masuk Dm.",
+      "url": "https://turnbackhoax.id/articles/35843-penipuan-pendaftaran-lowongan-kerja-telkomsel-melalui-dm-tiktok",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "KONTAK_PRIBADI"
+      ]
+    },
+    {
+      "id": "scam-06",
+      "label": 1,
+      "teks": "LOWONGAN KERJA SiCepat Express\n📌 Posisi:\nKurir\nSortir Barang\nStaff Gudang\n💰 Gaji:\nRp3.000.000 – Rp5.000.000 / bulan\n🎓 Kualifikasi:\nPendidikan SD / SMP / SMA\nPria / Wanita\nUsia minimal 18 tahun\nSehat jasmani & rohani\nDisiplin, jujur, dan bertanggung jawab\nSiap kerja shift\n⏰ Jam Kerja:\nSistem shift (pagi / malam)\n📍 Penempatan:\nSesuai domisili / cabang terdekat\n✅ Fasilitas & Benefit:\nGaji pokok\nUang lembur\nInsentif & bonus\nBPJS (sesuai ketentuan)\n📝 Pendaftaran:\n✔️ GRATIS\n❌ Tidak dipungut biaya apapun",
+      "url": "https://turnbackhoax.id/articles/34698-penipuan-tautan-pendaftaran-lowongan-kerja-sicepat-ekspres",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "scam-07",
+      "label": 1,
+      "teks": "LOKER AUSTRALIA TERBUKA SECARA RESMI\nPekerjaan ke Australi\nlegal, Resmi\nPacking buah, packing sayuran\nBatas usia 25 dan 52 diterima\nDapat gaji 12 juta perminggu,\nDapat jatah makan 2x sehari\nVisa dan mess sudah disediakan\nTersedia dana talang sistem potong gaji 1 bulan 7 juta\nSelengkapnya klik link di bio",
+      "url": "https://turnbackhoax.id/articles/27647-penipuan-tautan-pendaftaran-loker-bidang-pertanian-di-australia",
+      "skor_aturan": 80,
+      "rambu_aturan": [
+        "MINTA_BIAYA",
+        "GAJI_TIDAK_WAJAR",
+        "LUAR_NEGERI_TANPA_IZIN"
+      ]
+    },
+    {
+      "id": "scam-08",
+      "label": 1,
+      "teks": "Info Lowongan Kerja ...\nPT Indomarco Prismatama (Indomaret) saat ini sedang membuka lowongan kerja bagi kalian semua ...\nINVENTORY CONTROL\nADMIN UMUM\nSURVEYOR\nLICENSE\nTEKNISI LISTRIK\nMEKANIK\nHELPER\nDRIVER\nKualifikasi Umum :\nPria\nPendidikan Min SMA/SMK\nFreshgraduate dipersilahkan melamar\nBelum menikah\nBertanggung Jawab\nInformasi kualifikasi selengkapnya dan cara pendaftaran dapat kalian cek di whatsapp di pokok kanan bawah",
+      "url": "https://turnbackhoax.id/articles/26348-penipuan-pendaftaran-lowongan-kerja-indomaret-lewat-wa",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "KONTAK_PRIBADI"
+      ]
+    },
+    {
+      "id": "scam-09",
+      "label": 1,
+      "teks": "Dibuka lowongan kerja guru privat online. Syarat: Pria & wanita 20+, Lulusan SMA/Sederajat, Sehat jasmani dan rohani, Gaji 4jt-6jt/bulan. Penempatan di daerah masing-masing. Gratis tidak ada biaya, daftar via telegram.",
+      "url": "https://turnbackhoax.id/articles/25394-penipuan-kemendikdasmen-buka-loker-guru-privat-online",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "KONTAK_PRIBADI"
+      ]
+    },
+    {
+      "id": "scam-10",
+      "label": 1,
+      "teks": "REKRUTMEN BERSAMA BUMN\n✨RESMI BUKA, 110 BUMN menyediakan 2000+ lowongan pekerjaan, terbuka tanpa minimal pendidikan. (Silahkan Klik Link Di Bio)\nPertimbangkan dengan seksama pilihanmu, lengkapi persyaratan terbaikmu dan asah terus kemampuanmu. Optimis kamu siap mengikuti seluruh rangkaian proses RBB.\nJaga kesehatan dan jangan lupa untuk selalu berdoa, meminta restu dari orang tua ya!",
+      "url": "https://turnbackhoax.id/articles/25159-penipuan-tautan-rekrutmen-pegawai-laut-pt-pelni-untuk-lulusan-smk",
+      "skor_aturan": 10,
+      "rambu_aturan": [
+        "SYARAT_TERLALU_MUDAH"
+      ]
+    },
+    {
+      "id": "scam-11",
+      "label": 1,
+      "teks": "PLD Kemendesa 2024/2025 buka lowongan kerja dengan gaji hingga puluhan juta berikut syarat dan pendaftarannya. Penempatan sesuai domisili anda. Pendaftaran di sini gratis yah tidak dipungut biaya.",
+      "url": "https://www.tempo.co/cekfakta/keliru-klaim-lowongan-pendamping-lokal-desa-bergaji-puluhan-juta-di-situs-tidak-resmi-1183282",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "GAJI_TIDAK_WAJAR"
+      ]
+    },
+    {
+      "id": "scam-12",
+      "label": 1,
+      "teks": "Info Detail Silahkan Kunjungi Link Berikut Ini: https://lowongankerjadikantorkeretacepat[dot]jesdr[dot]com/\nPendaftaran Gratis Tidak Dipungut Biaya!!!\n[…]\nLowongan kerja di Kantor Kereta Cepat Jakarta Bandung Tersedia berbagai posisi, Gaji Rp.6.000.000 Rp.25.000.000",
+      "url": "https://www.kompas.com/cekfakta/read/2024/11/21/120200782/-hoaks-link-rekrutmen-whoosh-gaji-rp-5-juta-rp-25-juta",
+      "skor_aturan": 45,
+      "rambu_aturan": [
+        "TAUTAN_MENCURIGAKAN",
+        "GAJI_TIDAK_WAJAR"
+      ]
+    },
+    {
+      "id": "scam-13",
+      "label": 1,
+      "teks": "Penerimaan di buka PT PETRONESIA BENIMEL Penempatan\nSesuai Domisili/Daerah anda\nPria dan Wanita\n17 – 55 th\nGaji perbulan Rp 4 juta – Rp 9 juta/SMP SMA.SMK.Sederajat\nHelper,operator,driver\nTIDAK ADA PENGALAMAN KERJA TIDAK MASALAH NANTI ADA BIMBINGAN YANG AKAN DI BERIKAN\nFasilitas:Kendaraan,Seragam,Kartap,Makan,Bpjs\nPendaftaran Disini Gratis Yah Tidak Dipungut biaya👇👇\nhttps://bitly[dot]cx/CyqK",
+      "url": "https://turnbackhoax.id/articles/23566-penipuan-loker-helper-operator-dan-driver-di-pt-petronesia-benimel",
+      "skor_aturan": 40,
+      "rambu_aturan": [
+        "TAUTAN_MENCURIGAKAN",
+        "SYARAT_TERLALU_MUDAH"
+      ]
+    },
+    {
+      "id": "scam-14",
+      "label": 1,
+      "teks": "PT Pertamina ( Persero ) melalui program rekrutmennya saat ini membuka lowongan kerja terbaru untuk mencari calon – calon tenaga kerja yang siap diterjunkan ke setiap lini atau divisi kerja dalam perusahaan yang sedang membutuhkannya saat ini.\nPersyaratan Umum :\n• Warga Negara Indonesia\n• Pria Wanita\n• Lulusan SMP-SMA-SEDERAJAT D3 S1 S2\n• Sehat Jasmani Rohani\n• Bisa bekerja dengan TIMKELOMPOK\nFasilitas :\n• Gaji Pokok Rp. 7.500.000,-bulan (tergantung posisi)\n• Lembur Sesuai depnaker\n• Uang Makan & Transportasi.\n• Jamsostek Asuransi Kesehatan\n[…]\nCara Pendaftaran:\nhttps://lowongankerjaindonesiav2[dot]my[dot]id/pertaminav6/joinnow/",
+      "url": "https://www.kompas.com/cekfakta/read/2024/09/12/142800382/hoaks-lowongan-kerja-pertamina-pada-awal-september-2024",
+      "skor_aturan": 30,
+      "rambu_aturan": [
+        "TAUTAN_MENCURIGAKAN"
+      ]
+    },
+    {
+      "id": "scam-15",
+      "label": 1,
+      "teks": "SPS GROUP\nGrowing Together\nNEED CREW:\nVESSEL CARGO FU YUN GT 1000\nLINE TAIWAN (KINMEN – TAIPEI)\n2ND ENGINER 2000 USD\n2 AB SALARY 800 USD\n3 OILMAN SALARY 800 USD\nPERSYARATAN\nCONTRACT 1TAHUN\nEXPERIENCE MINIMUM 1YEAR\nDOCUMENT VALID\nGOOD ENGLISH\nJOINT AGUSTUS 2024\nOFFICE : PT Samudera Perdana Selaras, Jalan Madukoro Raya, Ruko Semarang Indah…\nSEND CV WHATSAPP “ 0881390xxxx (TEGUH NANANG)",
+      "url": "https://turnbackhoax.id/articles/21889-penipuan-poster-lowongan-kerja-di-pt-samudera-perdana-selaras",
+      "skor_aturan": 30,
+      "rambu_aturan": [
+        "KONTAK_PRIBADI",
+        "LUAR_NEGERI_TANPA_IZIN"
+      ]
+    },
+    {
+      "id": "scam-16",
+      "label": 1,
+      "teks": "Halo kak, Perkenalkan Saya dari MARKETING MAGA. Saat ini kami sedang membutuhkan banyak freelance untuk mengerjakan tugas LIKE dan SUBSCRIBE channel Youtube, Tujuannya untuk meningkatkan popularitas konten Youtube client kami Tersebut. Bisakah saya meminta waktunya sebentar untuk menjelaskan pekerjaan sampingan",
+      "url": "https://turnbackhoax.id/articles/20894-penipuan-lowongan-freelance-like-dan-subscribe-youtube",
+      "skor_aturan": 50,
+      "rambu_aturan": [
+        "DEPOSIT_TUGAS"
+      ]
+    },
+    {
+      "id": "scam-17",
+      "label": 1,
+      "teks": "Hallo!\nSaya adalah agen TikTok, dan saat ini kami sedang mencari mitra untuk bergabung dengan tim kami. Berdasarkan data konten dan komentar Anda, kami yakin Anda sangat cocok untuk bergabung dengan agensi TikTok kami.\nCukup ikuti petunjuk untuk membuat toko TikTok Anda di platform kami. Tanpa perlu pengalaman, Anda akan mendapatkan bimbingan satu per satu dari tutor kami. Kami menjamin pendapatan stabil minimal 300.000 IDR per hari. Jika Anda berminat (usia 24+), silakan hubungi tutor kami melalui WhatsApp dan lampirkan tangkapan layar undangan ini. WhatsApp:\nhttps://watiktok[dot]com/id1",
+      "url": "https://turnbackhoax.id/articles/20816-penipuan-pesan-penawaran-pekerjaan-menjadi-mitra-yang-mengatasnamakan-tiktok",
+      "skor_aturan": 40,
+      "rambu_aturan": [
+        "KONTAK_PRIBADI",
+        "GAJI_TIDAK_WAJAR",
+        "SYARAT_TERLALU_MUDAH"
+      ]
+    },
+    {
+      "id": "scam-18",
+      "label": 1,
+      "teks": "Nomor: 259/HRD/BUMN/PT.PERTAMINA/V/2024\nSehubungan Dengan Recruitment Karyawan BUMN PT. Pertamina (Persero) Tahun 2024 Untuk Wilayah Penempatan Kerja Sesuai Domisili Calon Karyawan PT. Pertamina (Persero) Di Seluruh Indonesia. Maka Kami Beritahukan Bahwa Dengan Ini Saudara/Sandari Di Nyatakan Lulus Seleksi Dan Wajib Mengikuti Seleksi Tes Selanjutnya Sampai Tahap Akhir Sesuai Dengan jadwal Berikut:\nMengingat Pentingnya Tahap Tersebut Di Atas Maka Peserta Tidak Boleh Di Wakili Dan\nJadwal Yang Kami Tentukan, Maka Peserta Yang Bersangkutan Secara Otomatis Kami An\nTahap Tersebut Untuk Menentukan Ke Lulusan. Demikian Undangan Ini Di Sampaikan Atas",
+      "url": "https://turnbackhoax.id/articles/20409-penipuan-surat-panggilan-tes-calon-karyawan-pertamina-mei-2024",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "scam-19",
+      "label": 1,
+      "teks": "Assalamualaikum, perkenalkan nama saya Cindy, saya menghubungi Anda dengan tujuan untuk menawarkan pekerjaan online. Saya mendapatkan nomor Anda dari database Jobstreet dan mungkin Anda sudah pernah melamar di sana. Bolehkah izinkan saya mula dengan menjelaskan pekerjaan ini secara singkat?",
+      "url": "https://turnbackhoax.id/articles/17512-salah-lowongan-pekerjaan-online",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "scam-20",
+      "label": 1,
+      "teks": "Dibutuhkan Segera Karyawan Laki-laki & Wanita untuk Staf Kasir Dan Penjaga Tiket. PENETAPAN KERJA: Pelindo Regional 1 Tanjung Balai Karimun\nAlamat: Jl. Teluk Air\nPERSYARATAN:\nUmur 17-25 Tahun\nMin Lulusan SMP/SMA\nDi Butuhkan Segera..\nInfo detail bisa Menghubungi Kontak ADM Whatsapp: 08950980xxxx (Ibuk Venya)",
+      "url": "https://turnbackhoax.id/articles/17217-salah-informasi-rekrutmen-karyawan-pelindo-regional-i-tanjung-balai-karimun",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "KONTAK_PRIBADI"
+      ]
+    },
+    {
+      "id": "scam-21",
+      "label": 1,
+      "teks": "KepadaYth :\nPara Calon Karyawan PT FREEPORT INDONESIA\nDi – Tempat\nSehubungan dengan recruitment karyawan PT. FREEPORT INDONESIA 2023 untuk wilayah penempatan kerja sesuai domisili calon karyawan PT FREEPORT INDONESIA di seluruh Indonesia. Maka kami beritahukan bahwa dengan ini saudara dinyatakan Lulus seleksi dan wajib mengikuti tes selanjutnya sampai tahap akhir sesuai dengan jadwal berikut:",
+      "url": "https://turnbackhoax.id/articles/15107-salah-surat-keterangan-lolos-tahapan-seleksi-pt-freeport-indonesia",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "scam-22",
+      "label": 1,
+      "teks": "Berdasarkan hasil evaluasi Recruitment mengenai berkas lamaran anda yang sudah kami terima via Online sudah dinyatakan lulus kualifikasi, Silahkan hadir diwaktu yang sudah ditentukan.\n[…]\nPosisi: Operator Produksi – Quality Control\nPerihal: MCU & Tes Fisik\n[…]\nKetentuan:\nUntuk mengikuti proses tersebut dikenakan biaya registrasi untuk mengambil no peserta MCU yang akan dilaksanakan pada hari yang sudah ditentukan.\nPembayaran registrasi peserta MCU Rp. 85.000.\nUntuk pembayaran melalui E-wallet (DANA) 0878-1634-xxxx\nJika sudah melakukan pembayaran wajib konfirmasi nama pengirim, nama peserta, dan bukti transfer di bkkjakartasolution@gmail.com.\nBatas pembayaran peserta 21.00",
+      "url": "https://turnbackhoax.id/articles/14789-salah-email-undangan-seleksi-kerja-pt-kao-indonesia",
+      "skor_aturan": 90,
+      "rambu_aturan": [
+        "MINTA_BIAYA",
+        "KONTAK_PRIBADI",
+        "EMAIL_GRATISAN",
+        "DESAKAN_WAKTU"
+      ]
+    },
+    {
+      "id": "scam-23",
+      "label": 1,
+      "teks": "INFO LOWONGAN KERJA\nPUSKESMAS KERSANA\nDi Butuhkan :\nStaff Kantor\nStaff Laboratorium\nOB\nKualifikasi :\nPerempuan/lk2\nBisa Komputer\nMin. lulusan SMA/K\nStaff Lab min Farmasi\nJujur,Disiplin,Tekun\nAlamat :\nJl …, Ciampel Wetan, …, Kec. Kersana, Kabupaten Brebes, Jawa Tengah\nHub 08222983xxxx",
+      "url": "https://turnbackhoax.id/articles/14203-salah-lowongan-kerja-di-puskesmas-kersana-kabupaten-brebes",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "KONTAK_PRIBADI"
+      ]
+    },
+    {
+      "id": "scam-24",
+      "label": 1,
+      "teks": "Terkait cek fisik tersebut, memang biasanya dilakukan on site atau secara langsung ya. Namun dikarenakan untuk proses seleksi cek kesehatan awal untuk periode rekrutmen periode 13-14 September sudah dilakukan, maka untuk para kandidat cadangan dilakukan cek kesehatan awal secara online.\n[…]\nBerikutnya, guna pengecekan fisik lebih lanjut (pengecekan lipatan / bentuk tubuh) yang nantinya akan berkaitan dengan pengukuran seragam, silahkan kirimkan foto dengan hanya mengenakan pakaian dalam bra dan underwear, untuk ketentuan sbb :\n1. Foto menghadap kamera tampak depan dengan posisi berdiri full body.\n2. Foto tampak samping dengan posisi berdiri full body.\n[…]",
+      "url": "https://turnbackhoax.id/articles/14167-salah-tes-fisik-online-rekrutmen-karyawan-pt-kai",
+      "skor_aturan": 30,
+      "rambu_aturan": [
+        "MINTA_DATA_SENSITIF"
+      ]
+    },
+    {
+      "id": "scam-25",
+      "label": 1,
+      "teks": "Kalbe saat ini sedang merekrut tim paruh waktu online di Indonesia, selama Anda memiliki ponsel, Anda dapat menghasilkan setidaknya Rp 118.000-Rp 300.000 sehari. Saat ini, Anda hanya perlu menyelesaikan tugas untuk mendapatkan Rp30.000 dan menyetor Rp70.000 untuk menjadi anggota. Dan dapatkan pekerjaan yang stabil dan dapatkan keuntungan jangka Panjang [Anda dapat menarik penghasilan saat menjadi anggota]",
+      "url": "https://turnbackhoax.id/articles/13647-salah-lowongan-kerja-paruh-waktu-di-kalbe",
+      "skor_aturan": 100,
+      "rambu_aturan": [
+        "MINTA_BIAYA",
+        "DEPOSIT_TUGAS"
+      ]
+    },
+    {
+      "id": "scam-26",
+      "label": 1,
+      "teks": "Hello kak, Apa anda berminat bergabung dengan kami di platform kerja tanpa modal dan dapat gaji setiap hari. Apakah anda mencoba nya kak ?\nKerjaan utama kita itu membantu merchant untuk meningkatkan popularitas bisnis, Jadi peran kakak disini hanya Follow dan Like blogger kami yang ada di instagram, setelah kakak selesai, kakak akan langsung di bayar.",
+      "url": "https://turnbackhoax.id/articles/12741-salah-pesan-whatsapp-penawaran-loker-freelance-diberi-misi-dan-reward",
+      "skor_aturan": 60,
+      "rambu_aturan": [
+        "DEPOSIT_TUGAS",
+        "SYARAT_TERLALU_MUDAH"
+      ]
+    },
+    {
+      "id": "scam-27",
+      "label": 1,
+      "teks": "Untuk Reservasinya paket sudah termasuk:\n– Tiket PP (pulang pergi)\n– Hotel\n– Penjemputan\n– Konsumsi\n– Pakaian\n– Rapid test\nMohon selesaikan pembayaran melalui transfer (Atm/Internet Banking/M-Banking) Transfer ke:\nBANK JAGO A/N. [nama disamarkan]\nNO REK: 1003-5450-xxxx\nTotal : Rp 3.920.887\nKonfirmasikan transfer (informasi, Nama pengirim/Jumlah pembayara/Bank pengirim/Bank tujuan/Bukti transfer.kirim via whatsapp ke nomor ini.\nBatas waktu pembayaran 45 menit.\n[…]\nSalam hormat\nTim Rekrutmen PLN",
+      "url": "https://turnbackhoax.id/articles/10803-salah-lowongan-kerja-oleh-pln-wilayah-denpasar-oktober-2022",
+      "skor_aturan": 25,
+      "rambu_aturan": [
+        "KONTAK_PRIBADI",
+        "DESAKAN_WAKTU"
+      ]
+    },
+    {
+      "id": "asli-01",
+      "label": 0,
+      "teks": "Grand Seminyak Lifestyle Boutique Bali Resort, Kuta, Indonesia [...] REF124915W People & Culture Officer [...] The People & Culture Officer is responsible for executing day-to-day HR operations while actively nurturing a positive, inclusive, and high-performing workplace culture. [...] - Assist with attendance, leave, payroll, and BPJS administration. [...] - Diploma or Bachelor's Degree in Human Resources Management or a related field, with a minimum of 1 year of experience in a similar position, preferably in the hospitality industry. [...] When applying, do not hesitate to let us know of any specific needs you may have so that we can take them into consideration.",
+      "url": "https://careers.accor.com/global/en/job/people-and-culture-officer-in-grand-seminyak-lifestyle-boutique-bali-resort-kuta-jid-116166",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-02",
+      "label": 0,
+      "teks": "Mövenpick Resort & Spa Jimbaran Bali, Kuta Selatan, Indonesia REF125106H Spa Therapist - DAILY WORKER [...] •Perform massage while maintaining the client's comfort at all times [...] •Minimum 1 year of experience as a Spa Therapist, preferably in a hotel or resort environment. •Knowledge of body massage, facial, and beauty treatments. [...] •Flexible to work on weekends and shifts as required. [...] •Employee benefit card offering discounted rates at Accor hotels worldwide.",
+      "url": "https://careers.accor.com/global/en/job/spa-therapist-daily-worker-in-moevenpick-resort-and-spa-jimbaran-bali-kuta-selat-jid-116327",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-03",
+      "label": 0,
+      "teks": "Raffles Bali, Kuta Selatan, Indonesia REF125315B Social & Event Sales Manager [...] To drive social event, wedding and group celebration revenue for Raffles Bali through proactive sales activities, business development, client relationship management and seamless conversion of enquiries into confirmed events while ensuring exceptional guest experiences aligned with luxury brand standards. [...] Minimum 3 (three) years experience in wedding sales, event sales or luxury hospitality sales. Diploma or Bachelor degree in Hospitality Management or similar.",
+      "url": "https://careers.accor.com/global/en/job/social-and-event-sales-manager-in-raffles-bali-kuta-selatan-indonesia-jid-116577",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-04",
+      "label": 0,
+      "teks": "Waiter/Waitress (Daily Worker) [...] Mercure Bali Legian is a vibrant 4-star international hotel located in the heart of Legian, Bali, just steps away from the beach, shopping, and entertainment areas. [...] Responsible for providing excellent guest service by taking and serving food and beverage orders, ensuring accuracy and timely service, maintaining cleanliness and organization of the dining area [...] Qualifications Having experience at the same field. Fluent in English (and national language) others language a plus. Guest oriented and service minded",
+      "url": "https://careers.accor.com/global/en/job/waiter-waitress-daily-worker-in-mercure-bali-legian-indonesia-jid-107874",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-05",
+      "label": 0,
+      "teks": "Event Executive The Westin Resort Nusa Dua Bali Apply Now POSITION SUMMARY Meet group coordinator/host(ess) prior to functions, make introductions, and ensure that all arrangements are agreeable. Read and analyze banquet event order in order to gather guest information, determine proper set up, timeline, specific guest needs, buffets, action stations, etc. [...] PREFERRED QUALIFICATIONS Education: High school diploma or G.E.D. equivalent. Related Work Experience: At least 1 year of related work experience. [...] Beware of recruiting scams. Marriott maintains a ‘no fees’ recruitment policy. We do not ask for money or charge fees to an applicant as part of the application process.",
+      "url": "https://careers.marriott.com/event-executive/job/P1-7340969-0",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-06",
+      "label": 0,
+      "teks": "Reservation Agent KARV a Luxury Collection Resort & Spa Jimbaran Bali [...] The resort is estimated to open in Q1 2027. POSITION SUMMARY Process all reservation requests, changes, and cancellations received by phone, fax, or mail. [...] PREFERRED QUALIFICATIONS Diploma or Bachelor's degree in Hospitality Management, Tourism, Business Administration, or related field. Minimum 1-2 years of experience in Reservations, Front Office, Guest Services, or Customer Contact Center within a luxury hotel, resort, or international hospitality brand. [...] Job ID 26136816",
+      "url": "https://careers.marriott.com/reservation-agent/job/P1-7441818-0",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-07",
+      "label": 0,
+      "teks": "Butler Mandarin Speaker - Bvlgari Resort Bali Bvlgari Resort Bali Apply Now POSITION SUMMARY Process all guest check-ins, verifying guest identity, form of payment, assigning room, and activating/issuing room key. [...] PREFERRED QUALIFICATIONS Education: High school diploma or G.E.D. equivalent. Related Work Experience: At least 1 year of related work experience. Supervisory Experience: At least 1 year of supervisory experience. [...] Job ID 26144542 [...] Beware of recruiting scams. Marriott maintains a ‘no fees’ recruitment policy.",
+      "url": "https://careers.marriott.com/butler-mandarin-speaker-bvlgari-resort-bali/job/P1-7623941-0",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-08",
+      "label": 0,
+      "teks": "Mandapa, a Ritz-Carlton Reserve - University Intern - Human Resources Mandapa a Ritz-Carlton Reserve Apply Now Build upon your classroom studies through our Hotel Internship Program opportunities. You will learn first-hand about a hotel's operations. [...] To be considered for an internship, you must be a current college or university student. Want to join us? Apply now! [...] Job ID 26140401 Career area Management Development Programs/Interns [...] Beware of recruiting scams. Marriott maintains a ‘no fees’ recruitment policy. We do not ask for money or charge fees to an applicant as part of the application process.",
+      "url": "https://careers.marriott.com/mandapa-a-ritz-carlton-reserve-university-intern-human-resources/job/P1-7472683-0",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-09",
+      "label": 0,
+      "teks": "Hilton Bali Resort - Housekeeping Supervisor Bali, Indonesia (On-site) Apply Now Job Info JOB IDENTIFICATION 229010 JOB CATEGORY Housekeeping and Laundry POSTING DATE 10/27/2026, 02:22 PM [...] In addition, this role requires the following minimum qualifications: Minimum of 1 year of experience in the Housekeeping department [...] Available to work shifts, including weekends and holidays. Basic proficiency in English; additional languages are a plus. Knowledge of cleaning chemicals and safety procedures.",
+      "url": "https://efet.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1009/job/229010",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-10",
+      "label": 0,
+      "teks": "Liu Li Palace - Hot Pot Chef de Partie | AYANA BALI [...] Join our team and be part of the continued success of Bali’s Largest Integrated Resort. [...] Responsibilities Oversee and manage the preparation of all hot pot ingredients [...] Requirements Only for Indonesian Citizen Minimum 3 years’ experience in a similar role within a high-end restaurant, with a focus on Chinese cuisine and hot pot [...] Good communication skills in English. Knowledge of Mandarin or other Chinese dialects is a plus Diploma degree in Culinary or certified equivalent professional training in a related major. Bachelor’s Degree is desirable Apply for this job",
+      "url": "https://apply.workable.com/ayana/j/C7CAE22C56/",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-11",
+      "label": 0,
+      "teks": "ADDITIONAL OPPORTUNITIES In addition to our posted jobs, Disney Cruise Line works directly with a select list of approved Procurement Allies as hiring agencies around the world who are authorized to recruit for a variety of positions. In Indonesia, we recruit for certain roles in Hotel Operations, Entertainment Operations, Marine and Technical Operations, Human Resources and Medical. FOR ALL OPPORTUNITIES Please contact PT RATU OCEANIA RAYA: Address: Jl Pondok Indah No 18X Denpasar Bali, Indonesia 80118 [...] Email: disney-bali@ratuoceaniaraya.com",
+      "url": "https://www.disneycareers.com/en/disney-cruise-line-shipboard-indonesia",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-12",
+      "label": 0,
+      "teks": "Jr Waiter - PTAMI By applying to this position, your application will be submitted to PT Alpha Magsaysay, one of Princess Cruises official Hiring Partners based Indonesia. A recruiter from PT Alpha Magsaysay will contact you soon if your qualifications align with our requirements for this position. [...] Skills, Knowledge & Expertise Graduate of a recognized Catering / Hotel Management School preferred Minimum of 2 years of restaurant service experience from four-star hotel or cruise ship [...] Command of the English language, both verbal and written [...] · Company-paid travel to and from the ship, so you can focus on the journey ahead.",
+      "url": "https://princesscruises.pinpointhq.com/en/postings/832135a1-cf35-409f-8533-8312d5fde675",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "LUAR_NEGERI_TANPA_IZIN"
+      ]
+    },
+    {
+      "id": "asli-13",
+      "label": 0,
+      "teks": "HAL - General Galley Steward - SBI Operates, maintains and cleans equipment, china, glassware, and other galley items as well as dishwashing areas. Assists with transporting food, provision, china, and other supplies as needed. Department Stewarding Workplace type Onsite Reporting To Chief Steward [...] Desired Skills & Experience 1+ years’ experience in a 5 star+ hotel, cruise ship or high-profile restaurant performing the functions of a similar position. [...] Ability to effectively read, write and speak English. [...] Stage 1: Application Stage 2: Talent Partner Review Stage 3: Talent Partner Interview Stage 4: Conditional Offer",
+      "url": "https://hollandamericagroup.pinpointhq.com/en/postings/bf070758-aafc-4e72-b2d8-7c8be07d95e8",
+      "skor_aturan": 15,
+      "rambu_aturan": [
+        "LUAR_NEGERI_TANPA_IZIN"
+      ]
+    },
+    {
+      "id": "asli-14",
+      "label": 0,
+      "teks": "No recruitment fee, no agencies fee, and no deployment fee [...] RESTAURANT ATTENDANT Hotel F&B Services Royal Caribbean International Perform all responsibilities in line with Royal Caribbean International's standards [...] Min 2-3 years experience in the same position, preferably work at4-5 star hotel, large scale resort, fine dining restaurant or shipboard experience Candidates must be at least 21 years old Excellent English communication skill Apply Form [...] PT EBU is one of the top crewing agencies in Indonesia and has been the official hiring partner for the Royal Caribbean Group since 2019.",
+      "url": "https://cruise.jobs.equinoxshipping.co.id/",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-15",
+      "label": 0,
+      "teks": "Engineering - Bali Kab. Badung, Bali Diposting sekitar 6 jam yang lalu•Jumlah lowongan: 1 Batas waktu lamaran 29 Nov 2026 Lamar Sekarang [...] Kualifikasi: Pendidikan minimal SMK/D3 jurusan Teknik Elektro, Teknik Mesin, Teknik Bangunan, atau bidang terkait. Memiliki pengalaman di bidang engineering atau maintenance, diutamakan di industri perhotelan. Memahami perawatan dan perbaikan instalasi listrik, AC, plumbing, serta peralatan gedung. [...] Bersedia bekerja dengan sistem shift dan menangani perbaikan sesuai kebutuhan operasional. Diutamakan dapat bergabung secepatnya. [...] Nuho Living Hospitality, Travel & Tourism Lihat Profil Perusahaan Lowongan dari Glints TapLoker",
+      "url": "https://karirhub.kemnaker.go.id/lowongan-dalam-negeri/lowongan/engineering---bali-01a1ace5-b49b-732e-9de8-4f65548d8819",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-16",
+      "label": 0,
+      "teks": "Perawat (Bali) Kota Denpasar, Bali Diposting 27 hari yang lalu•Jumlah lowongan: 1 Batas waktu lamaran 09 Nov 2026 [...] Deskripsi Pekerjaan - Asistensi terhadap kebutuhan Dokter dalam dalam memberikan pelayanan dan perawatan terhadap pasien - Memastikan kegiatan operasional klinik berjalan dengan lancar [...] Persyaratan Khusus - Wanita usia maksimal 28 tahun - Telah menyelesaikan pendidikan D3 / Profesi Keperawatan - Berpengalaman minimal 1 tahun dan terbuka untuk fresh graduate - Memiliki Surat Tanda Registrasi (STR) [...] Arya Noble Group (ERHA Clinic Indonesia) Beauty & Wellness Lihat Profil Perusahaan Lowongan dari REDY Indonesia",
+      "url": "https://karirhub.kemnaker.go.id/lowongan-dalam-negeri/lowongan/perawat-bali-01a12209-92d7-7349-b0a5-88e8327476a7",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-17",
+      "label": 0,
+      "teks": "Waiter/Waitress ANDHIKA PUTRA MANDIRI PONOROGO [...] Deskripsi Pekerjaan a. serving dish to customer b. receive order from customer c. kitchen preparation Kualifikasi Berlaku : 18 February 2025 s.d. 06 January 2027 Lowongan Tersisa : Laki-laki/Wanita : 4 Orang Usia : 20 Tahun s.d. 35 Tahun Pengalaman : Tidak Ada Pengalaman Bahasa : Japanese Level : - [...] Gaji : 147968 - 220000 Yen (JPY) Bulanan Pendidikan : SMA SEDERAJAT Minimal No SIP B. 819/SIP2MI/II/2025",
+      "url": "https://siskop2mi.bp2mi.go.id/lowongan/detail/444170",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-18",
+      "label": 0,
+      "teks": "REKRUTMEN MITRA STATISTIK TAHUN 2026 TAMBAHAN [...] May 8, 2026 | BPS Activities [...] BPS Kabupaten Sukoharjo membuka pendaftaran Calon Mitra Statistik Tambahan Tahun 2026. Bagi Sahabat Data yang berminat, segera daftarkan diri Anda dan pastikan Anda telah memenuhi syarat yang dtentukan. [...] Informasi resmi mengenai rekrutmen hanya kami bagikan melalui media sosial dan website resmi BPS Kabupaten Sukoharjo. Rekrutmen ini tidak dipungut biaya apapun.☺️ Link yang terkait: Sobat BPS : https://mitra.bps.go.id/ Input data : https://s.bps.go.id/seleksi3311-2026tambahan",
+      "url": "https://sukoharjokab.bps.go.id/en/news/2026/05/08/579/rekrutmen-mitra-statistik-tahun-2026-tambahan.html",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-19",
+      "label": 0,
+      "teks": "PATT Staf Kedeputian Wilayah dan Kantor Cabang Job Description Pegawai Administrasi Tidak Tetap (PATT) adalah Pegawai Tidak Tetap yang direkrut untuk mendukung pelaksanaan fungsi organisasi BPJS Kesehatan sesuai dengan kebutuhan unit kerja. [...] KEDEPUTIAN WILAYAH XI Kantor Cabang Denpasar [...] KUALIFIKASI UMUM Bersedia bekerja secara penuh waktu (Full time) dengan status Kontrak Pendidikan minimal D3 dan diutamakan berlatar belakang pendidikan di bidang kesehatan IPK minimal 3.00 dari skala 4.00 [...] Belum berusia 26 tahun pada 31 Desember 2026 Belum menikah [...] Dokumen lamaran harap di-scan dalam bentuk PDF yang disimpan dalam cloud (google drive/dropbox/onedrive dsb)",
+      "url": "https://jobs.talentics.id/bpjs-kesehatan-9757/patt-staf-kedeputian-wilayah-dan-kantor-cabang-copy-1",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-20",
+      "label": 0,
+      "teks": "BBAP Mantri Muda – BRI Region 10 Semarang BRI Regional Office Semarang Oct 2026, 04 Posisi : Mantri (Marketing Mikro Banking) Lokasi : Semarang Lamar Sebelum : Dec 2026, 31 [...] Pendidikan Minimal SMA/SMK dengan pengalaman kerja, atau lulusan D1/D2/D3/D4/S1 [...] Tidak memiliki catatan negatif (SLIK OJK lancar, tidak terlibat judol, termasuk catatan perilaku negatif) [...] WASPADA PENIPUAN! Pengumuman ini adalah satu-satunya pengumuman yang SAH dan RESMI dari BRI. Dalam perekrutan Pekerja, Bank BRI TIDAK pernah memungut biaya apapun dan TIDAK bekerja sama dengan Lembaga/Institusi lain termasuk travel agent manapun.",
+      "url": "https://e-recruitment.bri.co.id/jobs/view/ZBPAQe6vPpD7Kwbz",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-21",
+      "label": 0,
+      "teks": "Internship For students in their final semesters. Six months on site with an operating team, learning the work by doing it rather than watching it. [...] Commercial Strategy & Policy Intern Internship Kota Jakarta Pusat - DKI Jakarta · InJourney Apply Now Job description Commercial Strategy & Policy Intern berperan dalam mendukung tim Commercial Strategy & Policy InJourney dalam melakukan analisis bisnis, pengembangan strategi komersial, penyusunan kebijakan, serta monitoring dan pelaporan implementasi program strategis perusahaan (group wide).",
+      "url": "https://career.injourney.id/explore-opportunities",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-22",
+      "label": 0,
+      "teks": "Waspada Penipuan! PT PELNI (Persero) tidak pernah memungut biaya apapun dan/atau bekerja sama dengan travel agent manapun dalam proses perekrutan pekerja. Pengumuman kelulusan/ketidaklulusan dan undangan proses rekrutmen hanya melalui email resmi Rekrutmen PELNI (recruitment@pelni.co.id). Website resmi rekrutmen PELNI adalah karir.pelni.co.id. [...] Karir Pelaut [...] Pelaut adalah orang yang bekerja di atas kapal, memiliki tugas dan tanggung jawab tertentu, serta harus patuh pada perintah Nakhoda kapal. [...] PT PELNI (Persero) mengoperasikan berbagai jenis kapal, jika Anda merminat bergabung bersama kami menjadi bagian dari Insan Pelni, klik disini Drop CV Karir Pelaut",
+      "url": "https://karir.pelni.co.id/",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-23",
+      "label": 0,
+      "teks": "Helper Branch Bali Bali, Bali 12 Januari 2026 Warehouse Persyaratan Wajib : Senior/Vocational High School Semua Jurusan Syarat Tambahan : Usia Minimal 18 tahun. Lulusan SMK/SMA Sederajat. Tanggung Jawab Pekerjaan Membantu dalam melakukan pengangkatan dan pemindahan barang, penataan barang di rak gudang, dan penyiapan barang yang akan dikirim ke toko-toko, agar dapat berlangsung secara efektif dan efisien sesuai prosedur. Gambaran Pekerjaan Tingkat Pekerjaan : Clerk Tipe Pekerjaan : Full Time [...] PERHATIAN. Alfamart tidak memungut biaya apapun selama proses pendaftaran dan proses seleksi berlangsung.",
+      "url": "https://alfakarir.alfamart.co.id/vacancy-detail/branch-bali/lowongan-helper/akVHMm9idThDbE9Zd3JDMTExUUJFZz09",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-24",
+      "label": 0,
+      "teks": "Crew Store Penempatan Bali Branch Bali Bali, Bali 06 September 2024 Crew Outlet Persyaratan Wajib : Senior/Vocational High School Semua Jurusan [...] Tanggung Jawab Pekerjaan Melaksanakan pemajangan (display) barang, persiapan retur, menawarkan program promosi, pengecekan keadaan produk, pencegahan adanya kehilangan, melaksanakan kebersihan area toko, serta memberikan pelayanan terbaik kepada pengunjung toko. Gambaran Pekerjaan Tingkat Pekerjaan : Clerk Tipe Pekerjaan : Full Time [...] Lamar Sekarang",
+      "url": "https://alfakarir.alfamart.co.id/vacancy-detail/branch-bali/lowongan-crew-store-penempatan-bali/QkVHbExSVzFtbno3VTM3ZjJuTlhoUT09",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    },
+    {
+      "id": "asli-25",
+      "label": 0,
+      "teks": "Posted: 13-Oct-2025 Until 30-Nov-2026 ACCOUNT EXECUTIVE STAFF PT Tiki Jalur Nugraha Ekakurir Surabaya, Jawa Timur, Indonesia • Full Time [...] 1. Bertanggung jawab mencari pelanggan baru 2. Membina hubungan baik dengan seluruh pelanggan corporate [...] Minimum Qualification Pendidikan Minimal D3 semua disiplin Ilmu Memahami Desain marketing Berpenampilan rapi dan menarik Memiliki kemampuan komunikasi yang baik, disiplin, tanggung jawab dan jujur [...] Memahami di bidang eskpedisi menjadi nilai tambah",
+      "url": "https://recruitment.jne.co.id/jobs?jobId=M2tJOW1rWW0xVEZ0Tmt4RHhXcHRqQT09",
+      "skor_aturan": 0,
+      "rambu_aturan": []
+    }
+  ]
+}

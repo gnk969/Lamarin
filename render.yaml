@@ -1,0 +1,16 @@
+# Konfigurasi deploy gratis di Render (https://render.com). Kunci API diisi di dashboard Render,
+# bukan di file ini.
+services:
+  - type: web
+    name: lamarin
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: PYTHON_VERSION
+        value: 3.12.7

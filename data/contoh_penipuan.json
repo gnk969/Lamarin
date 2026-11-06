@@ -1,0 +1,442 @@
+[
+ {
+  "id": "scam-01",
+  "judul_artikel": "[PENIPUAN] Tautan Pendaftaran Staf Sekolah Rakyat Tahun 2026",
+  "url": "https://turnbackhoax.id/articles/37376-penipuan-tautan-pendaftaran-staf-sekolah-rakyat-tahun-2026",
+  "tanggal_artikel": "2026-11-05",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_instansi"
+  ],
+  "teks_lowongan": "PENDAFTARAN GURU & STAF SEKOLAH RAKYAT 2026 | Kami membuka kesempatan bagi putra-putri terbaik bangsa untuk bergabung sebagai: Guru Kelas, Guru Mata Pelajaran, Staf Administrasi, Operator Sekolah, Staf Perpustakaan, Tenaga Pendukung Sekolah",
+  "saluran": "Facebook (foto + tautan)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan ke subdomain workers.dev yang tidak resmi berisi formulir yang meminta nama, alamat, dan nomor Telegram. Hive Moderation menilai fotonya hasil rekayasa AI dengan probabilitas 99,9%. Pendaftaran resmi staf Sekolah Rakyat hanya lewat sscasn.bkn.go.id.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-02",
+  "judul_artikel": "Cek Fakta: Hoaks Link Pendaftaran Lowongan Kerja Jasa Marga 2026",
+  "url": "https://www.liputan6.com/cek-fakta/read/8316308/cek-fakta-hoaks-link-pendaftaran-lowongan-kerja-jasa-marga-2026",
+  "tanggal_artikel": "2026-10-19",
+  "pemeriksa": "Liputan6.com Cek Fakta",
+  "modus": [
+   "phishing",
+   "qr_code",
+   "telegram",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "🚨 INFO LOWONGAN KERJA JASA MARGA 2026! 🇮🇩💼\nPengen berkarier di perusahaan BUMN? 👀✨Kesempatan berkarier di bidang Teknik Sipil, Teknik Elektro, IT/Informatika, K3, hingga Administrasi bisa menjadi pilihanmu!\n💰 Kisaran gaji pada poster: Rp7–12 juta/bulan\nCatatan: nominal tersebut merupakan perkiraan dan wajib dikonfirmasi melalui pengumuman resmi.\n📌 CARA CEK & DAFTAR:\n✅ Cek informasi rekrutmen melalui kanal resmi Jasa Marga.\n✅ Jika tersedia, scan barcode pada sorotan atau postingan yang disematkan.\n✅ Cek tautan pendaftaran yang tersedia di Story.\n✅ Pastikan persyaratan dan posisi sesuai kualifikasimu.\n[…]",
+  "saluran": "Instagram (poster, barcode/QR, tautan di Story)",
+  "tanda_bahaya_menurut_pemeriksa": "Barcode/QR pada postingan mengarah ke formulir yang meminta nama sesuai KTP dan nomor Telegram aktif. Jasa Marga hanya mengumumkan rekrutmen di jasamarga.com dan media sosial resminya. Ciri rekrutmen palsu menurut Jasa Marga: meminta biaya pendaftaran, memakai kontak WhatsApp/Gmail pribadi, tautan tidak resmi, visual buatan AI, dan menjamin diterima tanpa tes.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-03",
+  "judul_artikel": "[PENIPUAN] Email Rekrutmen Indonesia Weda Bay Industrial Park",
+  "url": "https://turnbackhoax.id/articles/36647-penipuan-email-rekrutmen-indonesia-weda-bay-industrial-park",
+  "tanggal_artikel": "2026-09-14",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "email_gratis",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "LOWONGAN KERJA TERBARU 2026\nPT INDONESIA WEDA BAY INDUSTRIAL PARK (IWIP)\nPenempatan: Weda, Halmahera Tengah - Maluku Utara\nCARA MELAMAR:\nKirim CV & berkas lamaran melalui:\npt.iwipofficial@gmail.com\nPROSES PENDAFTARAN\nTIDAK DI PUNGUT BIAYA APAPUN…..!!!!",
+  "saluran": "TikTok (foto)",
+  "tanda_bahaya_menurut_pemeriksa": "Lamaran diminta dikirim ke alamat @gmail.com, bukan ke domain perusahaan. Rekrutmen IWIP hanya lewat laman rekrutmen resminya, dan email resmi perusahaan berdomain iwip.co.id.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-04",
+  "judul_artikel": "[PENIPUAN] Pendaftaran Rekrutmen Astra Agro Lestari Lewat WhatsApp",
+  "url": "https://turnbackhoax.id/articles/36333-penipuan-pendaftaran-rekrutmen-astra-agro-lestari-lewat-whatsapp",
+  "tanggal_artikel": "2026-08-25",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "whatsapp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "PT ASTRA AGRO LESTARI\nPerusahaan perkebunan kelapa sawit terkemuka yang berkomitmen untuk pertumbuhan berkelanjutan dan membuka peluang karir bagi talenta terbaik bangsa.\nASTRA AGRO LESTARI MEMPERBARUI LOWONGAN KERJA\nPosisi Tersedia\nManagement Trainee (MT) (Penempatan Area Kebun & Pabrik)\nAdmin Estate / Pabrik\nPetugas Rantai Pasokan\nKontrol Kualitas (QC)\nAsisten Lapangan (FA)\nKUALIFIKASI UMUM\nPria/Wanita\nPendidikan minimal D3/S1 (sesuai posisi yang dilamar)\nIPK minimal 2,75\nUsia maksimal 28 tahun\nBersedia ditempatkan di seluruh wilayah kerja perusahaan\nMemiliki kemampuan komunikasi yang baik, disiplin dan bertanggung jawab",
+  "saluran": "TikTok (video), lalu WhatsApp",
+  "tanda_bahaya_menurut_pemeriksa": "Pendaftaran diarahkan ke nomor WhatsApp pribadi di profil dan kolom komentar. Hasil Getcontact untuk nomor itu tidak berkaitan dengan perusahaan. Rekrutmen resmi hanya di astra-agro.co.id/karir, dengan satu nomor telepon kantor resmi.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-05",
+  "judul_artikel": "[PENIPUAN] Pendaftaran Lowongan Kerja Telkomsel Melalui DM TikTok",
+  "url": "https://turnbackhoax.id/articles/35843-penipuan-pendaftaran-lowongan-kerja-telkomsel-melalui-dm-tiktok",
+  "tanggal_artikel": "2026-07-26",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "dm_medsos",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "LOWONGAN KERJA KANTOR TELKOMSEL\nDibutuhkan segera untuk posisi:\n• Admin Kantor\n• Customer Service\n• Staff Operasional\nKualifikasi:\n✔ Pria/Wanita\n✔ Usia 18–45 tahun\n✔ Jujur & bertanggung jawab\n✔ Mampu bekerja dalam tim\nGaji: 4,5–8 juta/bulan\n📍 Penempatan: Domisili masing-masing\nPendaftaran langsung masuk Dm.",
+  "saluran": "TikTok (foto, pendaftaran lewat DM)",
+  "tanda_bahaya_menurut_pemeriksa": "Pengunggah berakun \"jobstreet7\", meniru nama portal kerja, dan pendaftarannya lewat DM. Telkomsel sedang tidak merekrut. Pendaftaran resmi hanya lewat career.telkomsel.com, dan komunikasi hanya melalui email dan nomor resmi.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-06",
+  "judul_artikel": "[PENIPUAN] Tautan Pendaftaran Lowongan Kerja SiCepat Ekspres",
+  "url": "https://turnbackhoax.id/articles/34698-penipuan-tautan-pendaftaran-lowongan-kerja-sicepat-ekspres",
+  "tanggal_artikel": "2026-05-26",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "LOWONGAN KERJA SiCepat Express\n📌 Posisi:\nKurir\nSortir Barang\nStaff Gudang\n💰 Gaji:\nRp3.000.000 – Rp5.000.000 / bulan\n🎓 Kualifikasi:\nPendidikan SD / SMP / SMA\nPria / Wanita\nUsia minimal 18 tahun\nSehat jasmani & rohani\nDisiplin, jujur, dan bertanggung jawab\nSiap kerja shift\n⏰ Jam Kerja:\nSistem shift (pagi / malam)\n📍 Penempatan:\nSesuai domisili / cabang terdekat\n✅ Fasilitas & Benefit:\nGaji pokok\nUang lembur\nInsentif & bonus\nBPJS (sesuai ketentuan)\n📝 Pendaftaran:\n✔️ GRATIS\n❌ Tidak dipungut biaya apapun",
+  "saluran": "Facebook (tautan + narasi)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan mengarah ke formulir yang meminta nama, alamat, dan nomor Telegram. Unggahan mencantumkan nominal gaji, sedangkan lowongan resmi tidak menuliskannya. SiCepat hanya mengumumkan rekrutmen lewat sicepat.com dan LinkedIn resmi.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-07",
+  "judul_artikel": "[PENIPUAN] Tautan Pendaftaran Loker Bidang Pertanian di Australia",
+  "url": "https://turnbackhoax.id/articles/27647-penipuan-tautan-pendaftaran-loker-bidang-pertanian-di-australia",
+  "tanggal_artikel": "2025-06-30",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "luar_negeri",
+   "phishing",
+   "telegram",
+   "biaya"
+  ],
+  "teks_lowongan": "LOKER AUSTRALIA TERBUKA SECARA RESMI\nPekerjaan ke Australi\nlegal, Resmi\nPacking buah, packing sayuran\nBatas usia 25 dan 52 diterima\nDapat gaji 12 juta perminggu,\nDapat jatah makan 2x sehari\nVisa dan mess sudah disediakan\nTersedia dana talang sistem potong gaji 1 bulan 7 juta\nSelengkapnya klik link di bio",
+  "saluran": "TikTok (video, tautan di bio)",
+  "tanda_bahaya_menurut_pemeriksa": "Menjanjikan gaji Rp12 juta per minggu, visa dan mess disediakan, plus \"dana talang\" yang dipotong dari gaji. Tautan di bio meminta nama lengkap dan nomor Telegram. Lowongan petik buah di Australia umumnya kerja harian lepas, bukan pekerjaan tetap bergaji mingguan.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-08",
+  "judul_artikel": "[PENIPUAN] Pendaftaran Lowongan Kerja Indomaret Lewat WA",
+  "url": "https://turnbackhoax.id/articles/26348-penipuan-pendaftaran-lowongan-kerja-indomaret-lewat-wa",
+  "tanggal_artikel": "2025-03-27",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "whatsapp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Info Lowongan Kerja ...\nPT Indomarco Prismatama (Indomaret) saat ini sedang membuka lowongan kerja bagi kalian semua ...\nINVENTORY CONTROL\nADMIN UMUM\nSURVEYOR\nLICENSE\nTEKNISI LISTRIK\nMEKANIK\nHELPER\nDRIVER\nKualifikasi Umum :\nPria\nPendidikan Min SMA/SMK\nFreshgraduate dipersilahkan melamar\nBelum menikah\nBertanggung Jawab\nInformasi kualifikasi selengkapnya dan cara pendaftaran dapat kalian cek di whatsapp di pokok kanan bawah",
+  "saluran": "Facebook (tautan), lalu WhatsApp",
+  "tanda_bahaya_menurut_pemeriksa": "Cara daftar diarahkan ke WhatsApp. Lowongan resmi Indomaret didaftar langsung di career.indomaretgroup.com, tidak lewat kontak WhatsApp.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-09",
+  "judul_artikel": "[PENIPUAN] Kemendikdasmen Buka Loker Guru Privat Online",
+  "url": "https://turnbackhoax.id/articles/25394-penipuan-kemendikdasmen-buka-loker-guru-privat-online",
+  "tanggal_artikel": "2025-01-30",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_instansi"
+  ],
+  "teks_lowongan": "Dibuka lowongan kerja guru privat online. Syarat: Pria & wanita 20+, Lulusan SMA/Sederajat, Sehat jasmani dan rohani, Gaji 4jt-6jt/bulan. Penempatan di daerah masing-masing. Gratis tidak ada biaya, daftar via telegram.",
+  "saluran": "TikTok (foto, akun \"bantuan_resmipemerintah\")",
+  "tanda_bahaya_menurut_pemeriksa": "Memakai foto Mendikdasmen dan meminta pendaftaran lewat Telegram. Tautan di bio mengarah ke situs yang tidak terkait kementerian dan meminta nama serta nomor Telegram untuk menerima kode OTP. Lowongan ini tidak ada di kanal resmi Kemendikdasmen.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-10",
+  "judul_artikel": "[PENIPUAN] Tautan Rekrutmen “Pegawai Laut PT PELNI” untuk Lulusan SMK",
+  "url": "https://turnbackhoax.id/articles/25159-penipuan-tautan-rekrutmen-pegawai-laut-pt-pelni-untuk-lulusan-smk",
+  "tanggal_artikel": "2025-01-17",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "telegram",
+   "kapal_abk",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "REKRUTMEN BERSAMA BUMN\n✨RESMI BUKA, 110 BUMN menyediakan 2000+ lowongan pekerjaan, terbuka tanpa minimal pendidikan. (Silahkan Klik Link Di Bio)\nPertimbangkan dengan seksama pilihanmu, lengkapi persyaratan terbaikmu dan asah terus kemampuanmu. Optimis kamu siap mengikuti seluruh rangkaian proses RBB.\nJaga kesehatan dan jangan lupa untuk selalu berdoa, meminta restu dari orang tua ya!",
+  "saluran": "TikTok (foto, tautan di bio)",
+  "tanda_bahaya_menurut_pemeriksa": "Memakai ulang poster rekrutmen pelaut PELNI yang batas daftarnya Agustus 2024, dengan klaim \"tanpa minimal pendidikan\". Tautan di bio tidak mengarah ke karir.pelni.co.id, tetapi meminta nama lengkap dan nomor Telegram.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-11",
+  "judul_artikel": "Keliru, Klaim Lowongan Pendamping Lokal Desa Bergaji Puluhan Juta di Situs Tidak Resmi",
+  "url": "https://www.tempo.co/cekfakta/keliru-klaim-lowongan-pendamping-lokal-desa-bergaji-puluhan-juta-di-situs-tidak-resmi-1183282",
+  "tanggal_artikel": "2024-12-18",
+  "pemeriksa": "Tempo Cek Fakta",
+  "modus": [
+   "phishing",
+   "catut_instansi",
+   "gaji_tidak_wajar"
+  ],
+  "teks_lowongan": "PLD Kemendesa 2024/2025 buka lowongan kerja dengan gaji hingga puluhan juta berikut syarat dan pendaftarannya. Penempatan sesuai domisili anda. Pendaftaran di sini gratis yah tidak dipungut biaya.",
+  "saluran": "Facebook (poster + tautan)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan pendaftaran ke situs register2024.info yang meminta data pribadi, bukan situs resmi Kemendes PDTT. Menjanjikan gaji puluhan juta. Kemendes menyatakan informasi itu hoaks dan tidak ada rekrutmen yang sedang berlangsung.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-12",
+  "judul_artikel": "[HOAKS] Link Rekrutmen Whoosh, Gaji Rp 5 Juta - Rp 25 Juta",
+  "url": "https://www.kompas.com/cekfakta/read/2024/11/21/120200782/-hoaks-link-rekrutmen-whoosh-gaji-rp-5-juta-rp-25-juta",
+  "tanggal_artikel": "2024-11-21",
+  "pemeriksa": "Kompas.com Cek Fakta",
+  "modus": [
+   "phishing",
+   "gaji_tidak_wajar",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Info Detail Silahkan Kunjungi Link Berikut Ini: https://lowongankerjadikantorkeretacepat[dot]jesdr[dot]com/\nPendaftaran Gratis Tidak Dipungut Biaya!!!\n[…]\nLowongan kerja di Kantor Kereta Cepat Jakarta Bandung Tersedia berbagai posisi, Gaji Rp.6.000.000 Rp.25.000.000",
+  "saluran": "Facebook (poster + tautan)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan tidak mengarah ke situs resmi KCIC (dicek tanpa diklik memakai Where Goes). Menjanjikan gaji Rp6–25 juta untuk \"berbagai posisi\". KCIC hanya mengumumkan rekrutmen di kcic.co.id dan media sosial resminya, serta tidak pernah meminta biaya.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-13",
+  "judul_artikel": "[PENIPUAN] Loker Helper, Operator, dan Driver di PT Petronesia Benimel",
+  "url": "https://turnbackhoax.id/articles/23566-penipuan-loker-helper-operator-dan-driver-di-pt-petronesia-benimel",
+  "tanggal_artikel": "2024-10-23",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "whatsapp",
+   "telegram_otp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Penerimaan di buka PT PETRONESIA BENIMEL Penempatan\nSesuai Domisili/Daerah anda\nPria dan Wanita\n17 – 55 th\nGaji perbulan Rp 4 juta – Rp 9 juta/SMP SMA.SMK.Sederajat\nHelper,operator,driver\nTIDAK ADA PENGALAMAN KERJA TIDAK MASALAH NANTI ADA BIMBINGAN YANG AKAN DI BERIKAN\nFasilitas:Kendaraan,Seragam,Kartap,Makan,Bpjs\nPendaftaran Disini Gratis Yah Tidak Dipungut biaya👇👇\nhttps://bitly[dot]cx/CyqK",
+  "saluran": "WhatsApp (pesan berantai)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan pemendek meminta nama, nomor Telegram, lalu kode OTP; ini modus penyalahgunaan data pribadi. Perusahaan menyatakan pesan itu palsu dan hanya mengumumkan lowongan lewat LinkedIn resminya.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-14",
+  "judul_artikel": "[HOAKS] Lowongan Kerja Pertamina pada Awal September 2024",
+  "url": "https://www.kompas.com/cekfakta/read/2024/09/12/142800382/hoaks-lowongan-kerja-pertamina-pada-awal-september-2024",
+  "tanggal_artikel": "2024-09-12",
+  "pemeriksa": "Kompas.com Cek Fakta",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "PT Pertamina ( Persero ) melalui program rekrutmennya saat ini membuka lowongan kerja terbaru untuk mencari calon – calon tenaga kerja yang siap diterjunkan ke setiap lini atau divisi kerja dalam perusahaan yang sedang membutuhkannya saat ini.\nPersyaratan Umum :\n• Warga Negara Indonesia\n• Pria Wanita\n• Lulusan SMP-SMA-SEDERAJAT D3 S1 S2\n• Sehat Jasmani Rohani\n• Bisa bekerja dengan TIMKELOMPOK\nFasilitas :\n• Gaji Pokok Rp. 7.500.000,-bulan (tergantung posisi)\n• Lembur Sesuai depnaker\n• Uang Makan & Transportasi.\n• Jamsostek Asuransi Kesehatan\n[…]\nCara Pendaftaran:\nhttps://lowongankerjaindonesiav2[dot]my[dot]id/pertaminav6/joinnow/",
+  "saluran": "Facebook",
+  "tanda_bahaya_menurut_pemeriksa": "Unggahan mencantumkan tautan pendaftaran tidak resmi; Kompas menyebut lowongan itu memakai tautan Telegram. Pertamina menyatakan tidak merekrut pada September 2024 lewat Telegram atau WhatsApp, dan meminta publik mengecek situs resmi atau Call Center 135.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-15",
+  "judul_artikel": "[PENIPUAN] Poster Lowongan Kerja di PT Samudera Perdana Selaras",
+  "url": "https://turnbackhoax.id/articles/21889-penipuan-poster-lowongan-kerja-di-pt-samudera-perdana-selaras",
+  "tanggal_artikel": "2024-08-16",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "luar_negeri",
+   "kapal_abk",
+   "whatsapp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "SPS GROUP\nGrowing Together\nNEED CREW:\nVESSEL CARGO FU YUN GT 1000\nLINE TAIWAN (KINMEN – TAIPEI)\n2ND ENGINER 2000 USD\n2 AB SALARY 800 USD\n3 OILMAN SALARY 800 USD\nPERSYARATAN\nCONTRACT 1TAHUN\nEXPERIENCE MINIMUM 1YEAR\nDOCUMENT VALID\nGOOD ENGLISH\nJOINT AGUSTUS 2024\nOFFICE : PT Samudera Perdana Selaras, Jalan Madukoro Raya, Ruko Semarang Indah…\nSEND CV WHATSAPP “ 0881390xxxx (TEGUH NANANG)",
+  "saluran": "Flyer/poster, CV dikirim ke WhatsApp pribadi",
+  "tanda_bahaya_menurut_pemeriksa": "Lowongan kru kapal kargo rute Taiwan bergaji dolar AS dengan CV dikirim ke WhatsApp perorangan. Perusahaan menandai poster itu HOAX, menyatakan pengumuman resmi hanya lewat situs dan media sosialnya, dan tidak memungut biaya rekrutmen.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-16",
+  "judul_artikel": "[PENIPUAN] Lowongan Freelance Like dan Subscribe Youtube",
+  "url": "https://turnbackhoax.id/articles/20894-penipuan-lowongan-freelance-like-dan-subscribe-youtube",
+  "tanggal_artikel": "2024-06-30",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "tugas_online",
+   "whatsapp",
+   "deposit"
+  ],
+  "teks_lowongan": "Halo kak, Perkenalkan Saya dari MARKETING MAGA. Saat ini kami sedang membutuhkan banyak freelance untuk mengerjakan tugas LIKE dan SUBSCRIBE channel Youtube, Tujuannya untuk meningkatkan popularitas konten Youtube client kami Tersebut. Bisakah saya meminta waktunya sebentar untuk menjelaskan pekerjaan sampingan",
+  "saluran": "WhatsApp (pesan pribadi)",
+  "tanda_bahaya_menurut_pemeriksa": "Tawaran kerja sampingan like/subscribe YouTube dari nomor tak dikenal. Korban awalnya diberi tugas dan imbalan, lalu diminta mengirim uang sebagai \"deposit\" dengan janji untung berlipat; uangnya tidak kembali.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-17",
+  "judul_artikel": "[PENIPUAN] PESAN PENAWARAN PEKERJAAN MENJADI MITRA YANG MENGATASNAMAKAN TIKTOK",
+  "url": "https://turnbackhoax.id/articles/20816-penipuan-pesan-penawaran-pekerjaan-menjadi-mitra-yang-mengatasnamakan-tiktok",
+  "tanggal_artikel": "2024-06-29",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "tugas_online",
+   "dm_medsos",
+   "whatsapp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Hallo!\nSaya adalah agen TikTok, dan saat ini kami sedang mencari mitra untuk bergabung dengan tim kami. Berdasarkan data konten dan komentar Anda, kami yakin Anda sangat cocok untuk bergabung dengan agensi TikTok kami.\nCukup ikuti petunjuk untuk membuat toko TikTok Anda di platform kami. Tanpa perlu pengalaman, Anda akan mendapatkan bimbingan satu per satu dari tutor kami. Kami menjamin pendapatan stabil minimal 300.000 IDR per hari. Jika Anda berminat (usia 24+), silakan hubungi tutor kami melalui WhatsApp dan lampirkan tangkapan layar undangan ini. WhatsApp:\nhttps://watiktok[dot]com/id1",
+  "saluran": "Instagram (DM), lalu tautan WhatsApp",
+  "tanda_bahaya_menurut_pemeriksa": "DM dari akun pribadi yang mengaku agen TikTok, menjanjikan pendapatan minimal Rp300.000 per hari tanpa pengalaman, lalu mengarahkan ke tautan WhatsApp. TikTok hanya mengirim pesan resmi lewat kotak masuk aplikasi atau jalur komunikasi resminya.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-18",
+  "judul_artikel": "[PENIPUAN] Surat Panggilan Tes Calon Karyawan Pertamina Mei 2024",
+  "url": "https://turnbackhoax.id/articles/20409-penipuan-surat-panggilan-tes-calon-karyawan-pertamina-mei-2024",
+  "tanggal_artikel": "2024-06-07",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "biaya",
+   "surat_panggilan_palsu",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Nomor: 259/HRD/BUMN/PT.PERTAMINA/V/2024\nSehubungan Dengan Recruitment Karyawan BUMN PT. Pertamina (Persero) Tahun 2024 Untuk Wilayah Penempatan Kerja Sesuai Domisili Calon Karyawan PT. Pertamina (Persero) Di Seluruh Indonesia. Maka Kami Beritahukan Bahwa Dengan Ini Saudara/Sandari Di Nyatakan Lulus Seleksi Dan Wajib Mengikuti Seleksi Tes Selanjutnya Sampai Tahap Akhir Sesuai Dengan jadwal Berikut:\nMengingat Pentingnya Tahap Tersebut Di Atas Maka Peserta Tidak Boleh Di Wakili Dan\nJadwal Yang Kami Tentukan, Maka Peserta Yang Bersangkutan Secara Otomatis Kami An\nTahap Tersebut Untuk Menentukan Ke Lulusan. Demikian Undangan Ini Di Sampaikan Atas",
+  "saluran": "Surat panggilan beredar (artikel tidak menyebut platform)",
+  "tanda_bahaya_menurut_pemeriksa": "Surat \"lulus seleksi\" berisi daftar nama peserta dan meminta pembayaran biaya transportasi, akomodasi, dan konsumsi yang dijanjikan akan diganti. Pertamina tidak pernah meminta uang dalam rekrutmen dan hanya merekrut lewat recruitment.pertamina.com serta Instagram @pertaminacareer. Format surat ini berulang setiap tahun.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-19",
+  "judul_artikel": "[SALAH] Lowongan Pekerjaan Online",
+  "url": "https://turnbackhoax.id/articles/17512-salah-lowongan-pekerjaan-online",
+  "tanggal_artikel": "2024-03-31",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "tugas_online",
+   "whatsapp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Assalamualaikum, perkenalkan nama saya Cindy, saya menghubungi Anda dengan tujuan untuk menawarkan pekerjaan online. Saya mendapatkan nomor Anda dari database Jobstreet dan mungkin Anda sudah pernah melamar di sana. Bolehkah izinkan saya mula dengan menjelaskan pekerjaan ini secara singkat?",
+  "saluran": "WhatsApp (pesan pribadi)",
+  "tanda_bahaya_menurut_pemeriksa": "Pengirim mengaku mendapat nomor dari database Jobstreet tetapi tidak menyebut perusahaan atau detail pekerjaan. Polanya sama dengan penipuan kerja paruh waktu: tugas awal dibayar, lalu diminta deposit yang makin besar.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-20",
+  "judul_artikel": "[SALAH] Informasi Rekrutmen Karyawan Pelindo Regional I Tanjung Balai Karimun",
+  "url": "https://turnbackhoax.id/articles/17217-salah-informasi-rekrutmen-karyawan-pelindo-regional-i-tanjung-balai-karimun",
+  "tanggal_artikel": "2024-03-29",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "whatsapp",
+   "biaya",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Dibutuhkan Segera Karyawan Laki-laki & Wanita untuk Staf Kasir Dan Penjaga Tiket. PENETAPAN KERJA: Pelindo Regional 1 Tanjung Balai Karimun\nAlamat: Jl. Teluk Air\nPERSYARATAN:\nUmur 17-25 Tahun\nMin Lulusan SMP/SMA\nDi Butuhkan Segera..\nInfo detail bisa Menghubungi Kontak ADM Whatsapp: 08950980xxxx (Ibuk Venya)",
+  "saluran": "Facebook (grup loker), lalu WhatsApp pribadi",
+  "tanda_bahaya_menurut_pemeriksa": "Kontak hanya lewat WhatsApp perorangan, dengan syarat minim (lulusan SMP/SMA, usia 17–25). Pemeriksa menyebut modusnya meminta uang biaya administrasi. Pelindo tidak membuka lowongan itu dan hanya mengumumkan lowongan di situs resmi Pelindo/BUMN.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-21",
+  "judul_artikel": "[SALAH] SURAT KETERANGAN LOLOS TAHAPAN SELEKSI PT FREEPORT INDONESIA",
+  "url": "https://turnbackhoax.id/articles/15107-salah-surat-keterangan-lolos-tahapan-seleksi-pt-freeport-indonesia",
+  "tanggal_artikel": "2024-01-04",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "biaya",
+   "surat_panggilan_palsu",
+   "email",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "KepadaYth :\nPara Calon Karyawan PT FREEPORT INDONESIA\nDi – Tempat\nSehubungan dengan recruitment karyawan PT. FREEPORT INDONESIA 2023 untuk wilayah penempatan kerja sesuai domisili calon karyawan PT FREEPORT INDONESIA di seluruh Indonesia. Maka kami beritahukan bahwa dengan ini saudara dinyatakan Lulus seleksi dan wajib mengikuti tes selanjutnya sampai tahap akhir sesuai dengan jadwal berikut:",
+  "saluran": "Email (surat keterangan lolos seleksi)",
+  "tanda_bahaya_menurut_pemeriksa": "Surat menyatakan penerima lolos seleksi dan meminta pembayaran sejumlah uang yang dijanjikan kembali saat tiba di lokasi tes. Freeport menyatakan dokumen itu hoaks, tidak memungut biaya, dan tidak bekerja sama dengan agen perjalanan.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-22",
+  "judul_artikel": "[SALAH] Email Undangan Seleksi Kerja PT. KAO Indonesia",
+  "url": "https://turnbackhoax.id/articles/14789-salah-email-undangan-seleksi-kerja-pt-kao-indonesia",
+  "tanggal_artikel": "2023-12-27",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "biaya",
+   "email",
+   "email_gratis",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Berdasarkan hasil evaluasi Recruitment mengenai berkas lamaran anda yang sudah kami terima via Online sudah dinyatakan lulus kualifikasi, Silahkan hadir diwaktu yang sudah ditentukan.\n[…]\nPosisi: Operator Produksi – Quality Control\nPerihal: MCU & Tes Fisik\n[…]\nKetentuan:\nUntuk mengikuti proses tersebut dikenakan biaya registrasi untuk mengambil no peserta MCU yang akan dilaksanakan pada hari yang sudah ditentukan.\nPembayaran registrasi peserta MCU Rp. 85.000.\nUntuk pembayaran melalui E-wallet (DANA) 0878-1634-xxxx\nJika sudah melakukan pembayaran wajib konfirmasi nama pengirim, nama peserta, dan bukti transfer di bkkjakartasolution@gmail.com.\nBatas pembayaran peserta 21.00",
+  "saluran": "Email",
+  "tanda_bahaya_menurut_pemeriksa": "Undangan MCU dan tes fisik mewajibkan biaya registrasi Rp85.000 lewat e-wallet ke nomor pribadi, dengan bukti transfer dikirim ke alamat Gmail. KAO tidak pernah meminta uang, tidak menjanjikan penggantian biaya akomodasi/transportasi, dan tidak bekerja sama dengan biro perjalanan mana pun.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-23",
+  "judul_artikel": "[SALAH] Lowongan Kerja di Puskesmas Kersana Kabupaten Brebes",
+  "url": "https://turnbackhoax.id/articles/14203-salah-lowongan-kerja-di-puskesmas-kersana-kabupaten-brebes",
+  "tanggal_artikel": "2023-11-27",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "catut_instansi",
+   "whatsapp",
+   "biaya"
+  ],
+  "teks_lowongan": "INFO LOWONGAN KERJA\nPUSKESMAS KERSANA\nDi Butuhkan :\nStaff Kantor\nStaff Laboratorium\nOB\nKualifikasi :\nPerempuan/lk2\nBisa Komputer\nMin. lulusan SMA/K\nStaff Lab min Farmasi\nJujur,Disiplin,Tekun\nAlamat :\nJl …, Ciampel Wetan, …, Kec. Kersana, Kabupaten Brebes, Jawa Tengah\nHub 08222983xxxx",
+  "saluran": "Poster/flyer, lamaran lewat WhatsApp",
+  "tanda_bahaya_menurut_pemeriksa": "Poster mencatut puskesmas dengan nomor HP pribadi sebagai kontak. Modusnya meminta transfer uang setelah pelamar mengirim lamaran lewat WhatsApp. Puskesmas menyatakan tidak membuka lowongan tersebut.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "scam-24",
+  "judul_artikel": "[SALAH] Tes Fisik Online Rekrutmen Karyawan PT KAI",
+  "url": "https://turnbackhoax.id/articles/14167-salah-tes-fisik-online-rekrutmen-karyawan-pt-kai",
+  "tanggal_artikel": "2023-11-25",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "whatsapp",
+   "data_sensitif",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Terkait cek fisik tersebut, memang biasanya dilakukan on site atau secara langsung ya. Namun dikarenakan untuk proses seleksi cek kesehatan awal untuk periode rekrutmen periode 13-14 September sudah dilakukan, maka untuk para kandidat cadangan dilakukan cek kesehatan awal secara online.\n[…]\nBerikutnya, guna pengecekan fisik lebih lanjut (pengecekan lipatan / bentuk tubuh) yang nantinya akan berkaitan dengan pengukuran seragam, silahkan kirimkan foto dengan hanya mengenakan pakaian dalam bra dan underwear, untuk ketentuan sbb :\n1. Foto menghadap kamera tampak depan dengan posisi berdiri full body.\n2. Foto tampak samping dengan posisi berdiri full body.\n[…]",
+  "saluran": "WhatsApp (tangkapan layar diunggah ke Twitter/X @worksfess)",
+  "tanda_bahaya_menurut_pemeriksa": "Meminta foto tubuh hanya berpakaian dalam dengan dalih cek fisik online atau pengukuran seragam. KAI Services tidak pernah meminta foto seperti itu, dan informasi rekrutmen resmi hanya di recruitment.kai.id serta media sosial resmi KAI.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-25",
+  "judul_artikel": "[SALAH] Lowongan Kerja Paruh Waktu di Kalbe",
+  "url": "https://turnbackhoax.id/articles/13647-salah-lowongan-kerja-paruh-waktu-di-kalbe",
+  "tanggal_artikel": "2023-09-22",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "tugas_online",
+   "deposit",
+   "biaya",
+   "whatsapp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Kalbe saat ini sedang merekrut tim paruh waktu online di Indonesia, selama Anda memiliki ponsel, Anda dapat menghasilkan setidaknya Rp 118.000-Rp 300.000 sehari. Saat ini, Anda hanya perlu menyelesaikan tugas untuk mendapatkan Rp30.000 dan menyetor Rp70.000 untuk menjadi anggota. Dan dapatkan pekerjaan yang stabil dan dapatkan keuntungan jangka Panjang [Anda dapat menarik penghasilan saat menjadi anggota]",
+  "saluran": "WhatsApp (pesan berantai)",
+  "tanda_bahaya_menurut_pemeriksa": "Kerja paruh waktu dari rumah dengan janji Rp118.000–Rp300.000 per hari, tetapi harus menyetor Rp70.000 agar menjadi anggota. Pemeriksa menyebutnya phishing berulang yang mencatut nama perusahaan; Kalbe tidak pernah memungut biaya rekrutmen.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-26",
+  "judul_artikel": "[SALAH] Pesan WhatsApp Penawaran Loker Freelance Diberi Misi Dan Reward",
+  "url": "https://turnbackhoax.id/articles/12741-salah-pesan-whatsapp-penawaran-loker-freelance-diberi-misi-dan-reward",
+  "tanggal_artikel": "2023-05-31",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "tugas_online",
+   "whatsapp",
+   "telegram",
+   "deposit"
+  ],
+  "teks_lowongan": "Hello kak, Apa anda berminat bergabung dengan kami di platform kerja tanpa modal dan dapat gaji setiap hari. Apakah anda mencoba nya kak ?\nKerjaan utama kita itu membantu merchant untuk meningkatkan popularitas bisnis, Jadi peran kakak disini hanya Follow dan Like blogger kami yang ada di instagram, setelah kakak selesai, kakak akan langsung di bayar.",
+  "saluran": "WhatsApp, lalu grup Telegram",
+  "tanda_bahaya_menurut_pemeriksa": "Bayaran Rp40 ribu–Rp288 ribu per misi follow/like. Setelah beberapa tugas, korban diminta menyetor deposit yang terus naik tanpa kembali, lewat grup Telegram yang memakai nama perusahaan tertentu. Seorang korban mengaku rugi hingga Rp21 juta.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "scam-27",
+  "judul_artikel": "[SALAH] Lowongan Kerja oleh PLN Wilayah Denpasar Oktober 2022",
+  "url": "https://turnbackhoax.id/articles/10803-salah-lowongan-kerja-oleh-pln-wilayah-denpasar-oktober-2022",
+  "tanggal_artikel": "2022-10-22",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "biaya",
+   "travel_agent",
+   "surat_panggilan_palsu",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Untuk Reservasinya paket sudah termasuk:\n– Tiket PP (pulang pergi)\n– Hotel\n– Penjemputan\n– Konsumsi\n– Pakaian\n– Rapid test\nMohon selesaikan pembayaran melalui transfer (Atm/Internet Banking/M-Banking) Transfer ke:\nBANK JAGO A/N. [nama disamarkan]\nNO REK: 1003-5450-xxxx\nTotal : Rp 3.920.887\nKonfirmasikan transfer (informasi, Nama pengirim/Jumlah pembayara/Bank pengirim/Bank tujuan/Bukti transfer.kirim via whatsapp ke nomor ini.\nBatas waktu pembayaran 45 menit.\n[…]\nSalam hormat\nTim Rekrutmen PLN",
+  "saluran": "Pesan ke pelamar, konfirmasi pembayaran lewat WhatsApp (ditanyakan korban di Twitter)",
+  "tanda_bahaya_menurut_pemeriksa": "TERKAIT BALI: rekrutmen palsu PLN di Denpasar. Pelamar diminta membayar \"paket reservasi\" (tiket PP, hotel, penjemputan, konsumsi, pakaian, rapid test) Rp3.920.887 ke rekening perorangan dengan batas waktu 45 menit. PLN menyatakan tidak pernah bekerja sama dengan biro perjalanan, tidak memungut biaya, dan hanya merekrut lewat rekrutmen.pln.co.id.",
+  "ada_gambar_poster": false
+ }
+]

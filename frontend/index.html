@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lamarin | Cek lowongan kerja palsu</title>
+  <meta name="description" content="Tempel teks atau unggah tangkapan layar lowongan kerja. Lamarin menandai tanda bahaya penipuan beserta buktinya.">
+  <script>(()=>{let t;try{t=localStorage.getItem("rambu.tema")}catch(e){}if(!t){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="/">
+        <svg class="sign" viewBox="0 0 22 20" aria-hidden="true"><path d="M11 1.5 20.5 18.5H1.5Z"/><path d="M11 7.5v5M11 15.3v.2"/></svg>
+        Lamarin
+      </a>
+      <button class="ghost" type="button" id="theme-btn">Tema gelap</button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="judul">
+        <h1 id="judul">Lowongan ini asli, atau <em>jebakan</em>?</h1>
+        <p>Tempel teks atau unggah tangkapan layar lowongan kerja. Lamarin menandai tanda bahaya penipuan beserta buktinya, sebelum kamu mengirim uang atau data.</p>
+      </section>
+
+      <form class="card" id="form" novalidate>
+        <div class="tabs" role="tablist" aria-label="Jenis masukan">
+          <button class="tab" type="button" role="tab" id="tab-teks" aria-selected="true" aria-controls="panel-teks">Teks</button>
+          <button class="tab" type="button" role="tab" id="tab-gambar" aria-selected="false" aria-controls="panel-gambar" tabindex="-1">Gambar</button>
+        </div>
+
+        <div class="panel" id="panel-teks" role="tabpanel" aria-labelledby="tab-teks">
+          <label class="visually-hidden" for="teks">Teks lowongan</label>
+          <textarea id="teks" maxlength="6000" placeholder="Tempel isi lowongan di sini, termasuk kontak dan tautannya."></textarea>
+        </div>
+
+        <div class="panel" id="panel-gambar" role="tabpanel" aria-labelledby="tab-gambar" hidden>
+          <div class="drop" id="drop">
+            <div id="drop-empty">
+              <p><strong>Seret gambar ke sini</strong>, tempel dengan Ctrl+V, atau</p>
+              <button class="linkbtn" type="button" id="pick-btn">pilih file dari perangkat</button>
+              <p class="meta">PNG, JPG, atau WEBP. Maksimal 4 MB.</p>
+            </div>
+            <img id="preview" alt="Pratinjau gambar lowongan yang akan diperiksa" hidden>
+            <button class="linkbtn" type="button" id="clear-img" hidden>Ganti gambar</button>
+          </div>
+          <input type="file" id="file" accept="image/png,image/jpeg,image/webp" class="visually-hidden" tabindex="-1">
+        </div>
+
+        <div class="row">
+          <span class="meta" id="ai-line">Memeriksa status AI</span>
+          <button class="primary" type="submit" id="submit">Periksa lowongan</button>
+        </div>
+      </form>
+
+      <div class="examples" id="examples" hidden>
+        Coba dengan kasus nyata:
+        <ul id="example-list"></ul>
+      </div>
+
+      <section class="result" id="result" aria-live="polite" hidden></section>
+    </main>
+
+    <footer class="foot">
+      <p>Hasil pemeriksaan adalah alat bantu, bukan kepastian. Lowongan tanpa rambu tetap perlu dicek ke saluran resmi perusahaan.</p>
+      <p>Teks atau gambar dikirim ke server hanya untuk diperiksa dan tidak disimpan. Bila AI aktif, isinya juga dikirim ke Gemini API paket gratis; pada paket ini Google dapat memakai konten untuk meningkatkan produknya. Jangan unggah data pribadi orang lain.</p>
+      <p>Contoh kasus berasal dari artikel cek fakta dan situs karier resmi, dengan tautan sumber di setiap contoh.</p>
+    </footer>
+  </div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
