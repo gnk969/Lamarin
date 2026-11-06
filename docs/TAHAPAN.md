@@ -2,10 +2,9 @@
 
 Status: [x] siap, [ ] perlu dikerjakan tim, [~] sebagian.
 
-> **Penting sebelum submit Tahap 1:** isi `GEMINI_API_KEY`, jalankan `python scripts/evaluate.py --set uji --ai`,
-> lalu `python scripts/build_proposal.py`. Tanpa AI, aturan saja hanya menangkap 1 dari 15 penipuan pada set uji,
-> jadi kekuatan produk bergantung pada hasil evaluasi AI ini. Bila hasil AI juga rendah, perbaiki prompt atau tambah
-> data pengembangan, lalu kumpulkan set uji baru (jangan menyetel ulang pada set uji yang sama).
+> **Status evaluasi (6 Nov 2026):** uji buta dengan AI sudah dijalankan. Aturan + AI: precision 0.91, recall 0.67
+> (10 dari 15 penipuan, 1 lowongan asli salah ditandai). Bila mengubah prompt atau aturan, setel pada set
+> pengembangan, lalu kumpulkan set uji baru (jangan menyetel ulang pada set uji yang sama).
 
 ## Tahap 1: Registrasi & Submission (4 komponen wajib)
 

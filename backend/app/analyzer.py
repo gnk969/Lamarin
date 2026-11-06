@@ -51,14 +51,25 @@ def evidence_in_text(bukti: str, text: str) -> bool:
     return False
 
 
+def _claim_matches(kode: str, bukti: str) -> bool:
+    """Pemeriksaan isi untuk rambu yang bisa dicek pasti dari kutipannya.
+
+    Ditemukan saat uji buta: AI pernah melabeli email berdomain perusahaan sebagai email gratisan.
+    """
+    if kode == "EMAIL_GRATISAN":
+        domains = [m.group(1) for m in rules.EMAIL_RE.finditer(bukti.lower())]
+        return any(d in rules.FREE_EMAIL for d in domains)
+    return True
+
+
 def analyze(text: str | None, image: bytes | None = None, mime: str | None = None,
-            use_ai: bool = True) -> dict:
+            use_ai: bool = True, ai_data: dict | None = None) -> dict:
+    """ai_data: hasil Gemini yang sudah ada (dipakai skrip evaluasi agar tiap lowongan cukup dipanggil sekali)."""
     text = (text or "").strip()
     warnings: list[str] = []
-    ai_data: dict | None = None
-    mode = "aturan"
+    mode = "aturan+ai" if ai_data is not None else "aturan"
 
-    if use_ai and config.ai_available():
+    if ai_data is None and use_ai and config.ai_available():
         try:
             ai_data = gemini.analyze(text or None, image, mime)
             mode = "aturan+ai"
@@ -83,7 +94,7 @@ def analyze(text: str | None, image: bytes | None = None, mime: str | None = Non
         bukti = str(item.get("bukti", "")).strip()[:200]
         if kode not in KATALOG:
             continue
-        if not evidence_in_text(bukti, text):
+        if not evidence_in_text(bukti, text) or not _claim_matches(kode, bukti):
             rejected += 1
             continue
         alasan = str(item.get("alasan", "")).strip()[:300]

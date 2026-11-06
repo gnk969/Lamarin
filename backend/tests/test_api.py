@@ -61,6 +61,15 @@ def test_ai_merge_and_hallucination_guard(monkeypatch):
     assert any("diabaikan" in w for w in r["peringatan"])
 
 
+def test_ai_free_email_claim_must_contain_free_domain():
+    text = "Kirim lamaran ke Recruitment@augustea-intcrews.com sebelum akhir bulan."
+    fake = {"teks_terbaca": text, "fakta": {}, "ringkasan": "",
+            "rambu": [{"kode": "EMAIL_GRATISAN", "bukti": "Recruitment@augustea-intcrews.com", "alasan": "x"}]}
+    r = analyzer.analyze(text, ai_data=fake)
+    assert r["rambu"] == []
+    assert any("diabaikan" in w for w in r["peringatan"])
+
+
 def test_ai_failure_falls_back(monkeypatch):
     def boom(*a, **k):
         raise gemini.AIUnavailable("kuota habis")

@@ -51,15 +51,29 @@ def metrics(rows, key):
             "f1": round(f1, 3), "akurasi": round(acc, 3)}
 
 
-def ai_only_score(teks):
-    """Versi pembanding: rambu dari AI saja (tanpa aturan), tetap dengan bobot katalog."""
+def gemini_with_retry(teks, tries=6):
+    """Satu panggilan Gemini per lowongan; tunggu lalu ulangi bila kuota per menit paket gratis habis."""
+    import time
     from app import gemini
-    from app.analyzer import evidence_in_text
+    for attempt in range(tries):
+        try:
+            return gemini.analyze(teks)
+        except gemini.AIUnavailable as exc:
+            if attempt == tries - 1:
+                raise
+            wait = 20 * (attempt + 1)
+            print(f"  AI belum bisa ({exc}); tunggu {wait} detik")
+            time.sleep(wait)
+
+
+def ai_only_score(data, teks):
+    """Versi pembanding: rambu dari AI saja (tanpa aturan), tetap dengan bobot katalog."""
+    from app.analyzer import _claim_matches, evidence_in_text
     from app.rambu import KATALOG
-    data = gemini.analyze(teks)
     kodes = {r.get("kode") for r in data.get("rambu", []) if r.get("kode") in KATALOG
-             and evidence_in_text(str(r.get("bukti", "")), teks)}
-    return min(100, sum(KATALOG[k].bobot for k in kodes))
+             and evidence_in_text(str(r.get("bukti", "")), teks)
+             and _claim_matches(r.get("kode"), str(r.get("bukti", "")))}
+    return min(100, sum(KATALOG[k].bobot for k in kodes)), sorted(kodes)
 
 
 def main():
@@ -84,9 +98,12 @@ def main():
     if args.ai:
         if not config.ai_available():
             sys.exit("GEMINI_API_KEY belum diatur di .env")
-        for r in rows:
-            r["skor_ai"] = ai_only_score(r["teks"])
-            res = analyzer.analyze(r["teks"], use_ai=True)
+        for i, r in enumerate(rows, 1):
+            print(f"[{i}/{len(rows)}] {r['id']}")
+            data = gemini_with_retry(r["teks"])
+            r["jawaban_ai"] = data  # disimpan agar hasil bisa dihitung ulang tanpa memanggil AI lagi
+            r["skor_ai"], r["rambu_ai"] = ai_only_score(data, r["teks"])
+            res = analyzer.analyze(r["teks"], ai_data=data)
             r["skor_gabungan"] = res["skor"]
             r["rambu_gabungan"] = [x["kode"] for x in res["rambu"]]
         report["ai_saja"] = metrics(rows, "skor_ai")

@@ -71,16 +71,28 @@ python scripts/evaluate.py --set uji --ai       # + AI saja dan aturan + AI (but
 python scripts/build_proposal.py                # angka terbaru masuk ke docs/proposal.pdf
 ```
 
-Hasil terakhir (aturan saja, 6 Nov 2026):
+Hasil terakhir (6 Nov 2026, model `gemini-3.5-flash-lite`, ambang skor >= 20):
 
-| Set | Precision | Recall | Catatan |
-|---|---|---|---|
-| Pengembangan | 1.00 | 0.44 | 12 dari 27 penipuan tertangkap, 0 lowongan asli salah ditandai |
-| Uji | 1.00 | 0.07 | 1 dari 15 penipuan tertangkap, 0 lowongan asli salah ditandai |
+| Set | Versi | Precision | Recall | F1 | Akurasi |
+|---|---|---|---|---|---|
+| Uji (buta, 27) | Aturan saja | 1.00 | 0.07 | 0.12 | 0.48 |
+| Uji (buta, 27) | AI saja | 0.90 | 0.60 | 0.72 | 0.74 |
+| Uji (buta, 27) | **Aturan + AI** | **0.91** | **0.67** | **0.77** | **0.78** |
+| Pengembangan (52) | Aturan saja | 1.00 | 0.44 | 0.61 | 0.71 |
+| Pengembangan (52) | AI saja | 0.94 | 0.63 | 0.76 | 0.79 |
+| Pengembangan (52) | Aturan + AI | 0.95 | 0.67 | 0.78 | 0.81 |
 
-Aturan aman (tidak salah menuduh lowongan resmi) tetapi melewatkan sebagian besar penipuan, terutama yang
-mencatut nama perusahaan lalu mengarahkan ke "link di bio", WhatsApp, atau DM. Bagian itu adalah tugas AI;
-hasil evaluasi dengan AI belum ada karena kunci API belum diatur. Detail per item: `docs/hasil-evaluasi-*.json`.
+Pada uji buta, AI menaikkan penipuan yang tertangkap dari 1 menjadi 10 dari 15, dengan 1 lowongan asli salah
+ditandai. Catatan jujur:
+- Jawaban AI sedikit berbeda antar-jalan walau temperature 0. Dua kali uji buta memberi angka gabungan yang sama,
+  tetapi lowongan yang salah berbeda.
+- Pemeriksaan "email gratisan harus benar-benar memuat domain gratisan" (`analyzer._claim_matches`) ditambahkan
+  setelah melihat salah tuduh pada uji buta pertama. Ini aturan kebenaran fakta, bukan penyetelan bobot, tetapi
+  set uji ini tidak lagi sepenuhnya buta untuk pemeriksaan tersebut. Set uji baru perlu dikumpulkan untuk angka akhir.
+- 5 penipuan masih lolos, umumnya poster yang hanya mencatut nama instansi dan mengarahkan ke tautan tanpa biaya
+  atau kontak pribadi di teksnya.
+
+Detail per item, termasuk jawaban AI mentah: `docs/hasil-evaluasi-*.json`.
 
 ## Installation / Run Instructions
 1. Pasang Python 3.11 atau lebih baru.

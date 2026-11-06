@@ -13,6 +13,26 @@
       "recall": 0.067,
       "f1": 0.125,
       "akurasi": 0.481
+    },
+    "ai_saja": {
+      "tp": 9,
+      "fp": 1,
+      "fn": 6,
+      "tn": 11,
+      "precision": 0.9,
+      "recall": 0.6,
+      "f1": 0.72,
+      "akurasi": 0.741
+    },
+    "aturan_ai": {
+      "tp": 10,
+      "fp": 1,
+      "fn": 5,
+      "tn": 11,
+      "precision": 0.909,
+      "recall": 0.667,
+      "f1": 0.769,
+      "akurasi": 0.778
     }
   },
   "per_item": [
@@ -26,6 +46,53 @@
         "TAUTAN_MENCURIGAKAN",
         "KONTAK_PRIBADI",
         "GAJI_TIDAK_WAJAR"
+      ],
+      "jawaban_ai": {
+        "teks_terbaca": "Seleksi Petugas Haji 2026/2027\n- Tamatan SMP, SMA, SMK, D3, S1\n- Laki-laki/perempuan\n- Minimal umur 26 tahun\n- Batas umur maksimal 60 tahun\n- Gaji 25jt-35jt/ musim + fasilitas ibadah haji gratis\n- Penempatan sesuai domilisi masing-masing\n- Dibuka di seluruh wilayah Indonesia\n- Pendaftaran gratis\n- Cara daftar gunakan nomor Telegram aktif\n[…]\nTelah dibuka seleksi petugas haji 2026/2027 Pendaftaran gratis tidak di pungut biaya\nSilahkan daftar kan diri anda melalui link di bawah👇\nhttps://daftarsegerasekarang[dot]vercel[dot]app/",
+        "fakta": {
+          "perusahaan": "Petugas Haji",
+          "posisi": "Petugas Haji",
+          "lokasi_kerja": "Seluruh wilayah Indonesia",
+          "luar_negeri": false,
+          "gaji": "25jt-35jt/ musim",
+          "biaya_disebut": "gratis",
+          "saluran_lamaran": "Telegram dan tautan Vercel",
+          "kontak": [],
+          "tautan": [
+            "https://daftarsegerasekarang[dot]vercel[dot]app/"
+          ]
+        },
+        "rambu": [
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "Seleksi Petugas Haji 2026/2027",
+            "alasan": "Mengatasnamakan seleksi instansi resmi (haji) tetapi menggunakan tautan pihak ketiga yang tidak resmi."
+          },
+          {
+            "kode": "TAUTAN_MENCURIGAKAN",
+            "bukti": "https://daftarsegerasekarang[dot]vercel[dot]app/",
+            "alasan": "Menggunakan tautan hosting gratisan (vercel) untuk pendaftaran seleksi resmi."
+          },
+          {
+            "kode": "KONTAK_PRIBADI",
+            "bukti": "Cara daftar gunakan nomor Telegram aktif",
+            "alasan": "Meminta pendaftaran melalui aplikasi pesan instan pribadi (Telegram)."
+          }
+        ],
+        "ringkasan": "Lowongan seleksi petugas haji ini menggunakan nama instansi resmi dengan saluran pendaftaran melalui tautan hosting gratis dan aplikasi Telegram."
+      },
+      "skor_ai": 70,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN",
+        "KONTAK_PRIBADI",
+        "TAUTAN_MENCURIGAKAN"
+      ],
+      "skor_gabungan": 85,
+      "rambu_gabungan": [
+        "TAUTAN_MENCURIGAKAN",
+        "CATUT_PERUSAHAAN",
+        "KONTAK_PRIBADI",
+        "GAJI_TIDAK_WAJAR"
       ]
     },
     {
@@ -34,7 +101,51 @@
       "teks": "STOP SCROLL IBOX LAGI BUK LOWONGAN ADA POSISI ADVISOR, STORE CREW, CASHIER, CUSTOMER SERVICE, DAN STORE SUPERVISOR. BUAT KAMU PRIA ATAU WANITA MINIMAL SMA ATAU SMK, KOMUNIKATIF, RAPI, DAN SIAP KERJA SHIFT INI KESEMPATAN MU. MAU DAFTAR LANGSUNG CEK LINK DI BIO AKUN INI. JANGAN SAMPAI KELEWATAN KESEMPATAN BERGABUNG BERSAMA IBOX | INFO LOWONGAN KERJA TERBARU!!! iBOX YANG SERIUS MAU KERJA LANGSUNG DAFTAR SEKARANG AJA YAH!!!",
       "url": "https://turnbackhoax.id/articles/37326-penipuan-lowongan-kerja-ibox",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "STOP SCROLL IBOX LAGI BUK LOWONGAN ADA POSISI ADVISOR, STORE CREW, CASHIER, CUSTOMER SERVICE, DAN STORE SUPERVISOR. BUAT KAMU PRIA ATAU WANITA MINIMAL SMA ATAU SMK, KOMUNIKATIF, RAPI, DAN SIAP KERJA SHIFT INI KESEMPATAN MU. MAU DAFTAR LANGSUNG CEK LINK DI BIO AKUN INI. JANGAN SAMPAI KELEWATAN KESEMPATAN BERGABUNG BERSAMA IBOX | INFO LOWONGAN KERJA TERBARU!!! iBOX YANG SERIUS MAU KERJA LANGSUNG DAFTAR SEKARANG AJA YAH!!!",
+        "fakta": {
+          "perusahaan": "iBox",
+          "posisi": "Advisor, Store Crew, Cashier, Customer Service, Store Supervisor",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "Link di bio akun",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "TAUTAN_MENCURIGAKAN",
+            "bukti": "MAU DAFTAR LANGSUNG CEK LINK DI BIO AKUN INI",
+            "alasan": "Pendaftaran mengarahkan ke tautan di bio akun media sosial alih-alih saluran resmi perusahaan."
+          },
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "BERGABUNG BERSAMA IBOX",
+            "alasan": "Mengatasnamakan merek besar iBox tetapi menggunakan saluran pendaftaran tidak resmi berupa tautan di bio."
+          },
+          {
+            "kode": "DESAKAN_WAKTU",
+            "bukti": "YANG SERIUS MAU KERJA LANGSUNG DAFTAR SEKARANG AJA YAH",
+            "alasan": "Terdapat desakan agar segera mendaftar."
+          }
+        ],
+        "ringkasan": "Lowongan kerja mengatasnamakan iBox untuk berbagai posisi dengan instruksi pendaftaran melalui tautan di bio akun media sosial. Pelamar disarankan untuk memverifikasi keaslian informasi melalui saluran resmi perusahaan."
+      },
+      "skor_ai": 65,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN",
+        "DESAKAN_WAKTU",
+        "TAUTAN_MENCURIGAKAN"
+      ],
+      "skor_gabungan": 65,
+      "rambu_gabungan": [
+        "TAUTAN_MENCURIGAKAN",
+        "CATUT_PERUSAHAAN",
+        "DESAKAN_WAKTU"
+      ]
     },
     {
       "id": "uji-scam-03",
@@ -42,7 +153,37 @@
       "teks": "RESMI MEMBUKA\nLOWONGAN KERJA PETUGAS SENSUS PERTANIAN\nPRIA & WANITA\nLULUSAN SMA / SEDERAJAT\nGAJI 5JT-8JT / BULAN\nPENEMPATAN SESUAI DAERAH MASING MASING\nANGKATAN 2026\nGRATIS TIDAK ADA BIAYA\nAyo Bergabung! Jadi Bagian dari Pertanian Maju Indonesia!\nDr. Ir. H. ANDI AMRAN SULAIMAN, M. P\nMENTERI PERTANIAN",
       "url": "https://www.liputan6.com/cek-fakta/read/8322837/cek-fakta-hoaks-lowongan-kerja-petugas-sensus-pertanian",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "RESMI MEMBUKA LOWONGAN KERJA PETUGAS SENSUS PERTANIAN PRIA & WANITA LULUSAN SMA / SEDERAJAT GAJI 5JT-8JT / BULAN PENEMPATAN SESUAI DAERAH MASING MASING ANGKATAN 2026 GRATIS TIDAK ADA BIAYA Ayo Bergabung! Jadi Bagian dari Pertanian Maju Indonesia! Dr. Ir. H. ANDI AMRAN SULAIMAN, M. P MENTERI PERTANIAN",
+        "fakta": {
+          "perusahaan": "Kementerian Pertanian",
+          "posisi": "Petugas Sensus Pertanian",
+          "lokasi_kerja": "Sesuai daerah masing-masing",
+          "luar_negeri": false,
+          "gaji": "5JT-8JT / BULAN",
+          "biaya_disebut": "GRATIS TIDAK ADA BIAYA",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "Dr. Ir. H. ANDI AMRAN SULAIMAN, M. P MENTERI PERTANIAN",
+            "alasan": "Lowongan ini mencatut nama instansi resmi atau pejabat tinggi negara tetapi tidak menyediakan saluran lamaran resmi yang jelas."
+          }
+        ],
+        "ringkasan": "Lowongan kerja untuk posisi Petugas Sensus Pertanian yang mengatasnamakan Kementerian Pertanian namun tidak mencantumkan saluran atau tautan lamaran resmi."
+      },
+      "skor_ai": 25,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN"
+      ],
+      "skor_gabungan": 25,
+      "rambu_gabungan": [
+        "CATUT_PERUSAHAAN"
+      ]
     },
     {
       "id": "uji-scam-04",
@@ -50,7 +191,44 @@
       "teks": "Rekrutmen pegawai BPJS KESEHATAN 2026\nPOSISI :\n1. Staf BPJS KESEHATAN 2026\n2. Staf BPJS Kabupaten/Kota\nSYARAT :\n1. Laki-laki / perempuan\n2. Pend-min SMA/SMK/D3 & S1\n3. Umur min 20-45 tahun\n4. Sehat jasmani dan rohani\n5. Bebas narkoba\n6. Berkelakuan baik\n7. Gaji 4,5jt-12ht / bulan\n8. Penempatan sesuai domisili\nINFO PENDAFTARAN CEK LINK DI BAWAH !!!",
       "url": "https://www.liputan6.com/cek-fakta/read/8307939/cek-fakta-hoaks-link-pendaftaran-lowongan-kerja-bpjs-kesehatan",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Rekrutmen pegawai BPJS KESEHATAN 2026\nPOSISI :\n1. Staf BPJS KESEHATAN 2026\n2. Staf BPJS Kabupaten/Kota\nSYARAT :\n1. Laki-laki / perempuan\n2. Pend-min SMA/SMK/D3 & S1\n3. Umur min 20-45 tahun\n4. Sehat jasmani dan rohani\n5. Bebas narkoba\n6. Berkelakuan baik\n7. Gaji 4,5jt-12ht / bulan\n8. Penempatan sesuai domisili\nINFO PENDAFTARAN CEK LINK DI BAWAH !!!",
+        "fakta": {
+          "perusahaan": "BPJS KESEHATAN",
+          "posisi": "Staf BPJS KESEHATAN 2026, Staf BPJS Kabupaten/Kota",
+          "lokasi_kerja": "Sesuai domisili",
+          "luar_negeri": false,
+          "gaji": "4,5jt-12ht / bulan",
+          "biaya_disebut": "",
+          "saluran_lamaran": "LINK DI BAWAH",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "TAUTAN_MENCURIGAKAN",
+            "bukti": "INFO PENDAFTARAN CEK LINK DI BAWAH !!!",
+            "alasan": "Pendaftaran diarahkan melalui tautan umum tanpa kejelasan domain resmi instansi."
+          },
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "Rekrutmen pegawai BPJS KESEHATAN 2026",
+            "alasan": "Menggunakan nama instansi besar BPJS Kesehatan tetapi saluran pendaftaran tidak menggunakan domain resmi."
+          }
+        ],
+        "ringkasan": "Lowongan kerja yang mengatasnamakan BPJS Kesehatan ini menggunakan saluran pendaftaran tautan eksternal yang tidak resmi. Pelamar disarankan untuk selalu memverifikasi keabsahan informasi melalui kanal resmi instansi terkait."
+      },
+      "skor_ai": 55,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN",
+        "TAUTAN_MENCURIGAKAN"
+      ],
+      "skor_gabungan": 55,
+      "rambu_gabungan": [
+        "TAUTAN_MENCURIGAKAN",
+        "CATUT_PERUSAHAAN"
+      ]
     },
     {
       "id": "uji-scam-05",
@@ -58,7 +236,27 @@
       "teks": "PT Agrinas Jaladri Nusantara kembali memberikan kesempatan kepada para talenta terbaik untuk berkarir | Yuk segera daftarkan dirimu melalui Link yang tertera untuk bisa mengawali karir bersama PT Agrinas Jaladri Nusantara.\nPENTING!!* Proses rekrutmen ini dilakukan secara mandiri dan online, serta tidak bekerja sama dengan perusahaan travel manapun dan tidak dipungut biaya. #infoloker #lowongankerja #agrinasjaladrinusantara #danantaraindonesia #infokarir",
       "url": "https://turnbackhoax.id/articles/36121-penipuan-tautan-lowongan-kerja-agrinas-jaladri-nusantara",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "PT Agrinas Jaladri Nusantara kembali memberikan kesempatan kepada para talenta terbaik untuk berkarir | Yuk segera daftarkan dirimu melalui Link yang tertera untuk bisa mengawali karir bersama PT Agrinas Jaladri Nusantara.\nPENTING!!* Proses rekrutmen ini dilakukan secara mandiri dan online, serta tidak bekerja sama dengan perusahaan travel manapun dan tidak dipungut biaya. #infoloker #lowongankerja #agrinasjaladrinusantara #danantaraindonesia #infokarir",
+        "fakta": {
+          "perusahaan": "PT Agrinas Jaladri Nusantara",
+          "posisi": "",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "tidak dipungut biaya",
+          "saluran_lamaran": "Link yang tertera",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan pekerjaan dari PT Agrinas Jaladri Nusantara menyatakan proses rekrutmen dilakukan secara online secara mandiri dan tidak dipungut biaya. Posisi pekerjaan dan rincian kontak tidak disebutkan secara spesifik dalam teks."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-scam-06",
@@ -66,7 +264,37 @@
       "teks": "✈️ PERSIAPKAN DIRI! REKRUTMEN PT GARUDA INDONESIA (PERSERO) Tbk 2026 | Wujudkan karier impianmu bersama maskapai kebanggaan Indonesia! Posisi yang Berpotensi Dibuka: Staff Administrasi, Customer Service, Ground Staff, Cabin Crew (Pramugari/Pramugara), Ticketing Staff, Cargo Staff, Flight Operations Support, Finance & Accounting Staff, Human Capital (HR), IT Support\n[…]\n⚠️ DAFTAR SEKARANG! KLIK LINK DI BIO ✈️",
       "url": "https://turnbackhoax.id/articles/35680-penipuan-pendaftaran-lowongan-kerja-garuda-indonesia",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "✈️ PERSIAPKAN DIRI! REKRUTMEN PT GARUDA INDONESIA (PERSERO) Tbk 2026 | Wujudkan karier impianmu bersama maskapai kebanggaan Indonesia! Posisi yang Berpotensi Dibuka: Staff Administrasi, Customer Service, Ground Staff, Cabin Crew (Pramugari/Pramugara), Ticketing Staff, Cargo Staff, Flight Operations Support, Finance & Accounting Staff, Human Capital (HR), IT Support […] ⚠️ DAFTAR SEKARANG! KLIK LINK DI BIO ✈️",
+        "fakta": {
+          "perusahaan": "PT Garuda Indonesia (Persero) Tbk",
+          "posisi": "Staff Administrasi, Customer Service, Ground Staff, Cabin Crew (Pramugari/Pramugara), Ticketing Staff, Cargo Staff, Flight Operations Support, Finance & Accounting Staff, Human Capital (HR), IT Support",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "Klik link di bio",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "TAUTAN_MENCURIGAKAN",
+            "bukti": "KLIK LINK DI BIO",
+            "alasan": "Pendaftaran mengarahkan melalui tautan di bio media sosial yang tidak terverifikasi."
+          }
+        ],
+        "ringkasan": "Lowongan kerja yang mengatasnamakan PT Garuda Indonesia (Persero) Tbk ini menggunakan tautan pada bio media sosial untuk pendaftaran, yang mengindikasikan perlunya kewaspadaan terhadap saluran resmi rekrutmen."
+      },
+      "skor_ai": 30,
+      "rambu_ai": [
+        "TAUTAN_MENCURIGAKAN"
+      ],
+      "skor_gabungan": 30,
+      "rambu_gabungan": [
+        "TAUTAN_MENCURIGAKAN"
+      ]
     },
     {
       "id": "uji-scam-07",
@@ -74,7 +302,44 @@
       "teks": "Telah Dibuka Lowongan Kerja Calon Anggota BADAN PENGAWAS PEMILIHAN UMUM (BAWASLU) PERIODE 2025 - 2030 Persyaratan Umum: ✅ Warga Negara Indonesia ✅ Pria/Wanita ✅ Pendidikan Minimal SMA/SMK Semua Jurusan PENEMPATAN SESUAI LOKASI PELAMAR Semua Tahapan Pendaftaran GRATIS BERLAKU UNTUK SELURUH INDONESIA Cara melamar: Informasi lengkap tentang persyaratan dan tata cara pendaftaran, klik link di bio kami",
       "url": "https://turnbackhoax.id/articles/25712-penipuan-rekrutmen-calon-anggota-bawaslu-via-whatsapp",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Telah Dibuka Lowongan Kerja Calon Anggota BADAN PENGAWAS PEMILIHAN UMUM (BAWASLU) PERIODE 2025 - 2030 Persyaratan Umum: ✅ Warga Negara Indonesia ✅ Pria/Wanita ✅ Pendidikan Minimal SMA/SMK Semua Jurusan PENEMPATAN SESUAI LOKASI PELAMAR Semua Tahapan Pendaftaran GRATIS BERLAKU UNTUK SELURUH INDONESIA Cara melamar: Informasi lengkap tentang persyaratan dan tata cara pendaftaran, klik link di bio kami",
+        "fakta": {
+          "perusahaan": "BADAN PENGAWAS PEMILIHAN UMUM (BAWASLU)",
+          "posisi": "Calon Anggota",
+          "lokasi_kerja": "Seluruh Indonesia",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "GRATIS",
+          "saluran_lamaran": "klik link di bio kami",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "BADAN PENGAWAS PEMILIHAN UMUM (BAWASLU)",
+            "alasan": "Lowongan mengatasnamakan lembaga negara resmi (Bawaslu) tetapi hanya menggunakan tautan di bio media sosial untuk pendaftaran."
+          },
+          {
+            "kode": "TAUTAN_MENCURIGAKAN",
+            "bukti": "klik link di bio kami",
+            "alasan": "Pendaftaran mengarahkan ke tautan yang tersemat pada bio tanpa menyertakan portal resmi instansi terkait."
+          }
+        ],
+        "ringkasan": "Lowongan kerja untuk posisi calon anggota Bawaslu ini mencantumkan persyaratan umum yang cukup mudah bagi lulusan SMA/SMK. Namun, penggunaan tautan media sosial untuk pendaftaran mengindikasikan perlunya kewaspadaan terhadap potensi pencatutan nama instansi."
+      },
+      "skor_ai": 55,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN",
+        "TAUTAN_MENCURIGAKAN"
+      ],
+      "skor_gabungan": 55,
+      "rambu_gabungan": [
+        "TAUTAN_MENCURIGAKAN",
+        "CATUT_PERUSAHAAN"
+      ]
     },
     {
       "id": "uji-scam-08",
@@ -82,7 +347,37 @@
       "teks": "Bagi yang mau daftar langsung ke bio",
       "url": "https://turnbackhoax.id/articles/24997-penipuan-tautan-pendaftaran-lowongan-kerja-di-brunei-darussalam",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Bagi yang mau daftar langsung ke bio",
+        "fakta": {
+          "perusahaan": "",
+          "posisi": "",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "bio",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "SYARAT_TERLALU_MUDAH",
+            "bukti": "Bagi yang mau daftar langsung ke bio",
+            "alasan": "Lowongan tidak mencantumkan persyaratan atau kualifikasi apapun sehingga terlalu mudah."
+          }
+        ],
+        "ringkasan": "Lowongan kerja ini sangat minim informasi dan mengarahkan pelamar langsung melalui tautan di bio tanpa penjelasan posisi atau syarat yang jelas."
+      },
+      "skor_ai": 10,
+      "rambu_ai": [
+        "SYARAT_TERLALU_MUDAH"
+      ],
+      "skor_gabungan": 10,
+      "rambu_gabungan": [
+        "SYARAT_TERLALU_MUDAH"
+      ]
     },
     {
       "id": "uji-scam-09",
@@ -90,7 +385,42 @@
       "teks": "Info lowongan pekerjaan PT.MAYORA INDAH.\nDibutuhkan karyawan Wanita/pria Lowongan kerja seluruh Indonesia untuk pendaftaran Tampa biaya apapun .\nSerius lansung daftarkan diri anda sekarang",
       "url": "https://turnbackhoax.id/articles/24788-penipuan-pendaftaran-loker-mayora-group-lewat-whatsapp",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Info lowongan pekerjaan PT.MAYORA INDAH. Dibutuhkan karyawan Wanita/pria Lowongan kerja seluruh Indonesia untuk pendaftaran Tampa biaya apapun . Serius lansung daftarkan diri anda sekarang",
+        "fakta": {
+          "perusahaan": "PT.MAYORA INDAH",
+          "posisi": "karyawan",
+          "lokasi_kerja": "seluruh Indonesia",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "Tampa biaya apapun",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "EMAIL_GRATISAN",
+            "bukti": "Info lowongan pekerjaan PT.MAYORA INDAH.",
+            "alasan": "Mengatasnamakan perusahaan besar namun tidak menyediakan kontak atau saluran resmi perusahaan."
+          },
+          {
+            "kode": "DESAKAN_WAKTU",
+            "bukti": "Serius lansung daftarkan diri anda sekarang",
+            "alasan": "Terdapat desakan waktu agar segera mendaftar."
+          }
+        ],
+        "ringkasan": "Lowongan kerja atas nama PT Mayora Indah ini tidak mencantumkan saluran lamaran resmi dan mendesak pendaftar untuk segera mendaftar."
+      },
+      "skor_ai": 10,
+      "rambu_ai": [
+        "DESAKAN_WAKTU"
+      ],
+      "skor_gabungan": 10,
+      "rambu_gabungan": [
+        "DESAKAN_WAKTU"
+      ]
     },
     {
       "id": "uji-scam-10",
@@ -98,7 +428,37 @@
       "teks": "Open Recruitment PT Bank Syariah Indonesia\nGaji Rp 5.475. 023 – Rp 7.140.321\nTunjangan, Kesehatan, dan Hari Raya, dll\nPersyaratan:\nWarga Negara Indonesia\nSehat jasmani dan rohani\nLulusan SMA/SMK dengan nilai minimal 70\nLulusan D1-D3 dan S1 dengan IPK minimal 2.50\nBerusia maksimal 19 tahun untuk lulusan SMA/SMK, maksimal 21 tahun lulusan D1, maksimal 24 tahun D3-S1\nBerpenampilan rapih, Mampu berkomunikasi dengan sopan dan rmaah\nTidak pernah terlibat dengan kasus kriminal\nBelum menikah dan bersedia tidak menikah selama mengikuti program BiBiT BSI.",
       "url": "https://turnbackhoax.id/articles/24613-penipuan-loker-pemagangan-terstruktur-bank-syariah-indonesia-gaji-rp5-7-jutaan",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Open Recruitment PT Bank Syariah Indonesia\nGaji Rp 5.475. 023 – Rp 7.140.321\nTunjangan, Kesehatan, dan Hari Raya, dll\nPersyaratan:\nWarga Negara Indonesia\nSehat jasmani dan rohani\nLulusan SMA/SMK dengan nilai minimal 70\nLulusan D1-D3 dan S1 dengan IPK minimal 2.50\nBerusia maksimal 19 tahun untuk lulusan SMA/SMK, maksimal 21 tahun lulusan D1, maksimal 24 tahun D3-S1\nBerpenampilan rapih, Mampu berkomunikasi dengan sopan dan rmaah\nTidak pernah terlibat dengan kasus kriminal\nBelum menikah dan bersedia tidak menikah selama mengikuti program BiBiT BSI.",
+        "fakta": {
+          "perusahaan": "PT Bank Syariah Indonesia",
+          "posisi": "program BiBiT BSI",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "Rp 5.475.023 – Rp 7.140.321",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "Open Recruitment PT Bank Syariah Indonesia",
+            "alasan": "Lowongan mencantumkan nama perusahaan besar tetapi tidak menyertakan informasi kontak resmi atau tautan pendaftaran."
+          }
+        ],
+        "ringkasan": "Lowongan pekerjaan mengatasnamakan PT Bank Syariah Indonesia tanpa mencantumkan saluran lamaran atau kontak resmi yang dapat dihubungi."
+      },
+      "skor_ai": 25,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN"
+      ],
+      "skor_gabungan": 25,
+      "rambu_gabungan": [
+        "CATUT_PERUSAHAAN"
+      ]
     },
     {
       "id": "uji-scam-11",
@@ -106,7 +466,44 @@
       "teks": "Lowongan kerja PT PEGADAIAN BUMN Daftarkan diri anda Langsung KLIK LINK.",
       "url": "https://www.kompas.com/cekfakta/read/2024/08/15/175900282/-hoaks-lowongan-pekerjaan-mengatasnamakan-pegadaian",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Lowongan kerja PT PEGADAIAN BUMN Daftarkan diri anda Langsung KLIK LINK.",
+        "fakta": {
+          "perusahaan": "PT PEGADAIAN BUMN",
+          "posisi": "",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "KLIK LINK",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "PT PEGADAIAN BUMN Daftarkan diri anda Langsung KLIK LINK.",
+            "alasan": "Menggunakan nama perusahaan BUMN namun menggunakan saluran pendaftaran umum berupa tautan langsung tanpa kejelasan domain resmi perusahaan."
+          },
+          {
+            "kode": "SYARAT_TERLALU_MUDAH",
+            "bukti": "Daftarkan diri anda Langsung KLIK LINK.",
+            "alasan": "Lowongan tidak mencantumkan kualifikasi atau persyaratan yang jelas, hanya mengarahkan langsung untuk klik tautan."
+          }
+        ],
+        "ringkasan": "Lowongan kerja mengatasnamakan PT Pegadaian BUMN tanpa menyebutkan posisi dan kualifikasi yang jelas, serta langsung mengarahkan pelamar untuk mengeklik tautan pendaftaran."
+      },
+      "skor_ai": 35,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN",
+        "SYARAT_TERLALU_MUDAH"
+      ],
+      "skor_gabungan": 35,
+      "rambu_gabungan": [
+        "CATUT_PERUSAHAAN",
+        "SYARAT_TERLALU_MUDAH"
+      ]
     },
     {
       "id": "uji-scam-12",
@@ -114,7 +511,27 @@
       "teks": "SURAT UNDANGAN WAWANCARA KERJA\nNomor : 029/HRD/PT.ET/XI/2024\nPerihal : Wawancara kerja\nKepada : Yth. Peserta Test\nPT ECLAT TEXTILE INTERNATIONAL\nDi Tempat\nDengan hormat,\nMenanggapi surat lamaran kerja saudara/i yang kami terima secara online dengan ini saudara/i kami harapkan kedatangannya untuk dapat mengikuti tahapan seleksi Operator … akan dilaksanakan sesuai jadwal yang di tetapkan sebagai berikut:\n[…]\nMembawa hasil Medical Check Up (Bukan Keterangan Sehat)\nMelampirkan undangan yang diberikan dan telah di printout\nUndangan ini hanya berlaku 1 (satu) kali.",
       "url": "https://turnbackhoax.id/articles/21562-penipuan-lowongan-kerja-di-pt-eclat-textile",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "SURAT UNDANGAN WAWANCARA KERJA\nNomor : 029/HRD/PT.ET/XI/2024\nPerihal : Wawancara kerja\nKepada : Yth. Peserta Test\nPT ECLAT TEXTILE INTERNATIONAL\nDi Tempat\nDengan hormat,\nMenanggapi surat lamaran kerja saudara/i yang kami terima secara online dengan ini saudara/i kami harapkan kedatangannya untuk dapat mengikuti tahapan seleksi Operator … akan dilaksanakan sesuai jadwal yang di tetapkan sebagai berikut:\n[…]\nMembawa hasil Medical Check Up (Bukan Keterangan Sehat)\nMelampirkan undangan yang diberikan dan telah di printout\nUndangan ini hanya berlaku 1 (satu) kali.",
+        "fakta": {
+          "perusahaan": "PT ECLAT TEXTILE INTERNATIONAL",
+          "posisi": "Operator",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan kerja berupa surat undangan wawancara untuk posisi Operator di PT Eclat Textile International. Pastikan untuk memverifikasi keaslian undangan langsung melalui saluran resmi perusahaan."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-scam-13",
@@ -122,7 +539,27 @@
       "teks": "PT INDUSTRI KERETA API (PERSERO)\nPanggilan Tes Interview Penerimaan Karyawan\nPT Industri Kereta Apai (Persero) Tahun 2023\nNomor : 0579/HRD-INKA/VI/2023\nLampiran : VII (Tujuh) Lembar\nPerihal : Panggilan Tes Interview\n[…]\nBerdasarkan hasil evaluasi awal Tim Recruitment SectiionDepartment of Human Resources Development terhadap lamaran pekerjaan saudara(i) dengan ini kami … persyaratan administrasi dan kuaifikasi dari saudara(i) berhak untuk mengikuti tahapan … akan diadakan sesuai dengan jadwal sebagai berikut :\nHati, tanggal : Kamis, 22 Juni 2023\nWaktu : 07.30 WIB- Selesai\nTempat : ….",
       "url": "https://turnbackhoax.id/articles/12981-salah-surat-panggilan-interview-pt-inka-persero",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "PT INDUSTRI KERETA API (PERSERO) Panggilan Tes Interview Penerimaan Karyawan PT Industri Kereta Apai (Persero) Tahun 2023 Nomor : 0579/HRD-INKA/VI/2023 Lampiran : VII (Tujuh) Lembar Perihal : Panggilan Tes Interview […] Berdasarkan hasil evaluasi awal Tim Recruitment SectiionDepartment of Human Resources Development terhadap lamaran pekerjaan saudara(i) dengan ini kami … persyaratan administrasi dan kuaifikasi dari saudara(i) berhak untuk mengikuti tahapan … akan diadakan sesuai dengan jadwal sebagai berikut : Hati, tanggal : Kamis, 22 Juni 2023 Waktu : 07.30 WIB- Selesai Tempat : ….",
+        "fakta": {
+          "perusahaan": "PT Industri Kereta Api (Persero)",
+          "posisi": "",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan ini mengatasnamakan PT Industri Kereta Api (Persero) untuk panggilan tes interview. Belum terdapat informasi kontak, tautan, atau permintaan biaya yang spesifik pada teks yang tersedia."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-scam-14",
@@ -132,6 +569,37 @@
       "skor_aturan": 15,
       "rambu_aturan": [
         "LUAR_NEGERI_TANPA_IZIN"
+      ],
+      "jawaban_ai": {
+        "teks_terbaca": "Nice to meet you. My name is Nina and from MALAYSIA and INDONESIA Marketing Clutch Ltd. My HR Head let me contact this number and I just want to share some work from home freelance job information for you. Are you interested?",
+        "fakta": {
+          "perusahaan": "Marketing Clutch Ltd",
+          "posisi": "freelance job",
+          "lokasi_kerja": "Work from home",
+          "luar_negeri": true,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "WhatsApp",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "KONTAK_PRIBADI",
+            "bukti": "My HR Head let me contact this number",
+            "alasan": "Perekrut menghubungi langsung melalui nomor pribadi atau WhatsApp tanpa kejelasan saluran resmi."
+          }
+        ],
+        "ringkasan": "Lowongan pekerjaan paruh waktu dari rumah ini dikirimkan melalui pesan langsung oleh seseorang yang mengaku dari luar negeri."
+      },
+      "skor_ai": 15,
+      "rambu_ai": [
+        "KONTAK_PRIBADI"
+      ],
+      "skor_gabungan": 30,
+      "rambu_gabungan": [
+        "LUAR_NEGERI_TANPA_IZIN",
+        "KONTAK_PRIBADI"
       ]
     },
     {
@@ -140,7 +608,62 @@
       "teks": "Hai, nama saya Diana dan saya bekerja di departemen SDM di tokopedia (cabang Indonesia).\nPerusahaan ini mencari karyawan paruh waktu secara online. Usia: 23-60\nKerja paruh waktu itu mudah, yang Anda butuhkan hanyalah ponsel. 10 hingga 20 menit kerja paruh waktu!\nHal ini bisa dilakukan di waktu senggang Anda tanpa mengganggu pekerjaan Anda saat ini. Pendatang baru langsung mendapatkan Rp 50000, gaji harian: Rp 200000 - 2000000\nJika Anda tertarik dengan pekerjaan paruh waktu ini! Balas 1, klik tautan untuk menambahkan! WhatsApp Manager.\nhttps://wa[dot]me/62xxxxxxxxxxx",
       "url": "https://www.kompas.com/cekfakta/read/2022/07/26/150531382/waspada-beredar-pesan-wa-mengatasnamakan-lowongan-kerja-tokopedia",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Hai, nama saya Diana dan saya bekerja di departemen SDM di tokopedia (cabang Indonesia).\nPerusahaan ini mencari karyawan paruh waktu secara online. Usia: 23-60\nKerja paruh waktu itu mudah, yang Anda butuhkan hanyalah ponsel. 10 hingga 20 menit kerja paruh waktu!\nHal ini bisa dilakukan di waktu senggang Anda tanpa mengganggu pekerjaan Anda saat ini. Pendatang baru langsung mendapatkan Rp 50000, gaji harian: Rp 200000 - 2000000\nJika Anda tertarik dengan pekerjaan paruh waktu ini! Balas 1, klik tautan untuk menambahkan! WhatsApp Manager.\nhttps://wa[dot]me/62xxxxxxxxxxx",
+        "fakta": {
+          "perusahaan": "tokopedia",
+          "posisi": "karyawan paruh waktu",
+          "lokasi_kerja": "online",
+          "luar_negeri": false,
+          "gaji": "Rp 200000 - 2000000 per hari",
+          "biaya_disebut": "",
+          "saluran_lamaran": "WhatsApp",
+          "kontak": [
+            "https://wa[dot]me/62xxxxxxxxxxx"
+          ],
+          "tautan": [
+            "https://wa[dot]me/62xxxxxxxxxxx"
+          ]
+        },
+        "rambu": [
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "bekerja di departemen SDM di tokopedia (cabang Indonesia)",
+            "alasan": "Menggunakan nama perusahaan besar Tokopedia tetapi menggunakan saluran lamaran melalui kontak pribadi WhatsApp."
+          },
+          {
+            "kode": "SYARAT_TERLALU_MUDAH",
+            "bukti": "10 hingga 20 menit kerja paruh waktu!",
+            "alasan": "Pekerjaan menawarkan hasil besar dengan durasi kerja yang sangat singkat tanpa persyaratan keahlian yang jelas."
+          },
+          {
+            "kode": "GAJI_TIDAK_WAJAR",
+            "bukti": "gaji harian: Rp 200000 - 2000000",
+            "alasan": "Menjanjikan gaji harian yang sangat tinggi untuk pekerjaan paruh waktu yang hanya memakan waktu beberapa menit."
+          },
+          {
+            "kode": "KONTAK_PRIBADI",
+            "bukti": "https://wa[dot]me/62xxxxxxxxxxx",
+            "alasan": "Proses perekrutan mengarahkan pelamar melalui tautan WhatsApp pribadi dan bukan saluran resmi perusahaan."
+          }
+        ],
+        "ringkasan": "Lowongan kerja paruh waktu ini mencatut nama perusahaan besar dan menjanjikan gaji harian yang sangat tinggi dengan syarat yang terlalu mudah. Proses pelamaran diarahkan melalui kontak WhatsApp pribadi."
+      },
+      "skor_ai": 65,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN",
+        "GAJI_TIDAK_WAJAR",
+        "KONTAK_PRIBADI",
+        "SYARAT_TERLALU_MUDAH"
+      ],
+      "skor_gabungan": 65,
+      "rambu_gabungan": [
+        "CATUT_PERUSAHAAN",
+        "GAJI_TIDAK_WAJAR",
+        "KONTAK_PRIBADI",
+        "SYARAT_TERLALU_MUDAH"
+      ]
     },
     {
       "id": "uji-asli-01",
@@ -148,7 +671,27 @@
       "teks": "CONTRACT HOUSEKEEPING Pool Attendant [...] Housekeeping Korurua Dijiwa Ubud Contract About the Role Join Dijiwa Sanctuaries as a Pool Attendant at Korurua Dijiwa Ubud, where thoughtful service and authentic Balinese hospitality create a true sanctuary for the soul. [...] - Monitor pool water quality, cleanliness, temperature, and surrounding areas throughout each shift, promptly reporting any concerns. [...] - Follow hotel procedures for chemical handling, waste segregation, occupational safety, and guest privacy. [...] Apply Now Take the first step towards your new journey. FULL NAME * EMAIL * PHONE * [...] RESUME / CV (PDF ONLY) *",
       "url": "https://recruit.dijiwasanctuaries.com/careers/pool-attendant-6ae16c952e366",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "CONTRACT HOUSEKEEPING Pool Attendant [...] Housekeeping Korurua Dijiwa Ubud Contract About the Role Join Dijiwa Sanctuaries as a Pool Attendant at Korurua Dijiwa Ubud, where thoughtful service and authentic Balinese hospitality create a true sanctuary for the soul. [...] - Monitor pool water quality, cleanliness, temperature, and surrounding areas throughout each shift, promptly reporting any concerns. [...] - Follow hotel procedures for chemical handling, waste segregation, occupational safety, and guest privacy. [...] Apply Now Take the first step towards your new journey. FULL NAME * EMAIL * PHONE * [...] RESUME / CV (PDF ONLY) *",
+        "fakta": {
+          "perusahaan": "Dijiwa Sanctuaries / Korurua Dijiwa Ubud",
+          "posisi": "Pool Attendant",
+          "lokasi_kerja": "Ubud, Bali",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "Formulir online",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan pekerjaan untuk posisi Pool Attendant di Korurua Dijiwa Ubud oleh Dijiwa Sanctuaries dengan persyaratan pengiriman lamaran melalui formulir daring."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-02",
@@ -156,7 +699,27 @@
       "teks": "Physiotherapist Full-time Job Description •Carry out Medical Rehabilitation service programs and plans related to physiotherapy services in accordance with service standards and procedures as well as applicable laws and regulations to support the patient's healing and recovery process [...] Qualifications •Diploma (D3) Degree from Occupational Therapy •Have minimum 1 year work experience as Occupational Therapist [...] [BEWARE OF RECRUITMENT SCAMS] It has come to our attention that there are fake job offers claiming to be hiring for Siloam Hospitals Group. Please note that Siloam Hospitals Group do not require applicants to make payment when seeking employment with our hospitals.",
       "url": "https://jobs.smartrecruiters.com/SiloamCareers/6000000001528008-physiotherapist",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Physiotherapist Full-time Job Description •Carry out Medical Rehabilitation service programs and plans related to physiotherapy services in accordance with service standards and procedures as well as applicable laws and regulations to support the patient's healing and recovery process [...] Qualifications •Diploma (D3) Degree from Occupational Therapy •Have minimum 1 year work experience as Occupational Therapist [...] [BEWARE OF RECRUITMENT SCAMS] It has come to our attention that there are fake job offers claiming to be hiring for Siloam Hospitals Group. Please note that Siloam Hospitals Group do not require applicants to make payment when seeking employment with our hospitals.",
+        "fakta": {
+          "perusahaan": "Siloam Hospitals Group",
+          "posisi": "Physiotherapist",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan pekerjaan untuk posisi Physiotherapist di Siloam Hospitals Group dengan persyaratan pendidikan D3 dan pengalaman minimal 1 tahun. Teks tersebut juga mencantumkan peringatan resmi mengenai penipuan rekrutmen."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-03",
@@ -166,6 +729,36 @@
       "skor_aturan": 15,
       "rambu_aturan": [
         "LUAR_NEGERI_TANPA_IZIN"
+      ],
+      "jawaban_ai": {
+        "teks_terbaca": "CREW POSITION HIRED Explore Career Opportunities [...] Position Hired For Cruise Ship Hotel Crews House Keeping Cleaner Laundry Food Production Cook Utility Food Service Restaurant Bar [...] PT Augustea Intcrews Indonesia Branch Office at Semarang & Bali Hotel Ballroom Walk-In Interview at Balawan, Bandung, Jogjakarta, Semarang, Surabaya, Bali & Makasar Tourism School (POLTEKPAR) Walk-In Interview at Politeknik Pariwisata Bali (PPB) [...] Email Us Recruitment@augustea-intcrews.com",
+        "fakta": {
+          "perusahaan": "PT Augustea Intcrews Indonesia",
+          "posisi": "House Keeping, Cleaner, Laundry, Food Production, Cook, Utility, Food Service, Restaurant, Bar",
+          "lokasi_kerja": "Cruise Ship",
+          "luar_negeri": true,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "Email",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [
+          {
+            "kode": "LUAR_NEGERI_TANPA_IZIN",
+            "bukti": "Position Hired For Cruise Ship Hotel Crews",
+            "alasan": "Lowongan pekerjaan di kapal pesiar (luar negeri) tanpa keterangan izin resmi penempatan tenaga kerja."
+          }
+        ],
+        "ringkasan": "Lowongan pekerjaan untuk awak kapal pesiar oleh PT Augustea Intcrews Indonesia melalui jalur email dengan wawancara langsung di beberapa politeknik pariwisata."
+      },
+      "skor_ai": 15,
+      "rambu_ai": [
+        "LUAR_NEGERI_TANPA_IZIN"
+      ],
+      "skor_gabungan": 15,
+      "rambu_gabungan": [
+        "LUAR_NEGERI_TANPA_IZIN"
       ]
     },
     {
@@ -174,7 +767,27 @@
       "teks": "Kawan Lama Group tidak memungut biaya apapun selama proses pendaftaran dan seleksi karir berlangsung. Kasir Lokasi Kota Denpasar - Prop. Bali Tipe Cabang Operasional Gambaran Pekerjaan Sebagai Kasir, Anda akan membantu customer melakukan transaksi pembayaran dengan cepat dan akurat, termasuk menginformasikan program yang sedang berlangsung kepada customer. [...] Kualifikasi Minimal SMA/SMK sederajat. Memiliki pengalaman minimal 1 tahun sebagai Kasir. Bersedia ditempatkan di Store dengan jam kerja shift. Skill yang Dibutuhkan Pengetahuan mengenai alat pembayaran yang sah Kemampuan mengoperasikan mesin POS Microsoft Office Saya ingin melamar posisi ini",
       "url": "https://karir.kawanlamagroup.com/JobOpenings/Details?id=VCN2024090015",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Kawan Lama Group tidak memungut biaya apapun selama proses pendaftaran dan seleksi karir berlangsung. Kasir Lokasi Kota Denpasar - Prop. Bali Tipe Cabang Operasional Gambaran Pekerjaan Sebagai Kasir, Anda akan membantu customer melakukan transaksi pembayaran dengan cepat dan akurat, termasuk menginformasikan program yang sedang berlangsung kepada customer. [...] Kualifikasi Minimal SMA/SMK sederajat. Memiliki pengalaman minimal 1 tahun sebagai Kasir. Bersedia ditempatkan di Store dengan jam kerja shift. Skill yang Dibutuhkan Pengetahuan mengenai alat pembayaran yang sah Kemampuan mengoperasikan mesin POS Microsoft Office Saya ingin melamar posisi ini",
+        "fakta": {
+          "perusahaan": "Kawan Lama Group",
+          "posisi": "Kasir",
+          "lokasi_kerja": "Kota Denpasar, Bali",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan pekerjaan untuk posisi Kasir di Kota Denpasar oleh Kawan Lama Group dengan persyaratan minimal SMA/SMK dan pengalaman 1 tahun. Tidak ditemukan adanya rambu-rambu bahaya penipuan pada teks lowongan ini."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-05",
@@ -182,7 +795,27 @@
       "teks": "Gateway & Cabang J&T [...] BALI - Mekanik Kendaraan Job Description Perawatan rutin kendaraan dan pemeriksaan status kendaraan. Menganalisis dan mendiagnosis kerusakan kendaraan [...] Job Requirement Pendidikan SMK/STM Jurusan Mesin atau Otomotif Menguasai maintenance dan perbaikan kendaraan roda 4 (truk) [...] Mampu mengoperasikan kendaraan truk Memiliki SIM A atau B Bersedia dengan jam kerja shifting Memiliki smartphone untuk sarana kerja & komunikasi Bersedia penempatan di Pemogan, Bali",
       "url": "https://jet.co.id/about/career/details?fid=52",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Gateway & Cabang J&T [...] BALI - Mekanik Kendaraan Job Description Perawatan rutin kendaraan dan pemeriksaan status kendaraan. Menganalisis dan mendiagnosis kerusakan kendaraan [...] Job Requirement Pendidikan SMK/STM Jurusan Mesin atau Otomotif Menguasai maintenance dan perbaikan kendaraan roda 4 (truk) [...] Mampu mengoperasikan kendaraan truk Memiliki SIM A atau B Bersedia dengan jam kerja shifting Memiliki smartphone untuk sarana kerja & komunikasi Bersedia penempatan di Pemogan, Bali",
+        "fakta": {
+          "perusahaan": "J&T",
+          "posisi": "Mekanik Kendaraan",
+          "lokasi_kerja": "Pemogan, Bali",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan kerja sebagai Mekanik Kendaraan di J&T Gateway & Cabang Bali untuk penempatan di Pemogan. Tidak ditemukan adanya rambu bahaya penipuan yang eksplisit dalam teks yang tersedia."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-06",
@@ -192,6 +825,47 @@
       "skor_aturan": 15,
       "rambu_aturan": [
         "EMAIL_GRATISAN"
+      ],
+      "jawaban_ai": {
+        "teks_terbaca": "Pengumuman Penempatan SDM KDKMP dan KNMP 1. Peserta dapat masuk melalui web simkopdes.go.id dan login melalui akun masing-masing. 2. Mohon memberikan konfirmasi paling lambat 28 September 2026 pukul 23.59 WIB. [...] KONTAK E-mail Kontak: kdkmpknmp2026@gmail.com (dikelola oleh admin Panselnas) [...] 2026 © Panitia Seleksi Nasional Pengadaan Sumber Daya Manusia Dalam Rangka Pemenuhan Program Prioritas Presiden",
+        "fakta": {
+          "perusahaan": "Panitia Seleksi Nasional Pengadaan Sumber Daya Manusia",
+          "posisi": "SDM KDKMP dan KNMP",
+          "lokasi_kerja": "",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "simkopdes.go.id",
+          "kontak": [
+            "kdkmpknmp2026@gmail.com"
+          ],
+          "tautan": [
+            "simkopdes.go.id"
+          ]
+        },
+        "rambu": [
+          {
+            "kode": "EMAIL_GRATISAN",
+            "bukti": "kdkmpknmp2026@gmail.com",
+            "alasan": "Lowongan instansi resmi menggunakan layanan email gratisan."
+          },
+          {
+            "kode": "CATUT_PERUSAHAAN",
+            "bukti": "Panitia Seleksi Nasional Pengadaan Sumber Daya Manusia",
+            "alasan": "Mengatasnamakan Panitia Seleksi Nasional tetapi menggunakan kontak email gratis."
+          }
+        ],
+        "ringkasan": "Lowongan mengatasnamakan Panitia Seleksi Nasional untuk posisi SDM KDKMP dan KNMP namun menggunakan kontak email gratisan."
+      },
+      "skor_ai": 40,
+      "rambu_ai": [
+        "CATUT_PERUSAHAAN",
+        "EMAIL_GRATISAN"
+      ],
+      "skor_gabungan": 40,
+      "rambu_gabungan": [
+        "CATUT_PERUSAHAAN",
+        "EMAIL_GRATISAN"
       ]
     },
     {
@@ -200,7 +874,27 @@
       "teks": "Retail Sales Associate (FINNS Bali Retail) Description FINNS Bali Retail is home to one of the island’s most exciting retail destinations, featuring curated fashion, swimwear, lifestyle, and accessories brands within one of Southeast Asia’s leading beach clubs. [...] Qualifications Prior experience in retail, fashion, or customer-facing hospitality — lifestyle or fashion retail is a strong advantage. [...] Presentable, well-groomed, and aligned with a premium hospitality brand standard. [...] Contacts Please send your CV and Recent Photograph. Only shortlisted candidates will be notified. APPLY NOW:",
       "url": "https://finnsbali.com/career/retail-sales-associate/",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Retail Sales Associate (FINNS Bali Retail) Description FINNS Bali Retail is home to one of the island’s most exciting retail destinations, featuring curated fashion, swimwear, lifestyle, and accessories brands within one of Southeast Asia’s leading beach clubs. [...] Qualifications Prior experience in retail, fashion, or customer-facing hospitality — lifestyle or fashion retail is a strong advantage. [...] Presentable, well-groomed, and aligned with a premium hospitality brand standard. [...] Contacts Please send your CV and Recent Photograph. Only shortlisted candidates will be notified. APPLY NOW:",
+        "fakta": {
+          "perusahaan": "FINNS Bali Retail",
+          "posisi": "Retail Sales Associate",
+          "lokasi_kerja": "Bali",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan pekerjaan untuk posisi Retail Sales Associate di FINNS Bali Retail dengan kualifikasi pengalaman di bidang ritel atau perhotelan. Tidak ditemukan adanya rambu bahaya penipuan secara jelas dari teks yang tersedia."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-08",
@@ -208,7 +902,29 @@
       "teks": "Pool Attendants We are looking for suitable candidates to join our team of Pool Attendants. If you are: Physically fit with good swimming abilities Knowledgeable about pool cleaning & maintenance Well-groomed, positive, energetic & creative Male/female max. 25 years old Great at verbal communication [...] High school, diploma or equivalent At least one year working in the hospitality or tourism industry Submit your resume and cover letter with relevant experience for the position to recruiter@waterbom-bali.com APPLY NOW",
       "url": "https://www.waterbom-bali.com/vacancy-pool-attendants",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Pool Attendants We are looking for suitable candidates to join our team of Pool Attendants. If you are: Physically fit with good swimming abilities Knowledgeable about pool cleaning & maintenance Well-groomed, positive, energetic & creative Male/female max. 25 years old Great at verbal communication [...] High school, diploma or equivalent At least one year working in the hospitality or tourism industry Submit your resume and cover letter with relevant experience for the position to recruiter@waterbom-bali.com APPLY NOW",
+        "fakta": {
+          "perusahaan": "Waterbom Bali",
+          "posisi": "Pool Attendant",
+          "lokasi_kerja": "Bali",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "Email",
+          "kontak": [],
+          "tautan": [
+            "recruiter@waterbom-bali.com"
+          ]
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan kerja untuk posisi Pool Attendant di Waterbom Bali dengan pengiriman lamaran melalui alamat email resmi perusahaan."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-09",
@@ -216,7 +932,27 @@
       "teks": "Guest Relations Officer (Russian Speaker) at The Apurva Kempinski Bali The Lady in Red is an iconic symbol of Kempinski and is in essence the Hotel Ambassador (or First Lady). [...] Application Deadline November 30, 2026 Department Rooms Division, Front Office & Guest Services Employment Type Fixed Term - Full Time Location Indonesia - Bali [...] Skills, Knowledge and Expertise Indonesia citizen, fluent in Russian Language (spoken & written) Proficient in English; additional language is a plus Has minimum 2 years experience in hospitality, customer service, or a similar role [...] Stage 1: Application Review Stage 2: HR interview",
       "url": "https://kempinski.pinpointhq.com/en/postings/01db2741-5e4c-4143-beb2-a59c8f2f2d5a",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Guest Relations Officer (Russian Speaker) at The Apurva Kempinski Bali The Lady in Red is an iconic symbol of Kempinski and is in essence the Hotel Ambassador (or First Lady). [...] Application Deadline November 30, 2026 Department Rooms Division, Front Office & Guest Services Employment Type Fixed Term - Full Time Location Indonesia - Bali [...] Skills, Knowledge and Expertise Indonesia citizen, fluent in Russian Language (spoken & written) Proficient in English; additional language is a plus Has minimum 2 years experience in hospitality, customer service, or a similar role [...] Stage 1: Application Review Stage 2: HR interview",
+        "fakta": {
+          "perusahaan": "The Apurva Kempinski Bali",
+          "posisi": "Guest Relations Officer (Russian Speaker)",
+          "lokasi_kerja": "Indonesia - Bali",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan pekerjaan untuk posisi Guest Relations Officer di The Apurva Kempinski Bali dengan persyaratan bahasa Rusia dan pengalaman minimal 2 tahun di bidang perhotelan. Tidak ditemukan indikasi tanda bahaya penipuan pada teks lowongan ini."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-10",
@@ -224,7 +960,27 @@
       "teks": "Guest Services Agent Quest Hotel Kuta Full-time On-site Contract IDR 3.7M-3.8M Join by 26 Nov 2026 · in 20 days Urgently needed 1 APPLY Welcome and greet guests warmly and professionally upon arrival at the hotel. [...] Requirements Minimum Diploma in Hospitality Management, Hotel Management, or a related field. Fresh graduates are welcome to apply; experience in a similar position will be an advantage. [...] Flexible to work in shifts, including weekends and public holidays. [...] Quest Hotel Kuta More Jalan Kediri No. 9 Tuban - Kuta 80361, Bali, Indonesia",
       "url": "https://jobs.ems.sentec.io/vacancy/6/1570/guest-services-agent",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Guest Services Agent Quest Hotel Kuta Full-time On-site Contract IDR 3.7M-3.8M Join by 26 Nov 2026 · in 20 days Urgently needed 1 APPLY Welcome and greet guests warmly and professionally upon arrival at the hotel. [...] Requirements Minimum Diploma in Hospitality Management, Hotel Management, or a related field. Fresh graduates are welcome to apply; experience in a similar position will be an advantage. [...] Flexible to work in shifts, including weekends and public holidays. [...] Quest Hotel Kuta More Jalan Kediri No. 9 Tuban - Kuta 80361, Bali, Indonesia",
+        "fakta": {
+          "perusahaan": "Quest Hotel Kuta",
+          "posisi": "Guest Services Agent",
+          "lokasi_kerja": "Jalan Kediri No. 9 Tuban - Kuta 80361, Bali, Indonesia",
+          "luar_negeri": false,
+          "gaji": "IDR 3.7M-3.8M",
+          "biaya_disebut": "",
+          "saluran_lamaran": "",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan kerja untuk posisi Guest Services Agent di Quest Hotel Kuta, Bali, dengan kisaran gaji IDR 3,7 juta hingga 3,8 juta. Tidak ditemukan indikasi rambu-rambu penipuan yang jelas dari teks yang tersedia."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-11",
@@ -232,7 +988,29 @@
       "teks": "Bina BNI Batch VI Kantor Wilayah 05 [Semarang] Bank Negara Indonesia Semarang, Indonesia Full time Posted 12 days ago and deadline of application is on 8 Nov [...] Pendaftaran dibuka mulai tanggal 26 Oktober sampai dengan 07 November 2026 pukul 23.59 WIB. [...] Pria/Wanita berpenampilan menarik dengan syarat : Pria dengan tinggi minimal 165 cm, Wanita dengan tinggi minimal 155 cm. Belum menikah dan bersedia tidak menikah selama periode pemagangan. [...] Usia 18 s/d 25 tahun saat seleksi rekrutmen. [...] WEBSITE https://recruitment.bni.co.id",
       "url": "https://www.kalibrr.com/c/pt-bank-negara-indonesia-persero-tbk/jobs/274668/bina-bni-batch-vi-kantor-wilayah-05-semarang",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Bina BNI Batch VI Kantor Wilayah 05 [Semarang] Bank Negara Indonesia Semarang, Indonesia Full time Posted 12 days ago and deadline of application is on 8 Nov [...] Pendaftaran dibuka mulai tanggal 26 Oktober sampai dengan 07 November 2026 pukul 23.59 WIB. [...] Pria/Wanita berpenampilan menarik dengan syarat : Pria dengan tinggi minimal 165 cm, Wanita dengan tinggi minimal 155 cm. Belum menikah dan bersedia tidak menikah selama periode pemagangan. [...] Usia 18 s/d 25 tahun saat seleksi rekrutmen. [...] WEBSITE https://recruitment.bni.co.id",
+        "fakta": {
+          "perusahaan": "Bank Negara Indonesia",
+          "posisi": "Bina BNI Batch VI",
+          "lokasi_kerja": "Semarang, Indonesia",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "WEBSITE",
+          "kontak": [],
+          "tautan": [
+            "https://recruitment.bni.co.id"
+          ]
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan pekerjaan untuk program Bina BNI Batch VI di Semarang menggunakan saluran resmi perusahaan melalui situs web rekrutmen BNI."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     },
     {
       "id": "uji-asli-12",
@@ -240,7 +1018,27 @@
       "teks": "Staff Operasional (BALI) Bali, Indonesia Ops - Operasi Apply for Position [...] Deskripsi Pekerjaan Melakukan penanganan masalah yang terjadi pada pengemudi selama masa orientasi Melakukan evaluasi performa pengemudi Menangani komplain atau kecelakaan armada yang melibatkan pelanggan [...] Kualifikasi Sarjana di bidang Administrasi,Teknik atau bidang terkait Fresh Graduate atau memiliki pengalaman kerja dalam bidang terkait minimal 1 tahun [...] Apply for Position Or refer someone",
       "url": "https://www.careers-page.com/bluebirdgroup/job/W388R9R9",
       "skor_aturan": 0,
-      "rambu_aturan": []
+      "rambu_aturan": [],
+      "jawaban_ai": {
+        "teks_terbaca": "Staff Operasional (BALI) Bali, Indonesia Ops - Operasi Apply for Position [...] Deskripsi Pekerjaan Melakukan penanganan masalah yang terjadi pada pengemudi selama masa orientasi Melakukan evaluasi performa pengemudi Menangani komplain atau kecelakaan armada yang melibatkan pelanggan [...] Kualifikasi Sarjana di bidang Administrasi,Teknik atau bidang terkait Fresh Graduate atau memiliki pengalaman kerja dalam bidang terkait minimal 1 tahun [...] Apply for Position Or refer someone",
+        "fakta": {
+          "perusahaan": "",
+          "posisi": "Staff Operasional",
+          "lokasi_kerja": "Bali, Indonesia",
+          "luar_negeri": false,
+          "gaji": "",
+          "biaya_disebut": "",
+          "saluran_lamaran": "Apply for Position",
+          "kontak": [],
+          "tautan": []
+        },
+        "rambu": [],
+        "ringkasan": "Lowongan kerja untuk posisi Staff Operasional di Bali dengan persyaratan minimal pendidikan Sarjana di bidang terkait. Tidak ditemukan tanda-tanda rambu bahaya penipuan pada teks lowongan ini."
+      },
+      "skor_ai": 0,
+      "rambu_ai": [],
+      "skor_gabungan": 0,
+      "rambu_gabungan": []
     }
   ]
 }

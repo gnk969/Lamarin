@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 docs/proposal.build.html
 docs/proposal-data.json
+.claude/
