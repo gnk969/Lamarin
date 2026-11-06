@@ -9,9 +9,16 @@
 import difflib
 import logging
 import re
+from dataclasses import asdict
 
-from . import config, gemini, rules
+from . import config, gemini, rules, sumber
 from .rambu import KATALOG, level_for
+
+# Rambu yang bergantung pada konteks dan tidak berlaku bila pendaftaran terbukti lewat domain resmi.
+# Rambu uang (biaya, deposit, travel wajib) dan kontak pribadi tetap dihitung.
+KONTEKS_RESMI = {"CATUT_PERUSAHAAN", "DESAKAN_WAKTU", "SYARAT_TERLALU_MUDAH", "LUAR_NEGERI_TANPA_IZIN",
+                 "MINTA_DATA_SENSITIF"}
+_SECRET = re.compile(r"\b(otp|pin|password|kode verifikasi)\b", re.I)
 
 log = logging.getLogger("rambu.analyzer")
 
@@ -62,6 +69,16 @@ def _claim_matches(kode: str, bukti: str) -> bool:
     return True
 
 
+def _claim_snippet(text: str, instansi: str) -> str:
+    """Kalimat yang menyebut instansi/perusahaan, sebagai bukti rambu mencatut."""
+    low = text.lower()
+    org = next((o for o in sumber.KNOWN_ORGS if o.nama == instansi), None)
+    m = re.search(org.pola, low) if org else sumber.GOV_CLAIM.search(low)
+    if not m:
+        return text.strip().splitlines()[0][:120]
+    return rules._snippet(text, m.start(), m.end())
+
+
 def analyze(text: str | None, image: bytes | None = None, mime: str | None = None,
             use_ai: bool = True, ai_data: dict | None = None) -> dict:
     """ai_data: hasil Gemini yang sudah ada (dipakai skrip evaluasi agar tiap lowongan cukup dipanggil sekali)."""
@@ -107,6 +124,19 @@ def analyze(text: str | None, image: bytes | None = None, mime: str | None = Non
     if rejected:
         warnings.append(f"{rejected} temuan AI diabaikan karena kutipannya tidak ada di teks lowongan.")
 
+    # Verifikasi sumber (kode, bukan AI): cocokkan instansi yang disebut dengan domain pendaftarannya.
+    perusahaan = str(((ai_data or {}).get("fakta") or {}).get("perusahaan", "") or "")
+    src = sumber.verify(text, perusahaan, has_personal_contact="KONTAK_PRIBADI" in found)
+    dibatalkan = []
+    if src.status == "resmi":
+        for kode in list(found):
+            if kode in KONTEKS_RESMI and not (kode == "MINTA_DATA_SENSITIF" and _SECRET.search(found[kode]["bukti"])):
+                dibatalkan.append(KATALOG[kode].judul)
+                del found[kode]
+    elif src.status == "tidak_cocok" and "CATUT_PERUSAHAAN" not in found:
+        found["CATUT_PERUSAHAAN"] = {"kode": "CATUT_PERUSAHAAN", "bukti": _claim_snippet(text, src.instansi),
+                                     "sumber": ["aturan"], "alasan_ai": ""}
+
     rambu = []
     for kode, f in found.items():
         r = KATALOG[kode]
@@ -135,4 +165,5 @@ def analyze(text: str | None, image: bytes | None = None, mime: str | None = Non
         "teks_diperiksa": text[: config.MAX_TEXT_CHARS],
         "langkah": steps[:6],
         "peringatan": warnings,
+        "sumber": {**asdict(src), "rambu_dibatalkan": dibatalkan},
     }

@@ -80,6 +80,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ai", action="store_true")
     ap.add_argument("--set", choices=list(FILES), default="uji")
+    ap.add_argument("--ulang", action="store_true",
+                    help="hitung ulang memakai jawaban AI yang tersimpan (tanpa memanggil AI lagi)")
     args = ap.parse_args()
     if not args.ai:
         os.environ["RAMBU_AI"] = "off"
@@ -95,7 +97,20 @@ def main():
     report = {"set": args.set, "jumlah": len(rows), "penipuan": sum(r["label"] for r in rows),
               "asli": sum(1 - r["label"] for r in rows), "aturan": metrics(rows, "skor_aturan")}
 
-    if args.ai:
+    if args.ulang:
+        old = {r["id"]: r for r in json.loads((ROOT / "docs" / f"hasil-evaluasi-{args.set}.json")
+                                              .read_text(encoding="utf-8"))["per_item"]}
+        for r in rows:
+            data = old[r["id"]]["jawaban_ai"]
+            r["jawaban_ai"] = data
+            r["skor_ai"], r["rambu_ai"] = ai_only_score(data, r["teks"])
+            res = analyzer.analyze(r["teks"], ai_data=data)
+            r["skor_gabungan"] = res["skor"]
+            r["rambu_gabungan"] = [x["kode"] for x in res["rambu"]]
+            r["sumber"] = res["sumber"]["status"]
+        report["ai_saja"] = metrics(rows, "skor_ai")
+        report["aturan_ai"] = metrics(rows, "skor_gabungan")
+    elif args.ai:
         if not config.ai_available():
             sys.exit("GEMINI_API_KEY belum diatur di .env")
         for i, r in enumerate(rows, 1):
@@ -106,6 +121,7 @@ def main():
             res = analyzer.analyze(r["teks"], ai_data=data)
             r["skor_gabungan"] = res["skor"]
             r["rambu_gabungan"] = [x["kode"] for x in res["rambu"]]
+            r["sumber"] = res["sumber"]["status"]
         report["ai_saja"] = metrics(rows, "skor_ai")
         report["aturan_ai"] = metrics(rows, "skor_gabungan")
 

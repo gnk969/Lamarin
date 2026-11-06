@@ -221,6 +221,23 @@ function renderResult(r) {
     })
     .join("");
 
+  const SRC_TITLE = {
+    resmi: "Sumber resmi terdeteksi",
+    tidak_cocok: "Sumber tidak cocok dengan nama yang dipakai",
+    campuran: "Ada saluran resmi dan tidak resmi",
+    netral: "Sumber belum bisa dipastikan",
+    tidak_ada: "Sumber belum bisa dipastikan",
+  };
+  const src = r.sumber;
+  const sourceBox = src ? `
+    <div class="source" data-status="${esc(src.status)}">
+      <h3><span class="dot" aria-hidden="true"></span>Cek sumber: ${esc(SRC_TITLE[src.status] || "Sumber")}</h3>
+      <p>${esc(src.pesan)}</p>
+      ${src.rambu_dibatalkan?.length ? `<p class="muted">Tidak dihitung karena sumbernya resmi: ${esc(src.rambu_dibatalkan.join(", "))}.</p>` : ""}
+      ${src.cek_manual?.length ? `<div class="links">${src.cek_manual.map((l) =>
+        `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}
+    </div>` : "";
+
   const modeText = r.mode === "aturan+ai" ? "Diperiksa dengan daftar aturan dan AI (Gemini)." : "Diperiksa dengan daftar aturan saja.";
   resultBox.hidden = false;
   resultBox.innerHTML = `
@@ -237,6 +254,7 @@ function renderResult(r) {
     ${r.ringkasan_ai ? `<p class="summary">${esc(r.ringkasan_ai)}</p>` : ""}
     <p class="meta" style="color:var(--ink-soft);font-size:.85rem;margin-top:12px">${modeText}</p>
     ${r.peringatan.map((w) => `<p class="warn">${esc(w)}</p>`).join("")}
+    ${sourceBox}
 
     <h2 class="section-title">Rambu yang ditemukan (${r.rambu.length})</h2>
     ${flags}
@@ -245,7 +263,7 @@ function renderResult(r) {
 
     <h2 class="section-title">Langkah aman</h2>
     <ol class="steps">${r.langkah.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
-    <p class="note">Skor dihitung dari bobot tetap tiap rambu. AI hanya boleh menambah rambu bila mengutip bagian lowongan yang benar-benar ada.</p>`;
+    <p class="note">Skor dihitung dari bobot tetap tiap rambu. AI hanya boleh menambah rambu bila mengutip bagian lowongan yang benar-benar ada. Cek sumber dilakukan oleh kode: domain .go.id, .ac.id, dan domain resmi perusahaan tidak bisa dibuat oleh penipu.</p>`;
   resultBox.querySelector("h2")?.focus?.();
   resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
 }

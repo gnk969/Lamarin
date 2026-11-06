@@ -18,8 +18,9 @@ dan calon pekerja migran di Bali.
 2. **Periksa gambar**: unggah, seret, atau tempel (Ctrl+V) tangkapan layar poster lowongan.
 3. **Rambu dengan bukti**: setiap tanda bahaya menampilkan kutipan kalimat lowongan yang memicunya, sumbernya (Aturan / AI), dan alasannya.
 4. **Skor risiko 0-100** dengan tiga level: Risiko tinggi, Waspada, Belum ditemukan rambu utama. Tidak ada label "aman".
-5. **Fakta yang terbaca** (perusahaan, posisi, gaji, biaya, kontak, tautan) dan **langkah aman** sesuai rambu.
-6. **Contoh kasus nyata** dari artikel cek fakta dan situs karier resmi, dengan tautan sumber.
+5. **Cek sumber**: mencocokkan domain pendaftaran dengan instansi/perusahaan yang disebut (mis. lowongan Kemenkes harus lewat kemkes.go.id), plus tautan untuk mengecek sendiri ke situs resmi dan laporan hoaks.
+6. **Fakta yang terbaca** (perusahaan, posisi, gaji, biaya, kontak, tautan) dan **langkah aman** sesuai rambu.
+7. **Contoh kasus nyata** dari artikel cek fakta dan situs karier resmi, dengan tautan sumber.
 
 ## Tech Stack
 - Backend: Python 3.11+, FastAPI, Uvicorn, httpx
@@ -36,6 +37,7 @@ dan calon pekerja migran di Bali.
 | Rambu kontekstual | **Gemini, JSON schema** | teks lowongan | rambu dari katalog tetap + kutipan bukti + alasan (mis. mencatut perusahaan besar, informasi bertentangan) |
 | Rambu pola | aturan (regex) | teks lowongan | 11 rambu: biaya, deposit, travel wajib, data sensitif, tautan mencurigakan, kontak pribadi, email gratisan, gaji tidak wajar, syarat terlalu mudah, desakan waktu, luar negeri tanpa izin |
 | Verifikasi | kode | kutipan AI vs teks | rambu AI tanpa kutipan yang cocok ditolak |
+| Verifikasi sumber | kode (`sumber.py`) | tautan & email lowongan | cocok/tidak dengan domain resmi instansi (.go.id, .ac.id) atau perusahaan yang disebut; bila resmi, rambu kontekstual dibatalkan, bila tidak cocok ditandai mencatut |
 | Skor | bobot tetap | rambu unik | skor 0-100 dan level |
 
 **Mengapa AI diperlukan:** poster lowongan berupa gambar, kalimatnya bebas, dan banyak penipuan baru terlihat dari konteks
@@ -78,9 +80,9 @@ Hasil terakhir (6 Nov 2026, model `gemini-3.5-flash-lite`, ambang skor >= 20):
 | Uji (buta, 27) | Aturan saja | 1.00 | 0.07 | 0.12 | 0.48 |
 | Uji (buta, 27) | AI saja | 0.90 | 0.60 | 0.72 | 0.74 |
 | Uji (buta, 27) | **Aturan + AI** | **0.91** | **0.67** | **0.77** | **0.78** |
-| Pengembangan (52) | Aturan saja | 1.00 | 0.44 | 0.61 | 0.71 |
-| Pengembangan (52) | AI saja | 0.94 | 0.63 | 0.76 | 0.79 |
-| Pengembangan (52) | Aturan + AI | 0.95 | 0.67 | 0.78 | 0.81 |
+| Pengembangan (52) | Aturan saja | 1.00 | 0.59 | 0.74 | 0.79 |
+| Pengembangan (52) | AI saja | 1.00 | 0.70 | 0.83 | 0.85 |
+| Pengembangan (52) | Aturan + AI | 1.00 | 0.70 | 0.83 | 0.85 |
 
 Pada uji buta, AI menaikkan penipuan yang tertangkap dari 1 menjadi 10 dari 15, dengan 1 lowongan asli salah
 ditandai. Catatan jujur:
@@ -89,6 +91,9 @@ ditandai. Catatan jujur:
 - Pemeriksaan "email gratisan harus benar-benar memuat domain gratisan" (`analyzer._claim_matches`) ditambahkan
   setelah melihat salah tuduh pada uji buta pertama. Ini aturan kebenaran fakta, bukan penyetelan bobot, tetapi
   set uji ini tidak lagi sepenuhnya buta untuk pemeriksaan tersebut. Set uji baru perlu dikumpulkan untuk angka akhir.
+- Verifikasi sumber (domain resmi vs saluran tidak resmi) ditambahkan setelah laporan lowongan resmi Kemenkes
+  dinilai berisiko tinggi. Angka set uji dihitung ulang dari jawaban AI yang tersimpan (tidak berubah);
+  set pengembangan dijalankan ulang dengan AI.
 - 5 penipuan masih lolos, umumnya poster yang hanya mencatut nama instansi dan mengarahkan ke tautan tanpa biaya
   atau kontak pribadi di teksnya.
 

@@ -93,7 +93,8 @@
         "CATUT_PERUSAHAAN",
         "KONTAK_PRIBADI",
         "GAJI_TIDAK_WAJAR"
-      ]
+      ],
+      "sumber": "netral"
     },
     {
       "id": "uji-scam-02",
@@ -145,7 +146,8 @@
         "TAUTAN_MENCURIGAKAN",
         "CATUT_PERUSAHAAN",
         "DESAKAN_WAKTU"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-03",
@@ -183,7 +185,8 @@
       "skor_gabungan": 25,
       "rambu_gabungan": [
         "CATUT_PERUSAHAAN"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-04",
@@ -228,7 +231,8 @@
       "rambu_gabungan": [
         "TAUTAN_MENCURIGAKAN",
         "CATUT_PERUSAHAAN"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-05",
@@ -256,7 +260,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-06",
@@ -294,7 +299,8 @@
       "skor_gabungan": 30,
       "rambu_gabungan": [
         "TAUTAN_MENCURIGAKAN"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-07",
@@ -339,7 +345,8 @@
       "rambu_gabungan": [
         "TAUTAN_MENCURIGAKAN",
         "CATUT_PERUSAHAAN"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-08",
@@ -377,7 +384,8 @@
       "skor_gabungan": 10,
       "rambu_gabungan": [
         "SYARAT_TERLALU_MUDAH"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-09",
@@ -420,7 +428,8 @@
       "skor_gabungan": 10,
       "rambu_gabungan": [
         "DESAKAN_WAKTU"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-10",
@@ -458,7 +467,8 @@
       "skor_gabungan": 25,
       "rambu_gabungan": [
         "CATUT_PERUSAHAAN"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-11",
@@ -503,7 +513,8 @@
       "rambu_gabungan": [
         "CATUT_PERUSAHAAN",
         "SYARAT_TERLALU_MUDAH"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-12",
@@ -531,7 +542,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-13",
@@ -559,7 +571,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-14",
@@ -600,7 +613,8 @@
       "rambu_gabungan": [
         "LUAR_NEGERI_TANPA_IZIN",
         "KONTAK_PRIBADI"
-      ]
+      ],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-scam-15",
@@ -663,7 +677,8 @@
         "GAJI_TIDAK_WAJAR",
         "KONTAK_PRIBADI",
         "SYARAT_TERLALU_MUDAH"
-      ]
+      ],
+      "sumber": "netral"
     },
     {
       "id": "uji-asli-01",
@@ -691,7 +706,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-asli-02",
@@ -719,7 +735,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-asli-03",
@@ -759,7 +776,8 @@
       "skor_gabungan": 15,
       "rambu_gabungan": [
         "LUAR_NEGERI_TANPA_IZIN"
-      ]
+      ],
+      "sumber": "netral"
     },
     {
       "id": "uji-asli-04",
@@ -787,7 +805,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-asli-05",
@@ -815,7 +834,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-asli-06",
@@ -866,7 +886,8 @@
       "rambu_gabungan": [
         "CATUT_PERUSAHAAN",
         "EMAIL_GRATISAN"
-      ]
+      ],
+      "sumber": "campuran"
     },
     {
       "id": "uji-asli-07",
@@ -894,7 +915,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-asli-08",
@@ -924,7 +946,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "netral"
     },
     {
       "id": "uji-asli-09",
@@ -952,7 +975,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-asli-10",
@@ -980,7 +1004,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     },
     {
       "id": "uji-asli-11",
@@ -1010,7 +1035,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "resmi"
     },
     {
       "id": "uji-asli-12",
@@ -1038,7 +1064,8 @@
       "skor_ai": 0,
       "rambu_ai": [],
       "skor_gabungan": 0,
-      "rambu_gabungan": []
+      "rambu_gabungan": [],
+      "sumber": "tidak_ada"
     }
   ]
 }
