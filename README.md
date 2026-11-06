@@ -26,7 +26,7 @@ dan calon pekerja migran di Bali.
 - Frontend: HTML, CSS, JavaScript tanpa framework; Tesseract.js (pembaca teks gambar di peramban saat AI tidak aktif)
 - AI: Google Gemini API paket gratis (`gemini-3.5-flash-lite`)
 - Database: tidak ada (masukan tidak disimpan)
-- Hosting: Render paket gratis (`render.yaml`)
+- Hosting: Vercel paket Hobby gratis (`vercel.json`, titik masuk `api/index.py`)
 
 ## AI Implementation
 | Tahap | Metode | Input | Output |
@@ -107,10 +107,11 @@ Detail per item, termasuk jawaban AI mentah: `docs/hasil-evaluasi-*.json`.
 5. Tes: `python -m pytest backend/tests`
 
 ## Deployment URL
-[Isi URL Render setelah deploy]
+[Isi URL Vercel setelah deploy]
 
-Deploy gratis: hubungkan repo ini di https://render.com (New > Blueprint), Render membaca `render.yaml`.
-Isi `GEMINI_API_KEY` di menu Environment.
+Deploy gratis tanpa kartu kredit di Vercel: https://vercel.com > Add New > Project > import repo ini > di Environment Variables
+isi `GEMINI_API_KEY` (dan `GEMINI_MODEL=gemini-3.5-flash-lite`) > Deploy. Vercel membaca `vercel.json`.
+Alternatif: `render.yaml` untuk Render (paket gratis Render meminta kartu kredit untuk web service).
 
 ## Demo Account
 Tidak perlu login.
@@ -121,7 +122,8 @@ Tidak perlu login.
 - Belum ada pengecekan otomatis ke daftar perusahaan penempatan pekerja migran (P3MI) resmi.
 - Pembacaan gambar tanpa AI (Tesseract.js) kurang akurat untuk poster bergaya rumit.
 - Paket gratis Gemini punya batas kuota, dan Google dapat memakai konten paket gratis untuk meningkatkan produknya.
-- Paket gratis Render tidur saat tidak dipakai; akses pertama bisa lambat.
+- Di hosting gratis, pemeriksaan pertama setelah lama tidak dipakai bisa sedikit lebih lambat (cold start).
+- Gambar besar diperkecil di peramban (sisi terpanjang 2000 px) sebelum dikirim, karena batas ukuran permintaan hosting.
 
 ## Third-party Resources / Credits
 - Google Gemini API; Tesseract.js (Apache-2.0); FastAPI, Uvicorn, Pydantic, httpx, pytest.

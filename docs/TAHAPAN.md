@@ -12,7 +12,7 @@ Status: [x] siap, [ ] perlu dikerjakan tim, [~] sebagian.
 |---|---|---|
 | Proposal PDF A4, maks 5 halaman isi di luar cover & lampiran | [~] | `docs/proposal.pdf` (dari `docs/proposal.html`). Isi nama tim, anggota, instansi, kontak ketua, dan URL deploy |
 | Repository GitHub | [~] | Kode siap. Tim membuat repo di GitHub lalu push (lihat README bagian GitHub) |
-| URL website/MVP aktif | [ ] | Deploy gratis lewat Render (`render.yaml`). Isi `GEMINI_API_KEY` di dashboard Render |
+| URL website/MVP aktif | [ ] | Deploy gratis lewat Vercel (`vercel.json`), tanpa kartu kredit. Isi `GEMINI_API_KEY` di Environment Variables Vercel |
 | AI & Technology Disclosure | [x] | `DISCLOSURE.md` |
 | README minimal (Lampiran B) | [~] | `README.md`. Isi Deployment URL dan Team Members |
 | `.env.example` tanpa secret | [x] | `.env.example` |
@@ -24,7 +24,7 @@ Status: [x] siap, [ ] perlu dikerjakan tim, [~] sebagian.
 - Identitas & komposisi peserta: diisi tim.
 - Proposal lengkap & terbaca: `docs/proposal.pdf`.
 - Repository dapat diakses: public, atau private dengan akses baca untuk akun GitHub panitia.
-- Website dapat diakses: URL Render. Paket gratis Render tidur bila tidak dipakai (bangun sekitar 30-60 detik); buka URL sebelum jadwal penjurian atau pakai monitor uptime gratis.
+- Website dapat diakses: URL Vercel. Buka URL dan coba satu pemeriksaan sebelum jadwal penjurian.
 - Fungsi utama dapat diuji: juri cukup menempel teks atau mengunggah gambar lowongan.
 - AI terintegrasi secara material: Gemini membaca gambar, mengekstrak fakta, dan menambah rambu kontekstual. Tanpa kunci API, aplikasi tetap jalan dalam mode aturan; untuk penjurian, **kunci API harus aktif**.
 

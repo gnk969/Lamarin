@@ -91,7 +91,7 @@ def main() -> None:
         "KATEGORI": data.get("kategori", "[SMA/SMK/sederajat atau Mahasiswa/Umum]"),
         "KONTAK": data.get("kontak", "[Isi email/telepon ketua]"),
         "GITHUB": data.get("github", "[Isi URL repository]"),
-        "DEPLOY": data.get("deploy", "[Isi URL Render]"),
+        "DEPLOY": data.get("deploy", "[Isi URL Vercel]"),
         "TAG": data.get("tag", "v1.0-submission (isi commit hash)"),
         "MODEL": config.GEMINI_MODEL,
         "DEV_N": str(dev.get("jumlah", "-")),

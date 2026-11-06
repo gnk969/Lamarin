@@ -33,7 +33,9 @@ _hits: dict[str, deque] = defaultdict(deque)
 
 
 def _rate_limit(request: Request) -> None:
-    ip = request.client.host if request.client else "lokal"
+    # Di belakang proxy hosting (Vercel/Render) alamat pengguna ada di X-Forwarded-For.
+    fwd = request.headers.get("x-forwarded-for", "")
+    ip = fwd.split(",")[0].strip() or (request.client.host if request.client else "lokal")
     now = time.monotonic()
     q = _hits[ip]
     while q and now - q[0] > 60:

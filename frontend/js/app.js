@@ -7,7 +7,9 @@ const tabs = { teks: $("tab-teks"), gambar: $("tab-gambar") };
 const panels = { teks: $("panel-teks"), gambar: $("panel-gambar") };
 
 const TESSERACT_URL = "https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js";
-const MAX_BYTES = 4 * 1024 * 1024;
+const MAX_BYTES = 15 * 1024 * 1024; // batas file asli; gambar besar diperkecil sebelum dikirim
+const SEND_BYTES = 1.5 * 1024 * 1024; // di atas ini gambar diperkecil (batas body hosting gratis sekitar 4,5 MB)
+const MAX_SIDE = 2000;
 
 let mode = "teks";
 let image = null; // { base64, mime }
@@ -78,19 +80,50 @@ function setImage(file) {
     return;
   }
   if (file.size > MAX_BYTES) {
-    showError("Gambar terlalu besar. Maksimal 4 MB.");
+    showError("Gambar terlalu besar. Maksimal 15 MB.");
     return;
   }
   const reader = new FileReader();
-  reader.onload = () => {
-    const url = String(reader.result);
-    image = { base64: url.split(",")[1], mime: file.type, dataUrl: url };
+  reader.onload = async () => {
+    let url = String(reader.result);
+    let mime = file.type;
+    try {
+      ({ url, mime } = await shrink(url, mime, file.size));
+    } catch {
+      /* bila gagal diperkecil, kirim apa adanya */
+    }
+    image = { base64: url.split(",")[1], mime, dataUrl: url };
+    if (resultBox.querySelector(".error")) {
+      resultBox.hidden = true; // hapus pesan galat lama setelah gambar valid dipilih
+      resultBox.innerHTML = "";
+    }
     $("preview").src = url;
     $("preview").hidden = false;
     $("clear-img").hidden = false;
     $("drop-empty").hidden = true;
   };
   reader.readAsDataURL(file);
+}
+
+// Perkecil tangkapan layar besar (sisi terpanjang maks 2000 px, JPEG) agar upload cepat dan muat di batas server.
+function shrink(url, mime, size) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => {
+      const scale = Math.min(1, MAX_SIDE / Math.max(img.width, img.height));
+      if (scale === 1 && size <= SEND_BYTES) return resolve({ url, mime });
+      const c = document.createElement("canvas");
+      c.width = Math.round(img.width * scale);
+      c.height = Math.round(img.height * scale);
+      const ctx = c.getContext("2d");
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, c.width, c.height);
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+      resolve({ url: c.toDataURL("image/jpeg", 0.88), mime: "image/jpeg" });
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
 }
 
 function clearImage() {

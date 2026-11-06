@@ -6,7 +6,7 @@
 | Framework / Frontend | HTML, CSS, JavaScript (ES modules), tanpa framework. Tesseract.js 5.1.1 (CDN jsDelivr) untuk membaca teks gambar di peramban saat AI tidak aktif |
 | Backend / Runtime | Python 3.11+, FastAPI, Uvicorn, httpx |
 | Database / Storage | Tidak ada database. Masukan pengguna tidak disimpan. Data uji di folder `data/` (JSON) |
-| Hosting / Deployment | Render paket gratis (`render.yaml`). URL dicantumkan di README setelah deploy |
+| Hosting / Deployment | Vercel paket Hobby gratis (`vercel.json`). URL dicantumkan di README setelah deploy |
 | AI Model / API / Method | Google Gemini API paket gratis, model `gemini-3.5-flash-lite` (dapat diganti lewat `GEMINI_MODEL`), endpoint REST `generateContent` dengan keluaran JSON terstruktur (JSON schema). Ditambah mesin aturan berbasis pola teks (regex) buatan tim |
 | Peran AI dalam Produk | (1) Membaca teks dari tangkapan layar lowongan. (2) Mengekstrak fakta lowongan (perusahaan, posisi, gaji, biaya, kontak, tautan). (3) Menemukan rambu kontekstual yang sulit ditangkap aturan, misalnya pencatutan nama perusahaan dan informasi yang saling bertentangan. Setiap rambu dari AI wajib mengutip teks lowongan dan diverifikasi server; skor dihitung dari bobot tetap, bukan oleh AI |
 | Dataset / Data Source | `data/contoh_penipuan.json`: kutipan lowongan penipuan dari artikel pemeriksa fakta (tautan sumber per item). `data/contoh_asli.json`: kutipan lowongan dari situs karier resmi atau situs pemerintah (tautan sumber per item). Dipakai untuk evaluasi dan contoh, bukan untuk melatih model |

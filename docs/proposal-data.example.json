@@ -6,6 +6,6 @@
   "kategori": "SMA/SMK/sederajat atau Mahasiswa/Umum",
   "kontak": "email@contoh.com",
   "github": "https://github.com/gnk969/Lamarin",
-  "deploy": "https://lamarin.onrender.com",
+  "deploy": "https://lamarin.vercel.app",
   "tag": "v1.0-submission (commit abc1234)"
 }
