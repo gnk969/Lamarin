@@ -58,16 +58,29 @@ Pengguna -> Frontend (teks / gambar)
 ```
 
 ## Evaluation
-Set uji dari sumber nyata (tidak ada data buatan): lowongan penipuan dari artikel pemeriksa fakta
-(`data/contoh_penipuan.json`) dan lowongan dari situs karier resmi atau situs pemerintah (`data/contoh_asli.json`).
-Setiap item menyimpan tautan sumbernya. Jalankan:
+Semua data dari sumber nyata (tidak ada data buatan), dengan tautan sumber per item:
+
+| Set | Penipuan (artikel pemeriksa fakta) | Asli (situs karier resmi / go.id) | Kegunaan |
+|---|---|---|---|
+| Pengembangan | `data/contoh_penipuan.json` (27) | `data/contoh_asli.json` (25) | menyusun aturan |
+| Uji (terpisah) | `data/uji_penipuan.json` (15) | `data/uji_asli.json` (12) | uji buta, tidak dipakai menyetel aturan |
 
 ```bash
-python scripts/evaluate.py          # aturan saja
-python scripts/evaluate.py --ai     # + AI saja dan aturan + AI (butuh GEMINI_API_KEY)
+python scripts/evaluate.py --set uji            # aturan saja
+python scripts/evaluate.py --set uji --ai       # + AI saja dan aturan + AI (butuh GEMINI_API_KEY)
+python scripts/build_proposal.py                # angka terbaru masuk ke docs/proposal.pdf
 ```
 
-Hasil terakhir dan detail per item: `docs/hasil-evaluasi.json`. Ringkasan ada di proposal.
+Hasil terakhir (aturan saja, 6 Nov 2026):
+
+| Set | Precision | Recall | Catatan |
+|---|---|---|---|
+| Pengembangan | 1.00 | 0.44 | 12 dari 27 penipuan tertangkap, 0 lowongan asli salah ditandai |
+| Uji | 1.00 | 0.07 | 1 dari 15 penipuan tertangkap, 0 lowongan asli salah ditandai |
+
+Aturan aman (tidak salah menuduh lowongan resmi) tetapi melewatkan sebagian besar penipuan, terutama yang
+mencatut nama perusahaan lalu mengarahkan ke "link di bio", WhatsApp, atau DM. Bagian itu adalah tugas AI;
+hasil evaluasi dengan AI belum ada karena kunci API belum diatur. Detail per item: `docs/hasil-evaluasi-*.json`.
 
 ## Installation / Run Instructions
 1. Pasang Python 3.11 atau lebih baru.
