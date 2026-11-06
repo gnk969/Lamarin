@@ -107,7 +107,7 @@ Detail per item, termasuk jawaban AI mentah: `docs/hasil-evaluasi-*.json`.
 5. Tes: `python -m pytest backend/tests`
 
 ## Deployment URL
-[Isi URL Vercel setelah deploy]
+https://lamarin-one.vercel.app
 
 Deploy gratis tanpa kartu kredit di Vercel: https://vercel.com > Add New > Project > import repo ini > di Environment Variables
 isi `GEMINI_API_KEY` (dan `GEMINI_MODEL=gemini-3.5-flash-lite`) > Deploy. Vercel mendeteksi FastAPI otomatis dari `api/index.py`.

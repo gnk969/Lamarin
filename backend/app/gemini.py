@@ -8,6 +8,7 @@ dapat dipakai untuk meningkatkan produknya; hal ini disampaikan ke pengguna di h
 import base64
 import json
 import logging
+import time
 
 import httpx
 
@@ -92,15 +93,19 @@ def analyze(text: str | None, image: bytes | None = None, mime: str | None = Non
             "responseJsonSchema": SCHEMA,
         },
     }
-    try:
-        resp = httpx.post(
-            ENDPOINT.format(model=config.GEMINI_MODEL),
-            headers={"x-goog-api-key": config.GEMINI_API_KEY, "Content-Type": "application/json"},
-            json=body,
-            timeout=config.GEMINI_TIMEOUT,
-        )
-    except httpx.HTTPError as exc:
-        raise AIUnavailable("Tidak bisa terhubung ke layanan AI.") from exc
+    for attempt in range(2):  # satu kali ulang bila model sedang sibuk (503/500), sering terjadi di paket gratis
+        try:
+            resp = httpx.post(
+                ENDPOINT.format(model=config.GEMINI_MODEL),
+                headers={"x-goog-api-key": config.GEMINI_API_KEY, "Content-Type": "application/json"},
+                json=body,
+                timeout=config.GEMINI_TIMEOUT,
+            )
+        except httpx.HTTPError as exc:
+            raise AIUnavailable("Tidak bisa terhubung ke layanan AI.") from exc
+        if resp.status_code not in (500, 503) or attempt == 1:
+            break
+        time.sleep(1.5)
 
     if resp.status_code == 429:
         raise AIUnavailable("Kuota gratis AI sedang habis. Coba lagi beberapa saat lagi.")

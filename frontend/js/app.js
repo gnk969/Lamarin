@@ -296,7 +296,16 @@ async function submit() {
     });
     renderResult(r);
   } catch (e) {
-    showError(e.message);
+    if (body.gambar && image) {
+      // AI gagal membaca gambar (mis. sedang sibuk): baca teks di perangkat lalu periksa dengan aturan.
+      try {
+        await checkImageInBrowser();
+      } catch (e2) {
+        showError(e2.message);
+      }
+    } else {
+      showError(e.message);
+    }
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = "Periksa lowongan";
@@ -346,3 +355,17 @@ async function init() {
   }
 }
 init();
+
+async function checkImageInBrowser() {
+  showLoading("AI sedang sibuk. Membaca teks di gambar (di perangkatmu)");
+  const teks = (await ocrInBrowser(image.dataUrl, (p) => showLoading(`AI sedang sibuk. Membaca teks di gambar: ${p}%`))).trim();
+  if (teks.length < 15) {
+    throw new Error("AI sedang sibuk dan teks di gambar tidak terbaca. Coba lagi sebentar, atau tempel teks lowongannya.");
+  }
+  const r = await api("/api/periksa", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ teks }),
+  });
+  renderResult(r);
+}

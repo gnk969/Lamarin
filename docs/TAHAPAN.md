@@ -12,7 +12,7 @@ Status: [x] siap, [ ] perlu dikerjakan tim, [~] sebagian.
 |---|---|---|
 | Proposal PDF A4, maks 5 halaman isi di luar cover & lampiran | [~] | `docs/proposal.pdf` (dari `docs/proposal.html`). Isi nama tim, anggota, instansi, kontak ketua, dan URL deploy |
 | Repository GitHub | [~] | Kode siap. Tim membuat repo di GitHub lalu push (lihat README bagian GitHub) |
-| URL website/MVP aktif | [ ] | Deploy gratis lewat Vercel (`api/index.py`), tanpa kartu kredit. Isi `GEMINI_API_KEY` di Environment Variables Vercel |
+| URL website/MVP aktif | [x] | https://lamarin-one.vercel.app.  Deploy gratis lewat Vercel (`api/index.py`), tanpa kartu kredit. Isi `GEMINI_API_KEY` di Environment Variables Vercel |
 | AI & Technology Disclosure | [x] | `DISCLOSURE.md` |
 | README minimal (Lampiran B) | [~] | `README.md`. Isi Deployment URL dan Team Members |
 | `.env.example` tanpa secret | [x] | `.env.example` |
