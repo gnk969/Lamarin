@@ -1,4 +1,6 @@
-"""Bangun docs/proposal.pdf dari docs/proposal.html.
+"""Bangun PDF proposal dari docs/proposal.html.
+
+Nama file mengikuti rekomendasi panduan: docs/AIWIC2026_<NamaTim>_<NamaProduk>.pdf
 
     python scripts/evaluate.py --set pengembangan [--ai]
     python scripts/evaluate.py --set uji [--ai]
@@ -10,6 +12,7 @@ PDF dibuat dengan Microsoft Edge atau Chrome mode headless.
 """
 
 import html
+import re
 import json
 import os
 import shutil
@@ -29,6 +32,10 @@ BROWSERS = [
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
     "msedge", "google-chrome", "chromium",
 ]
+CAPTIONS = {
+    "1-halaman-awal": "Halaman awal Lamarin: tempel teks atau unggah gambar lowongan",
+    "2-hasil-pemeriksaan-ai": "Hasil pemeriksaan dengan AI: skor, ringkasan, dan rambu beserta kutipan buktinya",
+}
 LABELS = {"aturan": "Aturan saja", "ai_saja": "AI saja", "aturan_ai": "Aturan + AI (Lamarin)"}
 
 
@@ -100,8 +107,10 @@ def main() -> None:
         "EVAL_ROWS": rows,
         "EVAL_NOTE": html.escape(note),
         "EVAL_INSIGHT": html.escape(insight(info)),
-        "SCREENSHOTS": "\n".join(f'<p><img class="shot" src="img/{p.name}" alt="Tangkapan layar Lamarin"></p>'
-                                 for p in shots) or "<p>[Tambahkan tangkapan layar ke docs/img/]</p>",
+        "SCREENSHOTS": "\n".join(
+            f'<img class="shot" src="img/{p.name}" alt="Tangkapan layar Lamarin">'
+            f'<p class="caption">Gambar {i}. {html.escape(CAPTIONS.get(p.stem, "Tampilan Lamarin"))}</p>'
+            for i, p in enumerate(shots, start=2)) or "<p>[Tambahkan tangkapan layar ke docs/img/]</p>",
     }
     src = (DOCS / "proposal.html").read_text(encoding="utf-8")
     already_html = {"EVAL_ROWS", "SCREENSHOTS", "EVAL_NOTE", "EVAL_INSIGHT"}
@@ -113,7 +122,8 @@ def main() -> None:
     browser = next((b for b in BROWSERS if Path(b).exists() or shutil.which(b)), None)
     if not browser:
         sys.exit(f"Edge/Chrome tidak ditemukan. Buka {built} di peramban lalu cetak ke PDF (A4).")
-    out = (DOCS / "proposal.pdf").resolve()
+    team = re.sub(r"[^0-9A-Za-z]", "", data.get("nama_tim", "NamaTim").title()) or "NamaTim"
+    out = (DOCS / f"AIWIC2026_{team}_Lamarin.pdf").resolve()
     if out.exists():
         out.unlink()
     with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as profile:

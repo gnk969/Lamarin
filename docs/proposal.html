@@ -2,152 +2,205 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<title>Proposal Lamarin - AI Web Innovation Challenge 2026</title>
+<title>Proposal Lamarin - {{NAMA_TIM}} - AI Web Innovation Challenge Bali DigiFest 2026</title>
 <style>
-  @page { size: A4; margin: 16mm 17mm 16mm 17mm; }
+  @page { size: A4; margin: 2.5cm 2.5cm 2.5cm 2.5cm; }
+  @page cover { margin: 2.5cm; }
   * { box-sizing: border-box; }
-  body { font-family: "Segoe UI", Arial, sans-serif; font-size: 10pt; line-height: 1.42; color: #16140F; margin: 0; }
-  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; margin: 0; }
-  h2 { font-size: 13pt; margin: 12pt 0 4pt; padding-top: 4pt; border-top: 1px solid #DDD5C6; }
-  h3 { font-size: 10.5pt; margin: 6pt 0 2pt; }
-  p { margin: 0 0 5pt; }
-  ul, ol { margin: 0 0 5pt; padding-left: 15pt; }
-  li { margin-bottom: 2pt; }
-  table { width: 100%; border-collapse: collapse; margin: 3pt 0 6pt; font-size: 9pt; }
-  th, td { border: 1px solid #DDD5C6; padding: 3pt 5pt; text-align: left; vertical-align: top; }
-  th { background: #F3EFE6; }
-  td.n { text-align: right; font-variant-numeric: tabular-nums; }
-  .cover { height: 260mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
-  .cover .event { font-size: 10pt; letter-spacing: 0.04em; color: #5E5A52; }
-  .cover h1 { font-size: 34pt; margin: 10pt 0 6pt; }
-  .cover .tag { font-size: 14pt; font-family: Georgia, serif; font-style: italic; margin-bottom: 26pt; }
-  .cover table { width: 70%; font-size: 10.5pt; }
-  .cover td:first-child { width: 38%; background: #F7F4EE; }
-  .sign { display: inline-block; width: 0; height: 0; border-left: 14pt solid transparent; border-right: 14pt solid transparent; border-bottom: 24pt solid #E9A100; position: relative; vertical-align: middle; margin-right: 8pt; }
-  .arch { display: flex; gap: 4pt; align-items: stretch; margin: 4pt 0 6pt; font-size: 8.5pt; }
-  .arch div { flex: 1; border: 1px solid #16140F; border-radius: 4pt; padding: 4pt; background: #FFF; }
-  .arch b { display: block; font-size: 9pt; }
-  .arch .ai { background: #FCF1D6; }
-  .arrow { flex: 0 0 auto !important; border: 0 !important; background: none !important; align-self: center; padding: 0 !important; }
-  .note { font-size: 8.5pt; color: #5E5A52; }
-  .refs { font-size: 8.5pt; }
-  .refs li { margin-bottom: 1.5pt; word-break: break-all; }
-  .page-break { page-break-before: always; }
-  .shot { border: 1px solid #DDD5C6; width: 100%; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    text-align: justify;
+    hyphens: manual;
+  }
+  h1, h2, h3 { font-weight: bold; margin: 0; text-align: left; }
+  h2 { font-size: 12pt; margin: 12pt 0 3pt; break-after: avoid; }
+  h2:first-of-type { margin-top: 0; }
+  p { margin: 0 0 6pt; }
+  ul, ol { margin: 0 0 6pt; padding-left: 18pt; }
+  li { margin-bottom: 1pt; }
+  i { font-style: italic; }
+
+  /* Tabel: TNR 11 pt dan spasi 1,15 agar padat namun tetap terbaca jelas */
+  table { width: 100%; border-collapse: collapse; margin: 3pt 0 8pt; font-size: 11pt; line-height: 1.15; text-align: left; }
+  tr { break-inside: avoid; }
+  th, td { border: 0.75pt solid #000; padding: 3pt 5pt; vertical-align: top; }
+  th { font-weight: bold; background: #E8E8E8; }
+  td.n, th.n { text-align: center; }
+  .caption { font-size: 11pt; text-align: center; margin: 3pt 0 8pt; }
+
+  /* Cover */
+  .cover { page: cover; height: 24.6cm; display: flex; flex-direction: column; align-items: center; text-align: center; break-after: page; }
+  .cover .event { font-weight: bold; font-size: 12pt; line-height: 1.5; margin-top: 1.2cm; }
+  .cover .kind { font-size: 12pt; margin-top: 2.2cm; }
+  .cover h1 { font-size: 26pt; line-height: 1.2; margin: 6pt 0 4pt; }
+  .cover .tag { font-size: 13pt; font-style: italic; }
+  .cover .logo { width: 0; height: 0; border-left: 34pt solid transparent; border-right: 34pt solid transparent; border-bottom: 58pt solid #E9A100; margin: 1.6cm 0 0; position: relative; }
+  .cover .logo::after { content: "!"; position: absolute; left: -6pt; top: 16pt; font: bold 30pt "Times New Roman", serif; color: #000; }
+  .cover .by { margin-top: 1.8cm; font-size: 12pt; }
+  .cover .team { font-weight: bold; font-size: 14pt; margin-top: 2pt; }
+  .cover table.who { width: auto; margin: 10pt auto 0; font-size: 12pt; line-height: 1.5; border: 0; }
+  .cover table.who td { border: 0; padding: 0 6pt; text-align: left; }
+  .cover table.who td:first-child { font-weight: bold; white-space: nowrap; }
+  .cover .inst { margin-top: auto; font-weight: bold; font-size: 13pt; line-height: 1.4; }
+  .cover .inst span { display: block; font-weight: normal; font-size: 12pt; }
+
+  /* Diagram arsitektur */
+  .arch { display: flex; align-items: stretch; gap: 0; margin: 4pt 0 2pt; font-size: 10pt; line-height: 1.25; text-align: center; }
+  .arch .box { flex: 1; border: 0.75pt solid #000; padding: 4pt 3pt; }
+  .arch .box b { display: block; font-size: 10.5pt; margin-bottom: 2pt; }
+  .arch .box.dash { border-style: dashed; }
+  .arch .box.ai { background: #E8E8E8; }
+  .arch .arrow { flex: 0 0 12pt; align-self: center; font-size: 13pt; }
+
+  .content { break-before: page; }
+  .lampiran { break-before: page; }
+  .refs { font-size: 11pt; line-height: 1.3; text-align: left; }
+  .refs li { margin-bottom: 3pt; overflow-wrap: anywhere; }
+  .shot { display: block; width: 72%; margin: 4pt auto 2pt; border: 0.75pt solid #000; }
+  code { font-family: "Courier New", monospace; font-size: 11pt; }
 </style>
 </head>
 <body>
 
 <section class="cover">
-  <div class="event">AI WEB INNOVATION CHALLENGE · BALI DIGIFEST 2026 · BUILD WITH AI, SOLVE FOR BALI</div>
-  <h1><span class="sign"></span>Lamarin</h1>
-  <div class="tag">Cek lowongan kerja palsu sebelum mengirim uang atau data</div>
-  <table>
-    <tr><td>Nama produk</td><td>Lamarin</td></tr>
-    <tr><td>Nama tim</td><td>{{NAMA_TIM}}</td></tr>
-    <tr><td>Ketua</td><td>{{KETUA}}</td></tr>
-    <tr><td>Anggota</td><td>{{ANGGOTA}}</td></tr>
-    <tr><td>Instansi</td><td>{{INSTANSI}}</td></tr>
-    <tr><td>Kategori</td><td>{{KATEGORI}}</td></tr>
-    <tr><td>Kontak ketua</td><td>{{KONTAK}}</td></tr>
-    <tr><td>Ruang lingkup</td><td>Bali Smart Society (perlindungan masyarakat), dengan dukungan Smart Information Systems</td></tr>
+  <div class="event">PROPOSAL SOLUSI &amp; MVP AI WEB<br>AI WEB INNOVATION CHALLENGE<br>BALI DIGIFEST 2026</div>
+  <div class="logo"></div>
+  <div class="kind">Nama Produk</div>
+  <h1>Lamarin</h1>
+  <div class="tag">Pemeriksa lowongan kerja palsu berbasis AI</div>
+  <div class="by">Disusun oleh:</div>
+  <div class="team">{{NAMA_TIM}}</div>
+  <table class="who">
+    <tr><td>Ketua</td><td>: {{KETUA}}</td></tr>
+    <tr><td>Anggota</td><td>: {{ANGGOTA}}</td></tr>
+    <tr><td>Kategori</td><td>: {{KATEGORI}}</td></tr>
+    <tr><td>Kontak ketua</td><td>: {{KONTAK}}</td></tr>
+    <tr><td>Ruang lingkup</td><td>: Bali Smart Society</td></tr>
   </table>
+  <div class="inst">{{INSTANSI}}<span>2026</span></div>
 </section>
 
-<h2>1. Problem &amp; Background</h2>
-<p>Lowongan kerja palsu beredar di Facebook, TikTok, Instagram, dan WhatsApp. Modusnya berulang: meminta biaya (administrasi, medical, tiket, "paket reservasi"), mengarahkan ke tautan formulir yang mencuri data dan nomor Telegram, memakai WhatsApp atau Gmail pribadi sambil mencatut nama BUMN atau perusahaan besar, dan kerja online "like/follow" yang berujung deposit. Kemnaker menyebut ciri yang sama dan menegaskan, "Jika ada pungutan biaya dalam proses rekrutmen, hampir pasti itu adalah modus penipuan."<sup>[1]</sup></p>
-<p>Di Bali, dampaknya bisa jauh lebih berat daripada kehilangan uang. Dalam kasus tindak pidana perdagangan orang terhadap awak kapal KM Awindo 2A di Pelabuhan Benoa, pelaku merekrut korban "menggunakan media sosial Facebook dengan postingan iklan lowongan pekerjaan"; Polda Bali menetapkan enam tersangka atas sedikitnya 21 calon awak kapal.<sup>[2][3]</sup> Minat warga Bali bekerja ke luar negeri tinggi: Disnaker ESDM Bali mencatat sekitar 5.000 pekerja migran prosedural pada Januari-Juni 2023 dan 21 ribu sepanjang 2022, sambil meminta masyarakat tidak terjebak tawaran kerja ilegal.<sup>[4]</sup> Pemeriksa fakta juga mencatat rekrutmen palsu yang mencatut PLN wilayah Denpasar dengan meminta pembayaran paket tiket dan hotel Rp3,9 juta dalam 45 menit.<sup>[5]</sup> Pola terbaru memakai poster buatan AI sehingga sulit dibedakan dengan mata.<sup>[6]</sup></p>
-<p><b>Masalah inti:</b> pencari kerja tidak punya cara cepat dan gratis untuk memeriksa sebuah lowongan <i>sebelum</i> membayar atau mengirim data. Situs cek fakta baru memeriksa setelah sebuah lowongan viral, dan kanal pengaduan bekerja setelah korban dirugikan.</p>
+<section class="content">
 
-<h2>2. Target User</h2>
+<h2>1. Masalah dan Latar Belakang (<i>Problem &amp; Background</i>)</h2>
+<p>Lowongan kerja palsu beredar luas di Facebook, TikTok, Instagram, dan grup WhatsApp. Polanya berulang: pelamar diminta membayar biaya administrasi, <i>medical</i>, tiket, atau "paket reservasi"; diarahkan ke tautan formulir yang mencuri data; dihubungi lewat WhatsApp atau Gmail pribadi yang mencatut nama BUMN dan perusahaan besar; atau ditawari kerja daring "<i>like</i> dan <i>follow</i>" yang berujung deposit. Kementerian Ketenagakerjaan menegaskan bahwa adanya pungutan biaya dalam rekrutmen hampir pasti merupakan modus penipuan [1].</p>
+<p>Di Bali, akibatnya dapat jauh lebih berat daripada kehilangan uang. Pada kasus tindak pidana perdagangan orang terhadap awak kapal KM Awindo 2A di Pelabuhan Benoa, pelaku merekrut korban melalui iklan lowongan di Facebook, dan Polda Bali menetapkan enam tersangka atas sedikitnya 21 calon awak kapal [2][3]. Minat warga Bali bekerja ke luar negeri juga tinggi: Disnaker ESDM Bali mencatat sekitar 5.000 pekerja migran prosedural pada Januari–Juni 2023 dan 21 ribu sepanjang 2022, sambil mengimbau masyarakat agar tidak terjebak tawaran kerja ilegal [4]. Pemeriksa fakta mencatat rekrutmen palsu yang mencatut PLN wilayah Denpasar dengan meminta pembayaran paket tiket dan hotel sebesar Rp3,9 juta [5], dan kini poster lowongan palsu mulai dibuat dengan AI sehingga sulit dibedakan secara kasatmata [6].</p>
+<p><b>Masalah inti:</b> pencari kerja belum memiliki cara yang cepat dan gratis untuk memeriksa sebuah lowongan <i>sebelum</i> membayar atau mengirim data pribadi. Situs cek fakta baru memeriksa setelah sebuah lowongan viral, sedangkan kanal pengaduan bekerja setelah korban dirugikan.</p>
+
+<h2>2. Target Pengguna (<i>Target User</i>)</h2>
 <table>
-  <tr><th>Pengguna</th><th>Konteks</th><th>Kebutuhan</th></tr>
-  <tr><td>Pencari kerja muda di Bali (lulusan SMA/SMK, D3, mahasiswa)</td><td>Menerima lowongan dari grup WA, TikTok, Facebook</td><td>Tahu dalam satu menit apakah lowongan berisiko, beserta alasannya</td></tr>
-  <tr><td>Calon pekerja kapal pesiar dan luar negeri</td><td>Tawaran "langsung berangkat", agen perorangan</td><td>Mengenali tanda agen tak berizin dan permintaan biaya</td></tr>
-  <tr><td>Orang tua, guru BK, pendamping desa</td><td>Membantu anak atau warga memeriksa tawaran kerja</td><td>Penjelasan sederhana yang bisa ditunjukkan ke orang lain</td></tr>
+  <tr><th style="width:30%">Pengguna</th><th style="width:33%">Konteks penggunaan</th><th>Kebutuhan (<i>pain point</i>)</th></tr>
+  <tr><td>Pencari kerja muda di Bali (lulusan SMA/SMK, diploma, mahasiswa)</td><td>Menerima lowongan dari grup WhatsApp, TikTok, dan Facebook</td><td>Mengetahui dalam satu menit apakah lowongan berisiko, beserta alasannya</td></tr>
+  <tr><td>Calon pekerja kapal pesiar dan luar negeri</td><td>Tawaran "langsung berangkat" dari agen perorangan</td><td>Mengenali tanda agen tidak berizin dan permintaan biaya</td></tr>
+  <tr><td>Orang tua, guru BK, dan pendamping desa</td><td>Membantu anak atau warga memeriksa tawaran kerja</td><td>Penjelasan sederhana yang dapat ditunjukkan kepada orang lain</td></tr>
 </table>
 
-<h2>3. Proposed Solution</h2>
-<p><b>Lamarin</b> adalah aplikasi web satu halaman. Pengguna menempel teks lowongan atau mengunggah tangkapan layar poster, lalu menerima:</p>
+<h2>3. Solusi yang Diusulkan (<i>Proposed Solution</i>)</h2>
+<p><b>Lamarin</b> adalah aplikasi web yang memeriksa lowongan kerja sebelum pengguna melamar. Pengguna cukup menempel teks lowongan atau mengunggah tangkapan layar poster, lalu menerima:</p>
 <ul>
-  <li><b>Daftar rambu</b> (tanda bahaya) dari katalog tetap 13 rambu, masing-masing dengan <b>kutipan kalimat lowongan</b> yang memicunya dan alasannya.</li>
-  <li><b>Skor risiko 0-100</b> dan level: Risiko tinggi, Waspada, atau Belum ditemukan rambu utama. Tidak ada label "aman" karena alat ini tidak bisa menjamin keaslian.</li>
-  <li><b>Fakta yang terbaca</b> (perusahaan, posisi, gaji, biaya, kontak, tautan) dan <b>langkah aman</b> sesuai rambu, misalnya cek izin P3MI ke BP3MI untuk kerja luar negeri.</li>
+  <li><b>Daftar rambu</b> (tanda bahaya penipuan) dari katalog tetap berisi 13 rambu, masing-masing disertai <b>kutipan kalimat lowongan</b> yang memicunya dan alasannya.</li>
+  <li><b>Skor risiko 0–100</b> dengan tiga level: Risiko tinggi, Waspada, atau Belum ditemukan rambu utama. Lamarin sengaja tidak memberi label "aman" karena tidak dapat menjamin keaslian sebuah lowongan.</li>
+  <li><b>Fakta yang terbaca</b> (perusahaan, posisi, gaji, biaya, kontak, tautan) dan <b>langkah aman</b> sesuai rambu, misalnya memastikan izin P3MI ke BP3MI untuk kerja luar negeri.</li>
 </ul>
-<p><b>User journey:</b> terima lowongan di WhatsApp, salin atau tangkap layar, buka Lamarin, tempel atau unggah, baca rambu dan buktinya, lalu putuskan: lanjut cek ke saluran resmi atau tolak.</p>
+<p><b>Alur pengguna utama:</b> menerima lowongan di WhatsApp → menyalin teks atau menangkap layar → membuka Lamarin → menempel atau mengunggah → membaca rambu beserta buktinya → memutuskan untuk memastikan ke saluran resmi atau menolak lowongan tersebut.</p>
 
-<h2>4. AI Implementation</h2>
+<h2>4. Implementasi AI (<i>AI Implementation</i>)</h2>
 <table>
-  <tr><th>Bagian</th><th>Model / metode</th><th>Input</th><th>Output</th></tr>
-  <tr><td>Membaca poster</td><td>Gemini {{MODEL}} (multimodal)</td><td>Tangkapan layar</td><td>Teks lowongan</td></tr>
-  <tr><td>Ekstraksi fakta</td><td>Gemini, keluaran JSON schema</td><td>Teks lowongan</td><td>Perusahaan, posisi, gaji, biaya, kontak, tautan, luar negeri</td></tr>
-  <tr><td>Rambu kontekstual</td><td>Gemini, JSON schema dengan enum kode rambu</td><td>Teks lowongan</td><td>Kode rambu + kutipan bukti + alasan (mis. mencatut perusahaan besar lewat WA/Gmail, informasi bertentangan)</td></tr>
-  <tr><td>Rambu pola</td><td>Aturan regex buatan tim</td><td>Teks lowongan</td><td>11 rambu eksplisit (biaya, deposit, travel wajib, data sensitif, tautan, kontak pribadi, dll.)</td></tr>
-  <tr><td>Verifikasi &amp; skor</td><td>Kode</td><td>Rambu AI + aturan</td><td>Rambu AI ditolak bila kutipannya tidak ada di teks; skor = jumlah bobot tetap</td></tr>
+  <tr><th style="width:19%">Bagian</th><th style="width:25%">Model / metode</th><th style="width:18%">Input</th><th>Output</th></tr>
+  <tr><td>Membaca poster</td><td>Gemini API, model {{MODEL}} (multimodal)</td><td>Tangkapan layar</td><td>Teks lowongan</td></tr>
+  <tr><td>Ekstraksi fakta</td><td>Gemini, keluaran JSON <i>schema</i></td><td>Teks lowongan</td><td>Perusahaan, posisi, gaji, biaya, kontak, tautan, lokasi kerja</td></tr>
+  <tr><td>Rambu kontekstual</td><td>Gemini, JSON <i>schema</i> dengan daftar kode rambu tetap</td><td>Teks lowongan</td><td>Kode rambu, kutipan bukti, dan alasan (misalnya mencatut perusahaan besar, informasi saling bertentangan)</td></tr>
+  <tr><td>Rambu pola</td><td>Aturan (<i>regex</i>) buatan tim</td><td>Teks lowongan</td><td>11 rambu eksplisit: biaya, deposit, travel wajib, data sensitif, tautan mencurigakan, kontak pribadi, dan lainnya</td></tr>
+  <tr><td>Verifikasi dan skor</td><td>Kode program</td><td>Rambu AI dan aturan</td><td>Rambu AI ditolak bila kutipannya tidak ada di teks; skor = jumlah bobot tetap</td></tr>
 </table>
-<p><b>Mengapa AI diperlukan:</b> banyak lowongan berupa gambar, kalimatnya bebas, dan penipuan paling umum (mencatut BUMN lalu mengarahkan ke WhatsApp atau Gmail) hanya terlihat dari hubungan antarbagian teks. Pada set pengembangan, aturan saja hanya menangkap {{DEV_RECALL}} kasus penipuan; kasus yang terlewat didominasi pencatutan nama perusahaan (lihat bagian 8).</p>
-<p><b>Batasan &amp; pengaman:</b> AI tidak menentukan skor; AI hanya boleh memilih kode dari katalog dan wajib mengutip teks. Bila kuota gratis habis atau API gagal, aplikasi tetap berjalan dengan aturan dan Tesseract.js (pembaca teks di peramban), disertai peringatan.</p>
+<p><b>Alasan AI diperlukan:</b> banyak lowongan beredar sebagai gambar, kalimatnya bebas, dan modus yang paling umum (mencatut BUMN lalu mengarahkan ke WhatsApp atau Gmail) hanya terlihat dari hubungan antarbagian teks. Pada set uji, aturan saja hanya menangkap 1 dari 15 lowongan penipuan, sedangkan gabungan aturan dan AI menangkap 10 dari 15 (bagian 8).</p>
+<p><b>Batasan dan pengaman:</b> AI tidak menentukan skor; AI hanya boleh memilih kode dari katalog dan wajib mengutip teks lowongan. Bila kuota gratis habis atau API gagal, aplikasi tetap berjalan dengan aturan, gambar dibaca di peramban dengan Tesseract.js, dan pengguna diberi peringatan.</p>
 
-<h2>5. MVP &amp; Key Features</h2>
-<p><b>Fitur inti yang sudah berfungsi:</b> (1) periksa teks; (2) periksa gambar (unggah, seret, atau Ctrl+V); (3) rambu dengan kutipan bukti dan label sumber Aturan/AI; (4) skor dan level risiko; (5) fakta terbaca dan langkah aman; (6) mode cadangan tanpa AI; (7) contoh kasus nyata dengan tautan sumber.</p>
-<p><b>Fitur tambahan:</b> tema terang/gelap, tampilan ponsel, pembatas laju permintaan, 17 tes otomatis.</p>
+<h2>5. MVP dan Fitur Utama (<i>MVP &amp; Key Features</i>)</h2>
+<p><b>Fitur inti yang sudah berfungsi:</b></p>
+<ol>
+  <li><b>Periksa teks</b> lowongan yang ditempel dari WhatsApp, media sosial, atau situs mana pun.</li>
+  <li><b>Periksa gambar</b> melalui unggah, seret, atau tempel (Ctrl+V); gambar besar diperkecil otomatis di peramban.</li>
+  <li><b>Rambu dengan kutipan bukti</b> dan label sumber (Aturan/AI), beserta <b>skor dan level risiko</b>.</li>
+  <li><b>Fakta yang terbaca</b> dan <b>langkah aman</b> yang menyesuaikan rambu yang ditemukan.</li>
+  <li><b>Mode cadangan tanpa AI</b>: aturan tetap berjalan dan gambar dibaca di peramban.</li>
+</ol>
+<p><b>Fitur tambahan:</b> contoh kasus nyata dengan tautan sumber, tema terang/gelap, tampilan ponsel, pembatas laju permintaan, dan 20 tes otomatis.</p>
 
-<h2>6. Technical Architecture</h2>
+<h2>6. Arsitektur Teknis (<i>Technical Architecture</i>)</h2>
 <div class="arch">
-  <div><b>Pengguna</b>teks / gambar lowongan</div><div class="arrow">→</div>
-  <div><b>Frontend</b>HTML, CSS, JS; Tesseract.js bila AI mati</div><div class="arrow">→</div>
-  <div><b>Backend FastAPI</b>/api/periksa, validasi, pembatas laju</div><div class="arrow">→</div>
-  <div class="ai"><b>Gemini API</b>baca gambar, fakta, rambu + kutipan</div><div class="arrow">→</div>
-  <div><b>Analyzer</b>aturan, verifikasi kutipan, skor bobot tetap</div><div class="arrow">→</div>
-  <div><b>Hasil</b>rambu, skor, fakta, langkah aman</div>
+  <div class="box"><b>Pengguna</b>teks atau gambar lowongan</div><div class="arrow">→</div>
+  <div class="box"><b>Frontend</b>HTML, CSS, JS + Tesseract.js</div><div class="arrow">→</div>
+  <div class="box"><b>Backend</b>FastAPI: validasi, aturan, skor</div><div class="arrow">→</div>
+  <div class="box dash"><b>Database</b>tidak ada (tidak disimpan)</div><div class="arrow">→</div>
+  <div class="box ai"><b>AI/API</b>Gemini: gambar, fakta, rambu</div><div class="arrow">→</div>
+  <div class="box"><b>Hasil</b>rambu, skor, fakta, langkah aman</div>
 </div>
-<p class="note">Tidak ada database; masukan tidak disimpan. Data uji berupa file JSON dengan tautan sumber per item. Hosting: Vercel paket gratis.</p>
+<p class="caption">Gambar 1. Alur data Lamarin (Tesseract.js dipakai di peramban saat AI tidak tersedia)</p>
+<p>Backend memanggil Gemini satu kali per pemeriksaan, memverifikasi setiap kutipan AI terhadap teks lowongan, lalu menggabungkannya dengan hasil aturan. Aplikasi berjalan di Vercel (paket gratis); data contoh dan data uji disimpan sebagai file JSON di <i>repository</i>.</p>
 
-<h2>7. Innovation &amp; Differentiation</h2>
+<h2>7. Inovasi dan Pembeda (<i>Innovation &amp; Differentiation</i>)</h2>
 <table>
-  <tr><th>Solusi yang ada</th><th>Keterbatasan</th><th>Lamarin</th></tr>
-  <tr><td>Artikel cek fakta (TurnBackHoax, Cek Fakta media)</td><td>Memeriksa setelah viral, satu kasus per artikel</td><td>Memeriksa lowongan apa pun saat diterima, sebelum korban bertindak</td></tr>
-  <tr><td>Aplikasi Bali Mantap (BP3MI Denpasar, Android)<sup>[7]</sup></td><td>Data perusahaan penyalur resmi, cek izin perekrutan, pengaduan; khusus pekerja migran dan pengguna harus tahu nama agennya</td><td>Membaca isi poster atau pesan apa pun langsung dan menandai tanda bahaya, untuk lowongan dalam dan luar negeri; bisa dibuka dari peramban mana saja</td></tr>
-  <tr><td>Imbauan Kemnaker</td><td>Daftar ciri umum, pengguna menilai sendiri</td><td>Ciri itu diterapkan otomatis dengan kutipan bukti per rambu</td></tr>
+  <tr><th style="width:24%">Solusi yang ada</th><th style="width:36%">Keterbatasan</th><th>Lamarin</th></tr>
+  <tr><td>Artikel cek fakta (TurnBackHoax, kanal cek fakta media)</td><td>Memeriksa setelah viral, satu kasus per artikel</td><td>Memeriksa lowongan apa pun saat diterima, sebelum pengguna bertindak</td></tr>
+  <tr><td>Aplikasi Bali Mantap (BP3MI Denpasar) [7]</td><td>Cek izin perekrut dan pengaduan, khusus pekerja migran; pengguna harus mengetahui nama agennya</td><td>Membaca isi poster atau pesan secara langsung, untuk lowongan dalam dan luar negeri, dari peramban mana saja</td></tr>
+  <tr><td>Imbauan ciri lowongan palsu (Kemnaker)</td><td>Daftar ciri umum; pengguna menilai sendiri</td><td>Ciri tersebut diterapkan otomatis dengan kutipan bukti untuk setiap rambu</td></tr>
 </table>
-<p>Pembeda teknis: rambu AI yang <b>wajib mengutip dan diverifikasi</b>, skor dengan <b>bobot tetap yang bisa diaudit</b>, dan mode cadangan gratis tanpa AI.</p>
+<p><b>Pembeda teknis:</b> rambu AI <b>wajib mengutip dan diverifikasi</b> sehingga AI tidak dapat mengarang temuan, skor memakai <b>bobot tetap yang dapat diaudit</b>, dan aplikasi tetap berfungsi tanpa AI.</p>
 
-<h2>8. Evaluation, Impact &amp; Development Potential</h2>
-<p>Dua set data dari sumber nyata (tanpa data buatan). <b>Set pengembangan</b> ({{DEV_N}} lowongan) dipakai untuk menyusun aturan. <b>Set uji</b> ({{TEST_N}} lowongan) dikumpulkan terpisah dan tidak dipakai untuk menyetel aturan. Penipuan diambil dari artikel pemeriksa fakta; lowongan asli dari situs karier resmi (hotel Bali, agen kapal pesiar resmi, BUMN, go.id). Positif = skor &ge; 20.</p>
+<h2>8. Dampak dan Potensi Pengembangan (<i>Impact &amp; Development Potential</i>)</h2>
+<p><b>Evaluasi.</b> Lamarin diuji dengan dua set data dari sumber nyata (tanpa data buatan). <b>Set pengembangan</b> ({{DEV_N}} lowongan) dipakai untuk menyusun aturan, sedangkan <b>set uji</b> ({{TEST_N}} lowongan) dikumpulkan terpisah dan tidak dipakai untuk menyetel aturan. Lowongan penipuan diambil dari artikel pemeriksa fakta; lowongan asli dari situs karier resmi (hotel di Bali, agen kapal pesiar resmi, BUMN, situs go.id). Lowongan dianggap terdeteksi bila skornya ≥ 20.</p>
 <table>
-  <tr><th>Versi</th><th>Set</th><th class="n">Precision</th><th class="n">Recall</th><th class="n">F1</th><th class="n">Akurasi</th></tr>
+  <tr><th>Versi</th><th>Set data</th><th class="n">Precision</th><th class="n">Recall</th><th class="n">F1</th><th class="n">Akurasi</th></tr>
   {{EVAL_ROWS}}
 </table>
+<p class="caption">Tabel 1. Hasil evaluasi (model {{MODEL}})</p>
 <p>{{EVAL_INSIGHT}}</p>
-<p class="note">{{EVAL_NOTE}}</p>
-<p><b>Manfaat:</b> keputusan "lanjut atau tolak" dalam satu menit, dengan bukti yang bisa ditunjukkan ke keluarga. <b>Pengembangan:</b> pengecekan otomatis ke daftar P3MI resmi, bot WhatsApp agar bisa dipakai tanpa membuka web, ekstensi peramban, dan laporan rambu anonim untuk BP3MI/Disnaker.</p>
-<p><b>Keterbatasan MVP:</b> set data masih kecil; rambu adalah indikator, bukan bukti; pembacaan gambar tanpa AI kurang akurat; kuota Gemini gratis terbatas dan kontennya dapat dipakai Google untuk meningkatkan produk.</p>
+<p><b>Manfaat:</b> pengguna dapat memutuskan "lanjut atau tolak" dalam satu menit, dengan bukti yang dapat ditunjukkan kepada keluarga. <b>Potensi pengembangan:</b> pengecekan otomatis ke daftar P3MI resmi, bot WhatsApp agar dapat dipakai tanpa membuka web, ekstensi peramban, dan laporan rambu anonim untuk BP3MI dan Disnaker.</p>
+<p><b>Keterbatasan MVP:</b> set data masih kecil; 5 dari 15 penipuan pada set uji belum tertangkap; rambu merupakan indikator, bukan bukti; pembacaan gambar tanpa AI kurang akurat; serta kuota Gemini gratis terbatas dan kontennya dapat dipakai Google untuk meningkatkan layanannya.</p>
 
-<h2>9. Technology Disclosure</h2>
-<p>Frontend HTML/CSS/JS, Tesseract.js 5.1.1 · Backend Python, FastAPI, Uvicorn, httpx · AI: Google Gemini API paket gratis ({{MODEL}}) · Database: tidak ada · Data: kutipan artikel pemeriksa fakta dan situs karier resmi (tautan per item) · Hosting: Vercel paket gratis · Font: Newsreader, Public Sans (OFL) · Inspirasi UI: "AskSilver" (Goodspeed Studio, Dribbble) · <b>AI coding assistant:</b> Claude Code (Anthropic) untuk riset, kode awal, pengumpulan data dari sumber publik, dan dokumentasi; tim bertanggung jawab atas seluruh kode. Rincian lengkap: <code>DISCLOSURE.md</code>.</p>
-
-<h2>10. Submission Links</h2>
+<h2>9. Pengungkapan Teknologi (<i>Technology Disclosure</i>)</h2>
 <table>
-  <tr><td>GitHub repository</td><td>{{GITHUB}}</td></tr>
-  <tr><td>Deployment URL</td><td>{{DEPLOY}}</td></tr>
-  <tr><td>Demo account</td><td>Tidak perlu login</td></tr>
-  <tr><td>Commit hash / tag</td><td>{{TAG}}</td></tr>
+  <tr><td style="width:30%"><b>Frontend</b></td><td>HTML, CSS, JavaScript tanpa <i>framework</i>; Tesseract.js 5.1.1 (Apache-2.0)</td></tr>
+  <tr><td><b>Backend</b></td><td>Python, FastAPI, Uvicorn, Pydantic, httpx</td></tr>
+  <tr><td><b>Database</b></td><td>Tidak ada; masukan pengguna tidak disimpan</td></tr>
+  <tr><td><b>Model / API AI</b></td><td>Google Gemini API paket gratis (model {{MODEL}})</td></tr>
+  <tr><td><b>Dataset</b></td><td>Kutipan artikel pemeriksa fakta dan situs karier resmi, dengan tautan sumber per item; data pribadi disamarkan</td></tr>
+  <tr><td><b>Hosting</b></td><td>Vercel paket Hobby gratis</td></tr>
+  <tr><td><b>Aset pihak ketiga</b></td><td>Font Newsreader dan Public Sans (SIL OFL); inspirasi tampilan "AskSilver" (Goodspeed Studio, Dribbble), tidak disalin</td></tr>
+  <tr><td><b>AI coding assistant</b></td><td>Claude Code (Anthropic) untuk riset, kode awal, pengumpulan data dari sumber publik, pengujian, dan dokumentasi; tim bertanggung jawab atas seluruh kode. Rincian: <code>DISCLOSURE.md</code></td></tr>
 </table>
 
-<h2 class="page-break">Lampiran A. Referensi</h2>
+<h2>10. Tautan Submission (<i>Submission Links</i>)</h2>
+<table>
+  <tr><td style="width:30%"><b>GitHub repository</b></td><td>{{GITHUB}}</td></tr>
+  <tr><td><b>Deployment URL</b></td><td>{{DEPLOY}}</td></tr>
+  <tr><td><b>Demo account</b></td><td>Tidak perlu login</td></tr>
+  <tr><td><b>Commit hash / tag</b></td><td>{{TAG}}</td></tr>
+</table>
+
+</section>
+
+<section class="lampiran">
+<h2>Lampiran A. Referensi</h2>
 <ol class="refs">
-  <li>Republika (13 Jan 2025), "Ini 5 ciri-ciri lowongan kerja palsu versi Kemnaker", https://ekonomi.republika.co.id/berita/sq0416423/ini-5-ciriciri-lowongan-kerja-palsu-versi-kemnaker</li>
-  <li>detikBali (12 Feb 2026), "Puluhan ABK jadi korban perdagangan orang, pecatan polisi diadili", https://www.detik.com/bali/hukum-dan-kriminal/d-8353640/puluhan-abk-jadi-korban-perdagangan-orang-pecatan-polisi-diadili</li>
-  <li>RMOL (24 Okt 2025), "Polda Bali tetapkan enam tersangka kasus TPPO di Pelabuhan Benoa", https://rmol.id/hukum/read/2025/10/24/684244/polda-bali-tetapkan-enam-tersangka-kasus-tppo-di-pelabuhan-benoa</li>
-  <li>Antara Bali (4 Agu 2023), "Disnaker ESDM Bali minta masyarakat tak terjebak pekerja migran ilegal", https://bali.antaranews.com/berita/321915/disnaker-esdm-bali-minta-masyarakat-tak-terjebak-pekerja-migran-ilegal</li>
-  <li>TurnBackHoax/MAFINDO (22 Okt 2022), "[SALAH] Lowongan Kerja oleh PLN Wilayah Denpasar Oktober 2022", https://turnbackhoax.id/articles/10803-salah-lowongan-kerja-oleh-pln-wilayah-denpasar-oktober-2022</li>
-  <li>TurnBackHoax/MAFINDO (5 Nov 2026), "[PENIPUAN] Tautan Pendaftaran Staf Sekolah Rakyat Tahun 2026", https://turnbackhoax.id/articles/37376-penipuan-tautan-pendaftaran-staf-sekolah-rakyat-tahun-2026</li>
-  <li>Kumparan/Kanal Bali (19 Jan 2023), "Tangkal hoaks kerja di luar negeri, BP3MI Denpasar buat aplikasi Bali Mantap", https://kumparan.com/kanalbali/tangkal-hoaks-kerja-di-luar-negeri-bp3mi-denpasar-buat-aplikasi-bali-mantap-1zfSswDrksX</li>
-  <li>Data uji lengkap dengan tautan sumber per item: <code>data/</code> pada repository.</li>
+  <li>Republika (13 Januari 2025). "Ini 5 Ciri-ciri Lowongan Kerja Palsu Versi Kemnaker." https://ekonomi.republika.co.id/berita/sq0416423/ini-5-ciriciri-lowongan-kerja-palsu-versi-kemnaker</li>
+  <li>detikBali (12 Februari 2026). "Puluhan ABK Jadi Korban Perdagangan Orang, Pecatan Polisi Diadili." https://www.detik.com/bali/hukum-dan-kriminal/d-8353640/puluhan-abk-jadi-korban-perdagangan-orang-pecatan-polisi-diadili</li>
+  <li>RMOL (24 Oktober 2025). "Polda Bali Tetapkan Enam Tersangka Kasus TPPO di Pelabuhan Benoa." https://rmol.id/hukum/read/2025/10/24/684244/polda-bali-tetapkan-enam-tersangka-kasus-tppo-di-pelabuhan-benoa</li>
+  <li>Antara Bali (4 Agustus 2023). "Disnaker ESDM Bali Minta Masyarakat Tak Terjebak Pekerja Migran Ilegal." https://bali.antaranews.com/berita/321915/disnaker-esdm-bali-minta-masyarakat-tak-terjebak-pekerja-migran-ilegal</li>
+  <li>TurnBackHoax/MAFINDO (22 Oktober 2022). "[SALAH] Lowongan Kerja oleh PLN Wilayah Denpasar Oktober 2022." https://turnbackhoax.id/articles/10803-salah-lowongan-kerja-oleh-pln-wilayah-denpasar-oktober-2022</li>
+  <li>TurnBackHoax/MAFINDO (5 November 2026). "[PENIPUAN] Tautan Pendaftaran Staf Sekolah Rakyat Tahun 2026." https://turnbackhoax.id/articles/37376-penipuan-tautan-pendaftaran-staf-sekolah-rakyat-tahun-2026</li>
+  <li>Kumparan/Kanal Bali (19 Januari 2023). "Tangkal Hoaks Kerja di Luar Negeri, BP3MI Denpasar Buat Aplikasi Bali Mantap." https://kumparan.com/kanalbali/tangkal-hoaks-kerja-di-luar-negeri-bp3mi-denpasar-buat-aplikasi-bali-mantap-1zfSswDrksX</li>
+  <li>Data contoh dan data uji lengkap dengan tautan sumber per item: folder <code>data/</code> pada <i>repository</i>.</li>
 </ol>
 
-<h2>Lampiran B. Tangkapan layar</h2>
+<h2>Lampiran B. Tangkapan Layar Aplikasi</h2>
 {{SCREENSHOTS}}
+</section>
 
 </body>
 </html>

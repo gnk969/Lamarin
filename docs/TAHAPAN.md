@@ -10,7 +10,7 @@ Status: [x] siap, [ ] perlu dikerjakan tim, [~] sebagian.
 
 | Komponen | Status | Lokasi / catatan |
 |---|---|---|
-| Proposal PDF A4, maks 5 halaman isi di luar cover & lampiran | [~] | `docs/proposal.pdf` (dari `docs/proposal.html`). Isi nama tim, anggota, instansi, kontak ketua, dan URL deploy |
+| Proposal PDF A4, maks 5 halaman isi di luar cover & lampiran | [x] | `docs/AIWIC2026_PengenKerjaRemoteB_Lamarin.pdf` (dari `docs/proposal.html`): cover, 5 halaman isi, lampiran. Times New Roman 12, spasi 1,5, rata kanan-kiri |
 | Repository GitHub | [~] | Kode siap. Tim membuat repo di GitHub lalu push (lihat README bagian GitHub) |
 | URL website/MVP aktif | [x] | https://lamarin-one.vercel.app.  Deploy gratis lewat Vercel (`api/index.py`), tanpa kartu kredit. Isi `GEMINI_API_KEY` di Environment Variables Vercel |
 | AI & Technology Disclosure | [x] | `DISCLOSURE.md` |
@@ -22,7 +22,7 @@ Status: [x] siap, [ ] perlu dikerjakan tim, [~] sebagian.
 
 ### Technical gate (hlm. 7) dan cara memenuhinya
 - Identitas & komposisi peserta: diisi tim.
-- Proposal lengkap & terbaca: `docs/proposal.pdf`.
+- Proposal lengkap & terbaca: `docs/AIWIC2026_PengenKerjaRemoteB_Lamarin.pdf`.
 - Repository dapat diakses: public, atau private dengan akses baca untuk akun GitHub panitia.
 - Website dapat diakses: URL Vercel. Buka URL dan coba satu pemeriksaan sebelum jadwal penjurian.
 - Fungsi utama dapat diuji: juri cukup menempel teks atau mengunggah gambar lowongan.

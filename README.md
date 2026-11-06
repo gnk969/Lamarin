@@ -68,7 +68,7 @@ Semua data dari sumber nyata (tidak ada data buatan), dengan tautan sumber per i
 ```bash
 python scripts/evaluate.py --set uji            # aturan saja
 python scripts/evaluate.py --set uji --ai       # + AI saja dan aturan + AI (butuh GEMINI_API_KEY)
-python scripts/build_proposal.py                # angka terbaru masuk ke docs/proposal.pdf
+python scripts/build_proposal.py                # angka terbaru masuk ke docs/AIWIC2026_PengenKerjaRemoteB_Lamarin.pdf
 ```
 
 Hasil terakhir (6 Nov 2026, model `gemini-3.5-flash-lite`, ambang skor >= 20):
@@ -133,4 +133,9 @@ Tidak perlu login.
 - Inspirasi tampilan: "AskSilver: AI Scam-Checking Platform" oleh Goodspeed Studio (Dribbble), tidak disalin.
 
 ## Team Members
-[Isi nama anggota tim dan perannya]
+Tim **Pengen Kerja Remote B**, Universitas Udayana
+
+| Nama | Peran |
+|---|---|
+| I Gede Bagus Nata Krisnu | Ketua |
+| Ida Bagus Pradnya Subhiksa Semaya | Anggota |
