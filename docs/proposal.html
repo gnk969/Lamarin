@@ -55,8 +55,8 @@
 </section>
 
 <h2>1. Problem &amp; Background</h2>
-<p>Lowongan kerja palsu beredar di Facebook, TikTok, Instagram, dan WhatsApp. Modusnya berulang: meminta biaya (administrasi, medical, tiket, "paket reservasi"), mengarahkan ke tautan formulir yang mencuri data dan nomor Telegram, memakai WhatsApp atau Gmail pribadi sambil mencatut nama BUMN atau perusahaan besar, dan kerja online "like/follow" yang berujung deposit. Kemnaker menyebut ciri yang sama: biaya, email atau situs gratisan, gaji tidak wajar, dan lokasi yang tidak sesuai.<sup>[1]</sup></p>
-<p>Di Bali, dampaknya bisa jauh lebih berat daripada kehilangan uang. Puluhan ABK korban tindak pidana perdagangan orang di Pelabuhan Benoa direkrut lewat Facebook dengan tawaran kerja menarik, dan Polda Bali menetapkan enam tersangka.<sup>[2][3]</sup> BP3MI Bali menyebut lowongan kerja ilegal "didapat dari media sosial" dan meminta warga memeriksa latar belakang perusahaan.<sup>[4]</sup> Pemeriksa fakta juga mencatat rekrutmen palsu yang mencatut PLN wilayah Denpasar dengan meminta pembayaran paket tiket dan hotel Rp3,9 juta dalam 45 menit.<sup>[5]</sup> Pola terbaru memakai poster buatan AI sehingga sulit dibedakan dengan mata.<sup>[6]</sup></p>
+<p>Lowongan kerja palsu beredar di Facebook, TikTok, Instagram, dan WhatsApp. Modusnya berulang: meminta biaya (administrasi, medical, tiket, "paket reservasi"), mengarahkan ke tautan formulir yang mencuri data dan nomor Telegram, memakai WhatsApp atau Gmail pribadi sambil mencatut nama BUMN atau perusahaan besar, dan kerja online "like/follow" yang berujung deposit. Kemnaker menyebut ciri yang sama dan menegaskan, "Jika ada pungutan biaya dalam proses rekrutmen, hampir pasti itu adalah modus penipuan."<sup>[1]</sup></p>
+<p>Di Bali, dampaknya bisa jauh lebih berat daripada kehilangan uang. Dalam kasus tindak pidana perdagangan orang terhadap awak kapal KM Awindo 2A di Pelabuhan Benoa, pelaku merekrut korban "menggunakan media sosial Facebook dengan postingan iklan lowongan pekerjaan"; Polda Bali menetapkan enam tersangka atas sedikitnya 21 calon awak kapal.<sup>[2][3]</sup> Minat warga Bali bekerja ke luar negeri tinggi: Disnaker ESDM Bali mencatat sekitar 5.000 pekerja migran prosedural pada Januari-Juni 2023 dan 21 ribu sepanjang 2022, sambil meminta masyarakat tidak terjebak tawaran kerja ilegal.<sup>[4]</sup> Pemeriksa fakta juga mencatat rekrutmen palsu yang mencatut PLN wilayah Denpasar dengan meminta pembayaran paket tiket dan hotel Rp3,9 juta dalam 45 menit.<sup>[5]</sup> Pola terbaru memakai poster buatan AI sehingga sulit dibedakan dengan mata.<sup>[6]</sup></p>
 <p><b>Masalah inti:</b> pencari kerja tidak punya cara cepat dan gratis untuk memeriksa sebuah lowongan <i>sebelum</i> membayar atau mengirim data. Situs cek fakta baru memeriksa setelah sebuah lowongan viral, dan kanal pengaduan bekerja setelah korban dirugikan.</p>
 
 <h2>2. Target User</h2>
@@ -107,7 +107,7 @@
 <table>
   <tr><th>Solusi yang ada</th><th>Keterbatasan</th><th>Lamarin</th></tr>
   <tr><td>Artikel cek fakta (TurnBackHoax, Cek Fakta media)</td><td>Memeriksa setelah viral, satu kasus per artikel</td><td>Memeriksa lowongan apa pun saat diterima, sebelum korban bertindak</td></tr>
-  <tr><td>Aplikasi Bali Mantap (BP3MI Denpasar)<sup>[7]</sup></td><td>Cek izin P3MI/LPK; pengguna harus tahu nama agen</td><td>Membaca isi poster/pesan langsung dan menandai tanda bahaya untuk semua jenis lowongan</td></tr>
+  <tr><td>Aplikasi Bali Mantap (BP3MI Denpasar, Android)<sup>[7]</sup></td><td>Data perusahaan penyalur resmi, cek izin perekrutan, pengaduan; khusus pekerja migran dan pengguna harus tahu nama agennya</td><td>Membaca isi poster atau pesan apa pun langsung dan menandai tanda bahaya, untuk lowongan dalam dan luar negeri; bisa dibuka dari peramban mana saja</td></tr>
   <tr><td>Imbauan Kemnaker</td><td>Daftar ciri umum, pengguna menilai sendiri</td><td>Ciri itu diterapkan otomatis dengan kutipan bukti per rambu</td></tr>
 </table>
 <p>Pembeda teknis: rambu AI yang <b>wajib mengutip dan diverifikasi</b>, skor dengan <b>bobot tetap yang bisa diaudit</b>, dan mode cadangan gratis tanpa AI.</p>
@@ -118,6 +118,7 @@
   <tr><th>Versi</th><th>Set</th><th class="n">Precision</th><th class="n">Recall</th><th class="n">F1</th><th class="n">Akurasi</th></tr>
   {{EVAL_ROWS}}
 </table>
+<p>{{EVAL_INSIGHT}}</p>
 <p class="note">{{EVAL_NOTE}}</p>
 <p><b>Manfaat:</b> keputusan "lanjut atau tolak" dalam satu menit, dengan bukti yang bisa ditunjukkan ke keluarga. <b>Pengembangan:</b> pengecekan otomatis ke daftar P3MI resmi, bot WhatsApp agar bisa dipakai tanpa membuka web, ekstensi peramban, dan laporan rambu anonim untuk BP3MI/Disnaker.</p>
 <p><b>Keterbatasan MVP:</b> set data masih kecil; rambu adalah indikator, bukan bukti; pembacaan gambar tanpa AI kurang akurat; kuota Gemini gratis terbatas dan kontennya dapat dipakai Google untuk meningkatkan produk.</p>
@@ -136,12 +137,12 @@
 <h2 class="page-break">Lampiran A. Referensi</h2>
 <ol class="refs">
   <li>Republika (13 Jan 2025), "Ini 5 ciri-ciri lowongan kerja palsu versi Kemnaker", https://ekonomi.republika.co.id/berita/sq0416423/ini-5-ciriciri-lowongan-kerja-palsu-versi-kemnaker</li>
-  <li>detikBali, "Puluhan ABK jadi korban perdagangan orang, pecatan polisi diadili", https://www.detik.com/bali/hukum-dan-kriminal/d-8353640/puluhan-abk-jadi-korban-perdagangan-orang-pecatan-polisi-diadili</li>
+  <li>detikBali (12 Feb 2026), "Puluhan ABK jadi korban perdagangan orang, pecatan polisi diadili", https://www.detik.com/bali/hukum-dan-kriminal/d-8353640/puluhan-abk-jadi-korban-perdagangan-orang-pecatan-polisi-diadili</li>
   <li>RMOL (24 Okt 2025), "Polda Bali tetapkan enam tersangka kasus TPPO di Pelabuhan Benoa", https://rmol.id/hukum/read/2025/10/24/684244/polda-bali-tetapkan-enam-tersangka-kasus-tppo-di-pelabuhan-benoa</li>
-  <li>Antara Bali, "Disnaker ESDM Bali minta masyarakat tak terjebak pekerja migran ilegal", https://bali.antaranews.com/berita/321915/disnaker-esdm-bali-minta-masyarakat-tak-terjebak-pekerja-migran-ilegal</li>
+  <li>Antara Bali (4 Agu 2023), "Disnaker ESDM Bali minta masyarakat tak terjebak pekerja migran ilegal", https://bali.antaranews.com/berita/321915/disnaker-esdm-bali-minta-masyarakat-tak-terjebak-pekerja-migran-ilegal</li>
   <li>TurnBackHoax/MAFINDO (22 Okt 2022), "[SALAH] Lowongan Kerja oleh PLN Wilayah Denpasar Oktober 2022", https://turnbackhoax.id/articles/10803-salah-lowongan-kerja-oleh-pln-wilayah-denpasar-oktober-2022</li>
   <li>TurnBackHoax/MAFINDO (5 Nov 2026), "[PENIPUAN] Tautan Pendaftaran Staf Sekolah Rakyat Tahun 2026", https://turnbackhoax.id/articles/37376-penipuan-tautan-pendaftaran-staf-sekolah-rakyat-tahun-2026</li>
-  <li>Kumparan/Kanal Bali, "Tangkal hoaks kerja di luar negeri, BP3MI Denpasar buat aplikasi Bali Mantap", https://kumparan.com/kanalbali/tangkal-hoaks-kerja-di-luar-negeri-bp3mi-denpasar-buat-aplikasi-bali-mantap-1zfSswDrksX</li>
+  <li>Kumparan/Kanal Bali (19 Jan 2023), "Tangkal hoaks kerja di luar negeri, BP3MI Denpasar buat aplikasi Bali Mantap", https://kumparan.com/kanalbali/tangkal-hoaks-kerja-di-luar-negeri-bp3mi-denpasar-buat-aplikasi-bali-mantap-1zfSswDrksX</li>
   <li>Data uji lengkap dengan tautan sumber per item: <code>data/</code> pada repository.</li>
 </ol>
 

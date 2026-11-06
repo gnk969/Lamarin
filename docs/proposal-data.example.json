@@ -1,0 +1,11 @@
+{
+  "nama_tim": "Isi nama tim",
+  "ketua": "Isi nama ketua",
+  "anggota": "Nama anggota 1, Nama anggota 2",
+  "instansi": "Isi sekolah/universitas/komunitas",
+  "kategori": "SMA/SMK/sederajat atau Mahasiswa/Umum",
+  "kontak": "email@contoh.com",
+  "github": "https://github.com/gnk969/Lamarin",
+  "deploy": "https://lamarin.onrender.com",
+  "tag": "v1.0-submission (commit abc1234)"
+}
