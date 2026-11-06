@@ -1,0 +1,6 @@
+# Tidak dibutuhkan untuk menjalankan aplikasi di Vercel
+docs/
+scripts/
+backend/tests/
+*.bat
+render.yaml

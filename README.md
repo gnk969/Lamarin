@@ -26,7 +26,7 @@ dan calon pekerja migran di Bali.
 - Frontend: HTML, CSS, JavaScript tanpa framework; Tesseract.js (pembaca teks gambar di peramban saat AI tidak aktif)
 - AI: Google Gemini API paket gratis (`gemini-3.5-flash-lite`)
 - Database: tidak ada (masukan tidak disimpan)
-- Hosting: Vercel paket Hobby gratis (`vercel.json`, titik masuk `api/index.py`)
+- Hosting: Vercel paket Hobby gratis (deteksi FastAPI otomatis, titik masuk `api/index.py`)
 
 ## AI Implementation
 | Tahap | Metode | Input | Output |
@@ -110,7 +110,7 @@ Detail per item, termasuk jawaban AI mentah: `docs/hasil-evaluasi-*.json`.
 [Isi URL Vercel setelah deploy]
 
 Deploy gratis tanpa kartu kredit di Vercel: https://vercel.com > Add New > Project > import repo ini > di Environment Variables
-isi `GEMINI_API_KEY` (dan `GEMINI_MODEL=gemini-3.5-flash-lite`) > Deploy. Vercel membaca `vercel.json`.
+isi `GEMINI_API_KEY` (dan `GEMINI_MODEL=gemini-3.5-flash-lite`) > Deploy. Vercel mendeteksi FastAPI otomatis dari `api/index.py`.
 Alternatif: `render.yaml` untuk Render (paket gratis Render meminta kartu kredit untuk web service).
 
 ## Demo Account
