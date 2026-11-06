@@ -62,6 +62,14 @@ def test_salary_and_overseas():
     assert "LUAR_NEGERI_TANPA_IZIN" not in kodes("Penempatan Jepang melalui P3MI berizin, terdaftar di KP2MI.")
 
 
+def test_multiline_payment_and_false_links():
+    text = ("Untuk Reservasinya paket sudah termasuk:\n– Tiket PP\n– Hotel\nMohon selesaikan pembayaran melalui "
+            "transfer\nBANK X\nTotal : Rp 3.920.887\nKonfirmasikan transfer.kirim via whatsapp ke nomor ini.")
+    assert {"MINTA_BIAYA", "TRAVEL_WAJIB"} <= kodes(text)
+    assert rules.domains_in("Konfirmasikan transfer.kirim via whatsapp") == []
+    assert rules.domains_in("daftar di bit.ly/abc") == ["bit.ly/abc"]
+
+
 def test_payment_instruction_and_packages():
     assert "MINTA_BIAYA" in kodes("Mohon selesaikan pembayaran melalui transfer. Total : Rp 3.920.887")
     assert "MINTA_BIAYA" in kodes("Tersedia dana talang sistem potong gaji.")

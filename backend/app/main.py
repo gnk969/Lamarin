@@ -20,6 +20,15 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 app = FastAPI(title="Lamarin", docs_url="/api/docs", redoc_url=None)
 
 ALLOWED_MIME = {"image/png", "image/jpeg", "image/webp"}
+
+
+@app.middleware("http")
+async def _no_stale_assets(request: Request, call_next):
+    """Peramban wajib memvalidasi ulang file frontend, supaya versi baru langsung terpakai setelah deploy."""
+    response = await call_next(request)
+    if not request.url.path.startswith("/api/"):
+        response.headers["Cache-Control"] = "no-cache"
+    return response
 _hits: dict[str, deque] = defaultdict(deque)
 
 
@@ -82,10 +91,20 @@ def examples():
         path = config.DATA_DIR / fname
         if not path.exists():
             continue
-        for item in json.loads(path.read_text(encoding="utf-8"))[:4]:
-            out.append({"label": label, "teks": item["teks_lowongan"], "sumber": item["url"],
-                        "judul": item.get("judul_artikel") or item.get("perusahaan", "")})
+        items = {i["id"]: i for i in json.loads(path.read_text(encoding="utf-8"))}
+        for item_id in SHOWCASE[label]:
+            item = items.get(item_id)
+            if item:
+                out.append({"label": label, "teks": item["teks_lowongan"], "sumber": item["url"],
+                            "judul": item.get("judul_artikel") or item.get("perusahaan", "")})
     return out
+
+
+# Contoh yang ditampilkan di halaman: beragam modus, termasuk kasus yang terkait Bali.
+SHOWCASE = {
+    "penipuan": ["scam-27", "scam-22", "scam-13", "scam-16"],
+    "asli": ["asli-02", "asli-14", "asli-23"],
+}
 
 
 app.mount("/", StaticFiles(directory=config.FRONTEND_DIR, html=True), name="frontend")

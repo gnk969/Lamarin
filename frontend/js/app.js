@@ -289,8 +289,13 @@ async function init() {
   try {
     const items = await api("/api/contoh");
     if (items.length) {
+      const counter = { penipuan: 0, asli: 0 };
       $("example-list").innerHTML = items
-        .map((x, i) => `<li><button type="button" data-i="${i}">${x.label === "penipuan" ? "Kasus penipuan" : "Lowongan resmi"} ${i + 1}</button></li>`)
+        .map((x, i) => {
+          counter[x.label] += 1;
+          const name = x.label === "penipuan" ? "Kasus penipuan" : "Lowongan resmi";
+          return `<li><button type="button" data-i="${i}" title="${esc(x.judul)}">${name} ${counter[x.label]}</button></li>`;
+        })
         .join("");
       $("examples").hidden = false;
       $("example-list").addEventListener("click", (e) => {

@@ -1,0 +1,243 @@
+[
+ {
+  "id": "uji-scam-01",
+  "judul_artikel": "[PENIPUAN] Tautan Pendaftaran Seleksi Petugas Haji 2027",
+  "url": "https://turnbackhoax.id/articles/37337-penipuan-tautan-pendaftaran-seleksi-petugas-haji-2027",
+  "tanggal_artikel": "2026-10-30",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_instansi",
+   "gaji_tidak_wajar"
+  ],
+  "teks_lowongan": "Seleksi Petugas Haji 2026/2027\n- Tamatan SMP, SMA, SMK, D3, S1\n- Laki-laki/perempuan\n- Minimal umur 26 tahun\n- Batas umur maksimal 60 tahun\n- Gaji 25jt-35jt/ musim + fasilitas ibadah haji gratis\n- Penempatan sesuai domilisi masing-masing\n- Dibuka di seluruh wilayah Indonesia\n- Pendaftaran gratis\n- Cara daftar gunakan nomor Telegram aktif\n[…]\nTelah dibuka seleksi petugas haji 2026/2027 Pendaftaran gratis tidak di pungut biaya\nSilahkan daftar kan diri anda melalui link di bawah👇\nhttps://daftarsegerasekarang[dot]vercel[dot]app/",
+  "saluran": "Facebook (video + tautan)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan di unggahan dan profil meminta nama lengkap dan nomor Telegram aktif, yang patut diwaspadai sebagai phishing. Pendaftaran resmi petugas haji 2027 dibuka 25–31 Agustus 2026 lewat petugas.haji.go.id dan sudah ditutup.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-02",
+  "judul_artikel": "[PENIPUAN] Lowongan Kerja iBox",
+  "url": "https://turnbackhoax.id/articles/37326-penipuan-lowongan-kerja-ibox",
+  "tanggal_artikel": "2026-10-29",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_perusahaan",
+   "konten_ai"
+  ],
+  "teks_lowongan": "STOP SCROLL IBOX LAGI BUK LOWONGAN ADA POSISI ADVISOR, STORE CREW, CASHIER, CUSTOMER SERVICE, DAN STORE SUPERVISOR. BUAT KAMU PRIA ATAU WANITA MINIMAL SMA ATAU SMK, KOMUNIKATIF, RAPI, DAN SIAP KERJA SHIFT INI KESEMPATAN MU. MAU DAFTAR LANGSUNG CEK LINK DI BIO AKUN INI. JANGAN SAMPAI KELEWATAN KESEMPATAN BERGABUNG BERSAMA IBOX | INFO LOWONGAN KERJA TERBARU!!! iBOX YANG SERIUS MAU KERJA LANGSUNG DAFTAR SEKARANG AJA YAH!!!",
+  "saluran": "TikTok (video, tautan di profil)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan di profil mengarah ke formulir yang meminta nama, alamat, dan nomor Telegram. Hive Moderation menilai videonya buatan AI dengan probabilitas 99,5%. Lowongan resmi iBox diumumkan Erajaya Group lewat erajaya.com dan Instagram erajaya_career.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-03",
+  "judul_artikel": "Cek Fakta: Hoaks Lowongan Kerja Petugas Sensus Pertanian",
+  "url": "https://www.liputan6.com/cek-fakta/read/8322837/cek-fakta-hoaks-lowongan-kerja-petugas-sensus-pertanian",
+  "tanggal_artikel": "2026-10-28",
+  "pemeriksa": "Liputan6.com Cek Fakta",
+  "modus": [
+   "catut_instansi",
+   "catut_pejabat",
+   "gaji_tidak_wajar"
+  ],
+  "teks_lowongan": "RESMI MEMBUKA\nLOWONGAN KERJA PETUGAS SENSUS PERTANIAN\nPRIA & WANITA\nLULUSAN SMA / SEDERAJAT\nGAJI 5JT-8JT / BULAN\nPENEMPATAN SESUAI DAERAH MASING MASING\nANGKATAN 2026\nGRATIS TIDAK ADA BIAYA\nAyo Bergabung! Jadi Bagian dari Pertanian Maju Indonesia!\nDr. Ir. H. ANDI AMRAN SULAIMAN, M. P\nMENTERI PERTANIAN",
+  "saluran": "Instagram",
+  "tanda_bahaya_menurut_pemeriksa": "Mencatut nama Menteri Pertanian. Kementan menyatakan tidak pernah membuka rekrutmen Petugas Sensus Pertanian 2026, tidak pernah menerbitkan pengumuman itu, dan tidak bekerja sama dengan pihak mana pun untuk merekrut lewat tautan yang beredar. Masyarakat diminta mewaspadai pendaftaran yang diarahkan ke tautan di luar kanal resmi pemerintah.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-04",
+  "judul_artikel": "Cek Fakta: Hoaks Link Pendaftaran Lowongan Kerja BPJS Kesehatan",
+  "url": "https://www.liputan6.com/cek-fakta/read/8307939/cek-fakta-hoaks-link-pendaftaran-lowongan-kerja-bpjs-kesehatan",
+  "tanggal_artikel": "2026-10-07",
+  "pemeriksa": "Liputan6.com Cek Fakta",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_instansi"
+  ],
+  "teks_lowongan": "Rekrutmen pegawai BPJS KESEHATAN 2026\nPOSISI :\n1. Staf BPJS KESEHATAN 2026\n2. Staf BPJS Kabupaten/Kota\nSYARAT :\n1. Laki-laki / perempuan\n2. Pend-min SMA/SMK/D3 & S1\n3. Umur min 20-45 tahun\n4. Sehat jasmani dan rohani\n5. Bebas narkoba\n6. Berkelakuan baik\n7. Gaji 4,5jt-12ht / bulan\n8. Penempatan sesuai domisili\nINFO PENDAFTARAN CEK LINK DI BAWAH !!!",
+  "saluran": "Facebook (teks + tautan)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan pendaftaran mengarah ke formulir yang meminta nama sesuai KTP dan nomor Telegram. BPJS Kesehatan memperingatkan penipuan rekrutmen atas namanya; pengumuman resmi hanya di bpjs-kesehatan.go.id dan rekrutmen.bpjs-kesehatan.go.id.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "uji-scam-05",
+  "judul_artikel": "[PENIPUAN] Tautan Lowongan Kerja Agrinas Jaladri Nusantara",
+  "url": "https://turnbackhoax.id/articles/36121-penipuan-tautan-lowongan-kerja-agrinas-jaladri-nusantara",
+  "tanggal_artikel": "2026-08-13",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "PT Agrinas Jaladri Nusantara kembali memberikan kesempatan kepada para talenta terbaik untuk berkarir | Yuk segera daftarkan dirimu melalui Link yang tertera untuk bisa mengawali karir bersama PT Agrinas Jaladri Nusantara.\nPENTING!!* Proses rekrutmen ini dilakukan secara mandiri dan online, serta tidak bekerja sama dengan perusahaan travel manapun dan tidak dipungut biaya. #infoloker #lowongankerja #agrinasjaladrinusantara #danantaraindonesia #infokarir",
+  "saluran": "TikTok (video, tautan di profil)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan di profil mengarah ke formulir yang meminta nama, alamat, dan nomor Telegram, bukan ke laman resmi. Saat ini perusahaan hanya membuka pendaftaran database kandidat \"Jaladri Career Box\" di karir.agrinasjaladri.co.id.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-06",
+  "judul_artikel": "[PENIPUAN] Pendaftaran Lowongan Kerja Garuda Indonesia",
+  "url": "https://turnbackhoax.id/articles/35680-penipuan-pendaftaran-lowongan-kerja-garuda-indonesia",
+  "tanggal_artikel": "2026-07-14",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "phishing",
+   "telegram",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "✈️ PERSIAPKAN DIRI! REKRUTMEN PT GARUDA INDONESIA (PERSERO) Tbk 2026 | Wujudkan karier impianmu bersama maskapai kebanggaan Indonesia! Posisi yang Berpotensi Dibuka: Staff Administrasi, Customer Service, Ground Staff, Cabin Crew (Pramugari/Pramugara), Ticketing Staff, Cargo Staff, Flight Operations Support, Finance & Accounting Staff, Human Capital (HR), IT Support\n[…]\n⚠️ DAFTAR SEKARANG! KLIK LINK DI BIO ✈️",
+  "saluran": "TikTok (video, tautan di profil)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan di profil mengarah ke formulir yang meminta nama, alamat, dan nomor Telegram. Menurut laman karier career.garuda-indonesia.com dan LinkedIn resminya, Garuda Indonesia sedang tidak membuka lowongan.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-07",
+  "judul_artikel": "[PENIPUAN] Rekrutmen Calon Anggota Bawaslu via WhatsApp",
+  "url": "https://turnbackhoax.id/articles/25712-penipuan-rekrutmen-calon-anggota-bawaslu-via-whatsapp",
+  "tanggal_artikel": "2025-02-19",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "whatsapp",
+   "catut_instansi"
+  ],
+  "teks_lowongan": "Telah Dibuka Lowongan Kerja Calon Anggota BADAN PENGAWAS PEMILIHAN UMUM (BAWASLU) PERIODE 2025 - 2030 Persyaratan Umum: ✅ Warga Negara Indonesia ✅ Pria/Wanita ✅ Pendidikan Minimal SMA/SMK Semua Jurusan PENEMPATAN SESUAI LOKASI PELAMAR Semua Tahapan Pendaftaran GRATIS BERLAKU UNTUK SELURUH INDONESIA Cara melamar: Informasi lengkap tentang persyaratan dan tata cara pendaftaran, klik link di bio kami",
+  "saluran": "Facebook (tautan + kontak WhatsApp); serupa di Instagram",
+  "tanda_bahaya_menurut_pemeriksa": "Unggahan menyertakan kontak WhatsApp untuk mendaftar. Bawaslu menegaskan rekrutmen hanya diumumkan lewat laman dan media sosial resmi; dari tiga jenis rekrutmen di bawaslu.go.id, tidak ada yang bisa didaftar lewat WhatsApp.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "uji-scam-08",
+  "judul_artikel": "[PENIPUAN] Tautan Pendaftaran Lowongan Kerja di Brunei Darussalam",
+  "url": "https://turnbackhoax.id/articles/24997-penipuan-tautan-pendaftaran-lowongan-kerja-di-brunei-darussalam",
+  "tanggal_artikel": "2025-01-10",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "luar_negeri",
+   "phishing",
+   "telegram",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Bagi yang mau daftar langsung ke bio",
+  "saluran": "TikTok (foto, tautan di bio)",
+  "tanda_bahaya_menurut_pemeriksa": "Foto lowongan asli milik perusahaan penempatan pekerja migran (P3MI) dipakai ulang, tetapi tautan pendaftaran aslinya diganti tautan pemendek lain yang meminta nama lengkap dan nomor Telegram aktif.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-09",
+  "judul_artikel": "[PENIPUAN] Pendaftaran Loker Mayora Group Lewat WhatsApp",
+  "url": "https://turnbackhoax.id/articles/24788-penipuan-pendaftaran-loker-mayora-group-lewat-whatsapp",
+  "tanggal_artikel": "2024-12-27",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "whatsapp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Info lowongan pekerjaan PT.MAYORA INDAH.\nDibutuhkan karyawan Wanita/pria Lowongan kerja seluruh Indonesia untuk pendaftaran Tampa biaya apapun .\nSerius lansung daftarkan diri anda sekarang",
+  "saluran": "Facebook (akun meniru nama perusahaan; foto berisi tautan WhatsApp)",
+  "tanda_bahaya_menurut_pemeriksa": "Akun Facebook memakai nama perusahaan, dan fotonya berisi tautan ke akun WhatsApp. Mayora menyatakan tidak mengundang kandidat lewat WhatsApp atau email selain berdomain @mayora.co.id, @mayoraportal.co.id, dan @ptcns.co.id.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-10",
+  "judul_artikel": "[PENIPUAN] Loker Pemagangan Terstruktur Bank Syariah Indonesia, Gaji Rp5—7 Jutaan",
+  "url": "https://turnbackhoax.id/articles/24613-penipuan-loker-pemagangan-terstruktur-bank-syariah-indonesia-gaji-rp5-7-jutaan",
+  "tanggal_artikel": "2024-12-15",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "dm_medsos",
+   "whatsapp",
+   "catut_perusahaan",
+   "gaji_tidak_wajar"
+  ],
+  "teks_lowongan": "Open Recruitment PT Bank Syariah Indonesia\nGaji Rp 5.475. 023 – Rp 7.140.321\nTunjangan, Kesehatan, dan Hari Raya, dll\nPersyaratan:\nWarga Negara Indonesia\nSehat jasmani dan rohani\nLulusan SMA/SMK dengan nilai minimal 70\nLulusan D1-D3 dan S1 dengan IPK minimal 2.50\nBerusia maksimal 19 tahun untuk lulusan SMA/SMK, maksimal 21 tahun lulusan D1, maksimal 24 tahun D3-S1\nBerpenampilan rapih, Mampu berkomunikasi dengan sopan dan rmaah\nTidak pernah terlibat dengan kasus kriminal\nBelum menikah dan bersedia tidak menikah selama mengikuti program BiBiT BSI.",
+  "saluran": "TikTok (video), lalu DM atau WhatsApp",
+  "tanda_bahaya_menurut_pemeriksa": "Rincian prosedur hanya diberikan lewat DM atau nomor WhatsApp. Program pemagangan BiBiT BSI memang ada di jobs.talentics.id, tetapi tidak mencantumkan nominal gaji dan tunjangan seperti di unggahan.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-11",
+  "judul_artikel": "[HOAKS] Lowongan Pekerjaan Mengatasnamakan Pegadaian",
+  "url": "https://www.kompas.com/cekfakta/read/2024/08/15/175900282/-hoaks-lowongan-pekerjaan-mengatasnamakan-pegadaian",
+  "tanggal_artikel": "2024-08-15",
+  "pemeriksa": "Kompas.com Cek Fakta",
+  "modus": [
+   "phishing",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Lowongan kerja PT PEGADAIAN BUMN Daftarkan diri anda Langsung KLIK LINK.",
+  "saluran": "Facebook (beberapa akun, dengan tautan)",
+  "tanda_bahaya_menurut_pemeriksa": "Tautan rekrutmen tidak mengarah ke situs resmi, dan Microsoft Edge memberi peringatan situs phishing. Akun resmi Pegadaian tidak membagikan lowongan itu. Pegadaian tidak memungut biaya rekrutmen, dan permintaan transfer untuk transportasi atau akomodasi harus diabaikan.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "uji-scam-12",
+  "judul_artikel": "[PENIPUAN] Lowongan Kerja di PT Eclat Textile",
+  "url": "https://turnbackhoax.id/articles/21562-penipuan-lowongan-kerja-di-pt-eclat-textile",
+  "tanggal_artikel": "2024-07-31",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "surat_panggilan_palsu",
+   "biaya",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "SURAT UNDANGAN WAWANCARA KERJA\nNomor : 029/HRD/PT.ET/XI/2024\nPerihal : Wawancara kerja\nKepada : Yth. Peserta Test\nPT ECLAT TEXTILE INTERNATIONAL\nDi Tempat\nDengan hormat,\nMenanggapi surat lamaran kerja saudara/i yang kami terima secara online dengan ini saudara/i kami harapkan kedatangannya untuk dapat mengikuti tahapan seleksi Operator … akan dilaksanakan sesuai jadwal yang di tetapkan sebagai berikut:\n[…]\nMembawa hasil Medical Check Up (Bukan Keterangan Sehat)\nMelampirkan undangan yang diberikan dan telah di printout\nUndangan ini hanya berlaku 1 (satu) kali.",
+  "saluran": "Surat undangan wawancara (flyer/WhatsApp)",
+  "tanda_bahaya_menurut_pemeriksa": "Surat undangan wawancara berkop perusahaan mewajibkan hasil Medical Check Up. Perusahaan menyatakan tidak pernah mengeluarkan surat itu dan tidak memungut biaya apa pun; undangan interview yang meminta biaya dipastikan penipuan.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-13",
+  "judul_artikel": "[SALAH] Surat Panggilan Interview PT INKA (Persero)",
+  "url": "https://turnbackhoax.id/articles/12981-salah-surat-panggilan-interview-pt-inka-persero",
+  "tanggal_artikel": "2023-06-30",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "surat_panggilan_palsu",
+   "biaya",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "PT INDUSTRI KERETA API (PERSERO)\nPanggilan Tes Interview Penerimaan Karyawan\nPT Industri Kereta Apai (Persero) Tahun 2023\nNomor : 0579/HRD-INKA/VI/2023\nLampiran : VII (Tujuh) Lembar\nPerihal : Panggilan Tes Interview\n[…]\nBerdasarkan hasil evaluasi awal Tim Recruitment SectiionDepartment of Human Resources Development terhadap lamaran pekerjaan saudara(i) dengan ini kami … persyaratan administrasi dan kuaifikasi dari saudara(i) berhak untuk mengikuti tahapan … akan diadakan sesuai dengan jadwal sebagai berikut :\nHati, tanggal : Kamis, 22 Juni 2023\nWaktu : 07.30 WIB- Selesai\nTempat : ….",
+  "saluran": "Surat panggilan beredar (artikel tidak menyebut platform)",
+  "tanda_bahaya_menurut_pemeriksa": "Peserta diminta mentransfer biaya akomodasi dan transportasi untuk interview di Jakarta, dengan janji akan diganti. INKA menyatakan surat itu palsu dan tidak pernah memungut biaya; akun Instagram @inka.karir juga bukan akun resmi.",
+  "ada_gambar_poster": true
+ },
+ {
+  "id": "uji-scam-14",
+  "judul_artikel": "[SALAH] Tawaran kerja sampingan",
+  "url": "https://turnbackhoax.id/articles/11965-salah-tawaran-kerja-sampingan",
+  "tanggal_artikel": "2023-02-28",
+  "pemeriksa": "MAFINDO/TurnBackHoax",
+  "modus": [
+   "tugas_online",
+   "whatsapp",
+   "phishing"
+  ],
+  "teks_lowongan": "Nice to meet you. My name is Nina and from MALAYSIA and INDONESIA Marketing Clutch Ltd. My HR Head let me contact this number and I just want to share some work from home freelance job information for you. Are you interested?",
+  "saluran": "WhatsApp (pesan berantai)",
+  "tanda_bahaya_menurut_pemeriksa": "Pesan berantai menawarkan kerja freelance dari rumah atas nama perusahaan asing. Pemeriksa menyebutnya bentuk phishing yang berulang dengan motif berbeda, mengatasnamakan perusahaan, dan menjanjikan upah besar untuk kerja jangka pendek.",
+  "ada_gambar_poster": false
+ },
+ {
+  "id": "uji-scam-15",
+  "judul_artikel": "Waspada, Beredar Pesan WA Mengatasnamakan Lowongan Kerja Tokopedia",
+  "url": "https://www.kompas.com/cekfakta/read/2022/07/26/150531382/waspada-beredar-pesan-wa-mengatasnamakan-lowongan-kerja-tokopedia",
+  "tanggal_artikel": "2022-07-26",
+  "pemeriksa": "Kompas.com Cek Fakta",
+  "modus": [
+   "tugas_online",
+   "whatsapp",
+   "catut_perusahaan"
+  ],
+  "teks_lowongan": "Hai, nama saya Diana dan saya bekerja di departemen SDM di tokopedia (cabang Indonesia).\nPerusahaan ini mencari karyawan paruh waktu secara online. Usia: 23-60\nKerja paruh waktu itu mudah, yang Anda butuhkan hanyalah ponsel. 10 hingga 20 menit kerja paruh waktu!\nHal ini bisa dilakukan di waktu senggang Anda tanpa mengganggu pekerjaan Anda saat ini. Pendatang baru langsung mendapatkan Rp 50000, gaji harian: Rp 200000 - 2000000\nJika Anda tertarik dengan pekerjaan paruh waktu ini! Balas 1, klik tautan untuk menambahkan! WhatsApp Manager.\nhttps://wa[dot]me/62xxxxxxxxxxx",
+  "saluran": "WhatsApp (pesan berantai; tangkapan layar beredar di Facebook)",
+  "tanda_bahaya_menurut_pemeriksa": "Pengirim mengaku dari departemen SDM Tokopedia dan menawarkan kerja paruh waktu online bergaji harian Rp200.000–2.000.000, lalu mengarahkan ke tautan WhatsApp. Tokopedia menyatakan pesan itu hoaks, meminta posisi dicek di kanal resmi, dan hanya mengirim email dari domain @tokopedia.com.",
+  "ada_gambar_poster": false
+ }
+]

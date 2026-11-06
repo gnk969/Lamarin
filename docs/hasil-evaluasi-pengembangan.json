@@ -279,8 +279,10 @@
       "label": 1,
       "teks": "Untuk Reservasinya paket sudah termasuk:\n– Tiket PP (pulang pergi)\n– Hotel\n– Penjemputan\n– Konsumsi\n– Pakaian\n– Rapid test\nMohon selesaikan pembayaran melalui transfer (Atm/Internet Banking/M-Banking) Transfer ke:\nBANK JAGO A/N. [nama disamarkan]\nNO REK: 1003-5450-xxxx\nTotal : Rp 3.920.887\nKonfirmasikan transfer (informasi, Nama pengirim/Jumlah pembayara/Bank pengirim/Bank tujuan/Bukti transfer.kirim via whatsapp ke nomor ini.\nBatas waktu pembayaran 45 menit.\n[…]\nSalam hormat\nTim Rekrutmen PLN",
       "url": "https://turnbackhoax.id/articles/10803-salah-lowongan-kerja-oleh-pln-wilayah-denpasar-oktober-2022",
-      "skor_aturan": 25,
+      "skor_aturan": 100,
       "rambu_aturan": [
+        "MINTA_BIAYA",
+        "TRAVEL_WAJIB",
         "KONTAK_PRIBADI",
         "DESAKAN_WAKTU"
       ]

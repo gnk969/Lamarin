@@ -38,7 +38,7 @@ class Temuan:
     sumber: str = "aturan"
 
 
-_SENTENCE_END = re.compile(r"[.!?\n](?=\s|$)")
+_SENTENCE_END = re.compile(r"\n|[.!?](?=\s|$)")
 
 
 def _snippet(text: str, start: int, end: int, pad: int = 120) -> str:
@@ -99,9 +99,17 @@ def domains_in(text: str) -> list[str]:
     for m in URL_RE.finditer(low):
         url = m.group(1)
         host = re.sub(r"^https?://", "", url).split("/")[0]
-        if "." in host and not host.replace(".", "").isdigit():
+        tld = host.rsplit(".", 1)[-1]
+        explicit = url.startswith(("http://", "https://", "www."))
+        if "." in host and not host.replace(".", "").isdigit() and (explicit or tld in URL_TLDS):
             found.append(url)
     return found
+
+
+# TLD yang dikenali sebagai tautan bila ditulis tanpa http:// (menghindari "transfer.kirim" dianggap tautan).
+URL_TLDS = {"com", "id", "net", "org", "info", "xyz", "site", "online", "top", "click", "live", "store", "shop",
+            "biz", "cc", "cx", "icu", "vip", "work", "fun", "ly", "gl", "me", "io", "app", "dev", "link", "gd",
+            "at", "co", "us", "in", "my", "sg", "to", "tk", "ml", "ga", "cf", "gq", "pw", "ws", "tv", "uk", "au"}
 
 
 def detect(text: str) -> list[Temuan]:
@@ -122,7 +130,7 @@ def detect(text: str) -> list[Temuan]:
         r"(rp\.?\s?\d|\b\d+\s?(rb|ribu|jt|juta)\b)", text, low, check_negation=True) or _first(
         # instruksi membayar ke rekening/e-wallet dengan nominal
         r"\b(pembayaran|selesaikan pembayaran|transfer ke|no\.?\s?rek|nomor rekening|e-?wallet|dana|ovo|gopay)\b"
-        r"[^\n]{0,80}?(rp\.?\s?\d)", text, low, check_negation=True) or _first(
+        r"[\s\S]{0,160}?(rp\.?\s?\d)", text, low, check_negation=True) or _first(
         # biaya yang ditalangi lalu dipotong dari gaji
         r"\b(dana talang|potong gaji|dipotong dari gaji|menyetor|setor rp)\b", text, low))
 
@@ -140,7 +148,7 @@ def detect(text: str) -> list[Temuan]:
         r"\b(wajib|harus|diwajibkan|mewajibkan|melalui|menggunakan jasa)\b[^.\n]{0,40}?"
         r"\b(travel|agen perjalanan|biro perjalanan|tour and travel)\b", text, low) or _first(
         # paket perjalanan (tiket + hotel) yang dijual perekrut
-        r"\b(reservasi|paket)\b[^\n]{0,60}?\b(tiket|hotel|penginapan|penjemputan)\b", text, low))
+        r"\b(reservasi\w*|paket)\b[\s\S]{0,60}?\b(tiket|hotel|penginapan|penjemputan)\b", text, low))
 
     # Data sensitif: OTP/PIN selalu rambu; KTP/rekening hanya bila dikirim lewat chat/formulir tak resmi.
     sensitif = _first(r"\b(otp|kode verifikasi|kode otp|pin atm|pin m-?banking|password)\b", text, low) or _first(
