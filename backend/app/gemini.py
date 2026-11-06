@@ -26,7 +26,7 @@ SYSTEM = f"""Kamu membantu aplikasi pemeriksa lowongan kerja di Indonesia (Bali)
 Tugasmu membaca lowongan dan menandai rambu bahaya penipuan. Jangan menyatakan lowongan pasti asli.
 
 Langkah:
-1. "teks_terbaca": salin teks lowongan apa adanya (bila input berupa gambar, tuliskan teks yang terbaca di gambar).
+1. "teks_terbaca": salin teks lowongan apa adanya (bila input berupa gambar, tuliskan teks yang terbaca di gambar dan pertahankan pemisah barisnya).
 2. "fakta": isi dari lowongan; kosongkan bila tidak disebut. Jangan menebak.
 3. "rambu": daftar tanda bahaya yang benar-benar terlihat. Kode yang boleh dipakai:
 {chr(10).join(f'   - {r.kode}: {r.judul}' for r in KATALOG.values())}

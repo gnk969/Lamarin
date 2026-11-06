@@ -107,3 +107,11 @@ def test_evidence_check():
     text = "Kirim lamaran ke hrd.rekrut@gmail.com paling lambat besok."
     assert analyzer.evidence_in_text("hrd.rekrut@gmail.com", text)
     assert not analyzer.evidence_in_text("wajib bayar Rp500.000", text)
+
+
+def test_snippet_single_line_poster_starts_near_trigger():
+    text = ("LOWONGAN KERJA HOTEL BINTANG 5 DUBAI Posisi: Housekeeping, Cook Helper, Laundry Gaji: Rp 25.000.000 / bulan "
+            "Tanpa pengalaman, lulusan SMP bisa Biaya proses visa & tiket Rp 4.500.000 transfer ke rekening a/n agen")
+    biaya = next(t for t in rules.detect(text) if t.kode == "MINTA_BIAYA")
+    assert not biaya.bukti.startswith("LOWONGAN")
+    assert "Biaya proses visa" in biaya.bukti

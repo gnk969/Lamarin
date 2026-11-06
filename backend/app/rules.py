@@ -45,9 +45,11 @@ def _snippet(text: str, start: int, end: int, pad: int = 120) -> str:
     """Potongan kalimat yang memuat temuan, dibatasi tanda akhir kalimat dan maksimal sekitar 2x pad."""
     a = max(0, start - pad)
     ends_before = [m.end() for m in _SENTENCE_END.finditer(text, a, start)]
-    a = ends_before[-1] if ends_before else a
+    # Tanpa tanda akhir kalimat (mis. teks poster hasil baca gambar dalam satu baris), ambil sedikit konteks saja
+    # supaya kutipan dimulai dekat kalimat pemicunya, bukan dari awal poster.
+    a = ends_before[-1] if ends_before else max(0, start - pad // 3)
     nxt = _SENTENCE_END.search(text, end, min(len(text), end + pad))
-    b = nxt.end() if nxt else min(len(text), end + pad)
+    b = nxt.end() if nxt else min(len(text), end + pad // 2)
     while a > 0 and a < start and text[a - 1].isalnum():
         a -= 1
     while b < len(text) and text[b - 1].isalnum() and text[b].isalnum():
