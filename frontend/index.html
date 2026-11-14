@@ -8,61 +8,92 @@
   <script>(()=>{let t;try{t=localStorage.getItem("rambu.tema")}catch(e){}if(!t){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,600&family=Public+Sans:wght@400;600;700&display=swap">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/logo.svg">
+  <meta name="theme-color" content="#F7F4EE">
   <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
   <div class="wrap">
     <header class="top">
       <a class="brand" href="/">
-        <svg class="sign" viewBox="0 0 22 20" aria-hidden="true"><path d="M11 1.5 20.5 18.5H1.5Z"/><path d="M11 7.5v5M11 15.3v.2"/></svg>
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="15" fill="#E9A100"/><path d="M19 13V46H30L47 21" fill="none" stroke="#16140F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Lamarin
       </a>
+      <span class="pill" title="Teks dan gambar tidak disimpan di server">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 7V5.2a3.5 3.5 0 0 1 7 0V7"/><rect x="3" y="7" width="10" height="7" rx="2"/></svg>
+        Tidak disimpan
+      </span>
       <button class="ghost" type="button" id="theme-btn">Tema gelap</button>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="judul">
-        <h1 id="judul">Lowongan ini asli, atau <em>jebakan</em>?</h1>
-        <p>Tempel teks atau unggah tangkapan layar lowongan kerja. Lamarin menandai tanda bahaya penipuan beserta buktinya, sebelum kamu mengirim uang atau data.</p>
+        <div class="hero-copy">
+          <p class="eyebrow">Pemeriksa lowongan kerja</p>
+          <h1 id="judul">Lowongan ini asli, atau <em>jebakan</em>?</h1>
+          <p class="lead">Kenali tanda penipuan sebelum mengirim uang, data pribadi, atau mendaftar lewat tautan yang tidak jelas.</p>
+          <aside class="soft-note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6.5V12c0 4.6-3.2 7.9-8 9-4.8-1.1-8-4.4-8-9V6.5Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+            <p>Setiap rambu disertai kutipan dari lowongan, dan sumber pendaftarannya dicek: domain resmi atau bukan.</p>
+          </aside>
+          <ul class="facts-mini" aria-label="Yang diperiksa">
+            <li><b>13</b> jenis rambu penipuan</li>
+            <li><b>Cek</b> tautan, email, nomor, akun</li>
+            <li><b>Gratis</b>, tanpa login</li>
+          </ul>
+        </div>
+
+        <form class="card checker" id="form" novalidate>
+          <h2 class="card-title">Periksa lowongan</h2>
+          <p class="card-hint">Tempel teks atau unggah tangkapan layar lowongan yang ingin diperiksa.</p>
+
+          <p class="field-label" id="mode-label">Pilih cara memasukkan lowongan</p>
+          <div class="tabs" role="tablist" aria-labelledby="mode-label">
+            <button class="tab" type="button" role="tab" id="tab-teks" aria-selected="true" aria-controls="panel-teks">Teks</button>
+            <button class="tab" type="button" role="tab" id="tab-gambar" aria-selected="false" aria-controls="panel-gambar" tabindex="-1">Gambar</button>
+          </div>
+
+          <div class="panel" id="panel-teks" role="tabpanel" aria-labelledby="tab-teks">
+            <label class="visually-hidden" for="teks">Teks lowongan</label>
+            <textarea id="teks" maxlength="6000" placeholder="Tempel isi lowongan di sini, termasuk kontak dan tautannya."></textarea>
+          </div>
+
+          <div class="panel" id="panel-gambar" role="tabpanel" aria-labelledby="tab-gambar" hidden>
+            <div class="drop" id="drop">
+              <div id="drop-empty">
+                <p><strong>Seret gambar ke sini</strong>, tempel dengan Ctrl+V, atau</p>
+                <button class="linkbtn" type="button" id="pick-btn">pilih file dari perangkat</button>
+                <p class="meta">PNG, JPG, atau WEBP. Maksimal 15 MB.</p>
+              </div>
+              <img id="preview" alt="Pratinjau gambar lowongan yang akan diperiksa" hidden>
+              <button class="linkbtn" type="button" id="clear-img" hidden>Ganti gambar</button>
+            </div>
+            <input type="file" id="file" accept="image/png,image/jpeg,image/webp" class="visually-hidden" tabindex="-1">
+          </div>
+
+          <button class="primary" type="submit" id="submit">Periksa lowongan</button>
+          <p class="meta ai-line" id="ai-line">Memeriksa status AI</p>
+
+          <div class="examples" id="examples" hidden>
+            <h2 class="card-title small">Ingin melihat contohnya?</h2>
+            <p class="card-hint">Lowongan nyata dari artikel cek fakta dan situs karier resmi, lengkap dengan sumbernya.</p>
+            <ul id="example-list"></ul>
+          </div>
+        </form>
       </section>
 
-      <form class="card" id="form" novalidate>
-        <div class="tabs" role="tablist" aria-label="Jenis masukan">
-          <button class="tab" type="button" role="tab" id="tab-teks" aria-selected="true" aria-controls="panel-teks">Teks</button>
-          <button class="tab" type="button" role="tab" id="tab-gambar" aria-selected="false" aria-controls="panel-gambar" tabindex="-1">Gambar</button>
-        </div>
-
-        <div class="panel" id="panel-teks" role="tabpanel" aria-labelledby="tab-teks">
-          <label class="visually-hidden" for="teks">Teks lowongan</label>
-          <textarea id="teks" maxlength="6000" placeholder="Tempel isi lowongan di sini, termasuk kontak dan tautannya."></textarea>
-        </div>
-
-        <div class="panel" id="panel-gambar" role="tabpanel" aria-labelledby="tab-gambar" hidden>
-          <div class="drop" id="drop">
-            <div id="drop-empty">
-              <p><strong>Seret gambar ke sini</strong>, tempel dengan Ctrl+V, atau</p>
-              <button class="linkbtn" type="button" id="pick-btn">pilih file dari perangkat</button>
-              <p class="meta">PNG, JPG, atau WEBP. Maksimal 15 MB.</p>
-            </div>
-            <img id="preview" alt="Pratinjau gambar lowongan yang akan diperiksa" hidden>
-            <button class="linkbtn" type="button" id="clear-img" hidden>Ganti gambar</button>
-          </div>
-          <input type="file" id="file" accept="image/png,image/jpeg,image/webp" class="visually-hidden" tabindex="-1">
-        </div>
-
-        <div class="row">
-          <span class="meta" id="ai-line">Memeriksa status AI</span>
-          <button class="primary" type="submit" id="submit">Periksa lowongan</button>
-        </div>
-      </form>
-
-      <div class="examples" id="examples" hidden>
-        Coba dengan kasus nyata:
-        <ul id="example-list"></ul>
-      </div>
-
       <section class="result" id="result" aria-live="polite" hidden></section>
+
+      <section class="process" aria-labelledby="cara-kerja">
+        <h2 id="cara-kerja">Cara kerja Lamarin</h2>
+        <ol class="process-steps">
+          <li><span class="num">01</span><h3>Masukkan lowongan</h3><p>Tempel teks dari WhatsApp atau media sosial, atau unggah tangkapan layar posternya.</p></li>
+          <li><span class="num">02</span><h3>Periksa rambu dan sumber</h3><p>Aturan dan AI mencari tanda penipuan, lalu tautan, email, dan nomor dicek satu per satu.</p></li>
+          <li><span class="num">03</span><h3>Pahami hasilnya</h3><p>Baca skor risiko, kutipan buktinya, dan langkah aman sebelum melamar.</p></li>
+        </ol>
+      </section>
     </main>
 
     <footer class="foot">

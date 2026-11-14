@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logo Lamarin">
+  <rect x="9" y="7" width="31" height="41" rx="5" fill="#F7F4EE" stroke="#16140F" stroke-width="3.2"/>
+  <path d="M16 17h17M16 24h17M16 31h9" stroke="#16140F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M47.5 47.5 56 56" stroke="#16140F" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="40" cy="40" r="12" fill="#E9A100" stroke="#16140F" stroke-width="3.2"/>
+  <path d="M34.5 40.2l3.8 3.8 7.2-7.6" fill="none" stroke="#16140F" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

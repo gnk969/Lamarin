@@ -361,7 +361,7 @@ async function init() {
         .map((x, i) => {
           counter[x.label] += 1;
           const name = x.label === "penipuan" ? "Kasus penipuan" : "Lowongan resmi";
-          return `<li><button type="button" data-i="${i}" title="${esc(x.judul)}">${name} ${counter[x.label]}</button></li>`;
+          return `<li><button type="button" data-i="${i}" data-label="${esc(x.label)}" title="${esc(x.judul)}">${name} ${counter[x.label]}</button></li>`;
         })
         .join("");
       $("examples").hidden = false;
