@@ -40,7 +40,9 @@ async function api(path, options = {}) {
 // ---------- tema ----------
 function applyTheme(t) {
   document.documentElement.dataset.theme = t;
-  $("theme-btn").textContent = t === "dark" ? "Tema terang" : "Tema gelap";
+  const label = t === "dark" ? "Ganti ke tema terang" : "Ganti ke tema gelap";
+  $("theme-btn").setAttribute("aria-label", label);
+  $("theme-btn").title = label;
 }
 $("theme-btn").addEventListener("click", () => {
   const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
@@ -394,3 +396,10 @@ async function checkImageInBrowser() {
   });
   renderResult(r);
 }
+
+// Tombol "Periksa lowongan" di navbar: gulir ke formulir lalu fokus ke kotak teks.
+document.getElementById("nav-cta")?.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById("form").scrollIntoView({ behavior: "smooth", block: "center" });
+  setTimeout(() => (mode === "teks" ? textarea : document.getElementById("pick-btn")).focus({ preventScroll: true }), 350);
+});
